@@ -113,6 +113,38 @@ footer p {
   font-size: 0.9rem;
 }
 
+/* Terminal styling */
+#terminal {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #0d0d0d;
+  color: #00ff00;
+  font-family: 'Share Tech Mono', monospace;
+  padding: 1rem;
+  box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.5);
+}
+
+#output {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#input {
+  width: 100%;
+  border: none;
+  background: none;
+  color: #00ff00;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1rem;
+  outline: none;
+}
+
+#input::placeholder {
+  color: #00ff00;
+}
+
 /* Glitch animation */
 @keyframes glitch {
   0% {
