@@ -1,6 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
     const input = document.getElementById('input');
     const output = document.getElementById('output');
+    const welcomeMessage = 'Welcome to the hacker-themed blog. Enjoy your stay!';
+    let index = 0;
+  
+    function typeMessage() {
+      if (index < welcomeMessage.length) {
+        output.textContent += welcomeMessage.charAt(index);
+        index++;
+        setTimeout(typeMessage, 50);
+      }
+    }
+  
+    typeMessage();
   
     input.addEventListener('keydown', function(event) {
       if (event.key === 'Enter') {
@@ -18,6 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
         outputHelp();
       } else if (command.startsWith('navigate')) {
         navigateTo(command.split(' ')[1]);
+      } else if (command === 'date') {
+        displayDate();
       } else {
         outputUnknownCommand();
       }
@@ -25,11 +39,19 @@ document.addEventListener('DOMContentLoaded', function() {
       output.scrollTop = output.scrollHeight;
     }
   
+    function displayDate() {
+      const date = new Date();
+      const outputLine = document.createElement('div');
+      outputLine.textContent = `Current Date: ${date.toDateString()}`;
+      output.appendChild(outputLine);
+    }
+  
     function outputHelp() {
       const helpText = `
         Available commands:
         - help: Show this help message
         - navigate [page]: Navigate to a different page (home, about, contact)
+        - date: Display the current date
       `;
       const helpLines = helpText.trim().split('\n');
       helpLines.forEach(line => {
@@ -52,7 +74,5 @@ document.addEventListener('DOMContentLoaded', function() {
       outputLine.textContent = 'Unknown command. Type "help" for a list of available commands.';
       output.appendChild(outputLine);
     }
-  
-    console.log('Welcome to the hacker-themed blog. Enjoy your stay!');
   });
   
