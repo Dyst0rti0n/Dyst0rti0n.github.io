@@ -5,7 +5,7 @@ title: Home
 
 <div class="home">
   <h2>Welcome to Dyst0rti0n's Cybersecurity & Programming Blog</h2>
-  <p>Exploring advancedments of cybersecurity, programming, and more..</p>
+  <p>Exploring advancements in cybersecurity, programming, and more.</p>
 
   <h3>Latest Posts</h3>
   <ul>
