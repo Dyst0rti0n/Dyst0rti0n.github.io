@@ -1,0 +1,124 @@
+body {
+  font-family: 'Share Tech Mono', monospace;
+  background-color: #0d0d0d;
+  color: #00ff00;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  background: #1a1a1a;
+  padding: 1.5rem 0;
+  text-align: center;
+  border-bottom: 2px solid #333;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #00ff00;
+  animation: glitch 1s infinite;
+}
+
+header p {
+  margin: 0.5rem 0;
+  color: #4dff4d;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: #00ff00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #ff00ff;
+}
+
+main {
+  padding: 2rem 0;
+}
+
+footer {
+  background: #1a1a1a;
+  color: #4dff4d;
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 2px solid #333;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+}
+
+.home h2 {
+  color: #ff00ff;
+  animation: glitch 1s infinite;
+}
+
+.home p {
+  color: #4dff4d;
+}
+
+.home h3 {
+  color: #ff00ff;
+  margin-top: 2rem;
+}
+
+.home ul {
+  list-style: none;
+  padding: 0;
+}
+
+.home ul li {
+  margin: 0.5rem 0;
+}
+
+.home ul li a {
+  color: #00ffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.home ul li a:hover {
+  text-decoration: underline;
+}
+
+.home ul li span {
+  color: #4dff4d;
+  font-size: 0.9rem;
+}
+
+/* Glitch animation */
+@keyframes glitch {
+  0% {
+    text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff;
+  }
+  50% {
+    text-shadow: -2px -2px #ff00ff, 2px 2px #00ffff;
+  }
+  100% {
+    text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff;
+  }
+}
