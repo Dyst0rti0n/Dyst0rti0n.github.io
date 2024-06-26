@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const input = document.getElementById('input');
     const output = document.getElementById('output');
-    const welcomeMessage = 'Welcome to the hacker-themed blog. Enjoy your stay!';
+    const welcomeMessage = `Dyst0rti0n's Blog\nWelcome to the hacker-themed blog. Enjoy your stay!`;
     const commands = ['cd', 'ls', 'date', 'help'];
     const pages = ['home', 'about', 'contact'];
     let index = 0;
