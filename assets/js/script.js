@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const input = document.getElementById('input');
     const output = document.getElementById('output');
     const welcomeMessage = 'Welcome to the hacker-themed blog. Enjoy your stay!';
+    const commands = ['cd', 'ls', 'date', 'help'];
+    const pages = ['home', 'about', 'contact'];
     let index = 0;
   
     function typeMessage() {
@@ -18,6 +20,9 @@ document.addEventListener('DOMContentLoaded', function() {
       if (event.key === 'Enter') {
         handleCommand(input.value);
         input.value = '';
+      } else if (event.key === 'Tab') {
+        event.preventDefault();
+        autoCompleteCommand(input.value);
       }
     });
   
@@ -28,8 +33,10 @@ document.addEventListener('DOMContentLoaded', function() {
   
       if (command === 'help') {
         outputHelp();
-      } else if (command.startsWith('navigate')) {
+      } else if (command.startsWith('cd ')) {
         navigateTo(command.split(' ')[1]);
+      } else if (command === 'ls') {
+        listPages();
       } else if (command === 'date') {
         displayDate();
       } else {
@@ -39,6 +46,13 @@ document.addEventListener('DOMContentLoaded', function() {
       output.scrollTop = output.scrollHeight;
     }
   
+    function autoCompleteCommand(inputValue) {
+      const matchingCommands = commands.filter(cmd => cmd.startsWith(inputValue));
+      if (matchingCommands.length === 1) {
+        input.value = matchingCommands[0] + ' ';
+      }
+    }
+  
     function displayDate() {
       const date = new Date();
       const outputLine = document.createElement('div');
@@ -46,11 +60,18 @@ document.addEventListener('DOMContentLoaded', function() {
       output.appendChild(outputLine);
     }
   
+    function listPages() {
+      const outputLine = document.createElement('div');
+      outputLine.textContent = pages.join(' ');
+      output.appendChild(outputLine);
+    }
+  
     function outputHelp() {
       const helpText = `
         Available commands:
         - help: Show this help message
-        - navigate [page]: Navigate to a different page (home, about, contact)
+        - cd [page]: Navigate to a different page (home, about, contact)
+        - ls: List available pages
         - date: Display the current date
       `;
       const helpLines = helpText.trim().split('\n');
@@ -62,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   
     function navigateTo(page) {
-      if (['home', 'about', 'contact'].includes(page)) {
+      if (pages.includes(page)) {
         window.location.href = `${page}`;
       } else {
         outputUnknownCommand();
