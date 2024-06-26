@@ -171,12 +171,27 @@ footer p {
 /* Glitch animation */
 @keyframes glitch {
   0% {
+    transform: translate(0);
     text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff;
   }
-  50% {
+  20% {
+    transform: translate(-2px, 2px);
     text-shadow: -2px -2px #ff00ff, 2px 2px #00ffff;
   }
+  40% {
+    transform: translate(2px, -2px);
+    text-shadow: 2px -2px #ff00ff, -2px 2px #00ffff;
+  }
+  60% {
+    transform: translate(-2px, -2px);
+    text-shadow: -2px 2px #ff00ff, 2px -2px #00ffff;
+  }
+  80% {
+    transform: translate(2px, 2px);
+    text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff;
+  }
   100% {
+    transform: translate(0);
     text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff;
   }
 }
