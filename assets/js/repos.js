@@ -16,16 +16,10 @@ document.addEventListener('DOMContentLoaded', function() {
           reposContainer.appendChild(repoDiv);
         });
   
-        // Initialize Slick Carousel
-        $('.carousel-container').slick({
-          infinite: true,
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          autoplay: true,
-          autoplaySpeed: 2000,
-          arrows: true,
-          dots: true
-        });
+        // Start the automatic scrolling
+        setInterval(() => {
+          reposContainer.scrollBy({ left: 1, behavior: 'smooth' });
+        }, 50);
       })
       .catch(error => console.error('Error fetching repos:', error));
   });

@@ -19,9 +19,6 @@
   <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="{{ "/assets/images/favicon.png" | relative_url }}">
-  <!-- Slick Carousel CSS -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
 </head>
 <body>
   <header>
@@ -42,7 +39,7 @@
   </main>
   <section id="repos-carousel" class="carousel">
     <h2>My GitHub Repositories</h2>
-    <div class="carousel-container"></div>
+    <div class="horizontal-scroll-wrapper squares"></div>
   </section>
   <footer>
     <div class="container">
@@ -53,8 +50,6 @@
     <div id="output">Dyst0rti0n's Blog</div>
     <input type="text" id="input" autofocus placeholder="Type 'help' for commands">
   </div>
-  <!-- Slick Carousel JS -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
   <script src="{{ "/assets/js/script.js" | relative_url }}"></script>
   <script src="{{ "/assets/js/repos.js" | relative_url }}"></script>
 </body>

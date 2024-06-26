@@ -61,6 +61,32 @@ main {
   margin-bottom: 6rem; /* Ensure space for terminal */
 }
 
+.content {
+  background-color: #f8f8f8; /* Light background for better readability */
+  color: #333; /* Dark text for better contrast */
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.content h2, .content h3, .content h4, .content h5, .content h6 {
+  color: #00ff00; /* Keep headers in the hacker theme color */
+}
+
+.content p, .content li, .content code {
+  color: #333; /* Dark text for better readability */
+}
+
+.content a {
+  color: #007acc; /* Blue links for better visibility */
+  text-decoration: none;
+}
+
+.content a:hover {
+  color: #005799;
+  text-decoration: underline;
+}
+
 footer {
   background: #1e1e1e;
   color: #66ff66;
@@ -281,11 +307,19 @@ footer p {
 }
 
 .carousel-container {
-  max-width: 90%;
-  margin: 0 auto;
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
 }
 
 .repo {
+  display: inline-block;
   background: #121212;
   border: 1px solid #00ff00;
   padding: 1rem;
@@ -296,16 +330,4 @@ footer p {
 
 .repo:hover {
   transform: scale(1.05);
-}
-
-.slick-slide {
-  margin: 0 10px;
-}
-
-.slick-prev, .slick-next {
-  color: #00ff00;
-}
-
-.slick-prev:hover, .slick-next:hover {
-  color: #ff00ff;
 }
