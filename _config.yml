@@ -1,10 +1,11 @@
 # Site settings
 title: Dyst0rti0n's Cybersecurity & Programming Blog
 email: dystorti0n@proton.me
-description:  Exploring advancedments of cybersecurity, programming, and more.
+description:  Exploring advancements of cybersecurity, programming, and more.
 baseurl: ""
 url: "https://dyst0rti0n.github.io" 
 github_username:  Dyst0rti0n
+author: Dyst0rti0n
 
 # Build settings
 theme: minima
@@ -45,3 +46,4 @@ assets:
   sources:
     - _assets/css
     - _assets/js
+    - _assets/images
