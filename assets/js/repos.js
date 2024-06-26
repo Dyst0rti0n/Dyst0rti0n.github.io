@@ -7,9 +7,12 @@ document.addEventListener('DOMContentLoaded', function() {
           const repoDiv = document.createElement('div');
           repoDiv.className = 'repo';
           repoDiv.innerHTML = `
-            <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
+            <h3>${repo.name}</h3>
             <p>${repo.description || 'No description'}</p>
           `;
+          repoDiv.addEventListener('click', () => {
+            window.open(repo.html_url, '_blank');
+          });
           reposContainer.appendChild(repoDiv);
         });
   
