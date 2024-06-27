@@ -1,7 +1,7 @@
 body {
   font-family: 'Share Tech Mono', monospace;
   background-color: #121212;
-  color: #00ff00;
+  color: #e0e0e0; /* Light grey for main text */
   margin: 0;
   padding: 0;
 }
@@ -22,7 +22,7 @@ header {
 header h1 {
   margin: 0;
   font-size: 2.5rem; /* Adjusted for better responsiveness */
-  color: #00ff00;
+  color: #00ff00; /* Bright green for header */
   position: relative;
   display: inline-block;
   animation: glitch1 2s infinite;
@@ -36,7 +36,7 @@ header h1 {
 
 header p {
   margin: 0.5rem 0;
-  color: #66ff66;
+  color: #00ff00; /* Bright green for header */
   font-size: 1.25rem; /* Adjusted for better readability on mobile */
 }
 
@@ -58,7 +58,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #00ff00;
+  color: #00ff00; /* Bright green for navigation links */
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
@@ -74,34 +74,34 @@ main {
 }
 
 .content {
-  background-color: #f8f8f8; /* Light background for better readability */
-  color: #333; /* Dark text for better contrast */
+  background-color: #1e1e1e; /* Dark background for content */
+  color: #e0e0e0; /* Light grey for main text */
   padding: 1rem 2rem;
   border-radius: 8px;
   margin: 1rem 0;
 }
 
 .content h2, .content h3, .content h4, .content h5, .content h6 {
-  color: #00ff00; /* Keep headers in the hacker theme color */
+  color: #00ff00; /* Bright green for headers */
 }
 
 .content p, .content li, .content code {
-  color: #333; /* Dark text for better readability */
+  color: #e0e0e0; /* Light grey for main text */
 }
 
 .content a {
-  color: #007acc; /* Blue links for better visibility */
+  color: #00ff00; /* Bright green for links */
   text-decoration: none;
 }
 
 .content a:hover {
-  color: #005799;
+  color: #ff00ff; /* Bright magenta for hover state */
   text-decoration: underline;
 }
 
 footer {
   background: #1e1e1e;
-  color: #66ff66;
+  color: #e0e0e0;
   text-align: center;
   padding: 1rem 0;
   border-top: 2px solid #444;
@@ -118,7 +118,7 @@ footer p {
 }
 
 .home p {
-  color: #66ff66;
+  color: #e0e0e0;
 }
 
 .home h3 {
@@ -148,7 +148,7 @@ footer p {
 }
 
 .home ul li span {
-  color: #66ff66;
+  color: #e0e0e0;
   font-size: 0.9rem;
 }
 
@@ -365,7 +365,7 @@ footer p {
   border: 1px solid #00ff00;
   padding: 1rem; /* Adjust padding to fit new size */
   margin: 0 10px; /* Adjust margin to fit new size */
-  width: 200px; /* Adjust width to make boxes slightly bigger */
+  width: 180px; /* Adjust width to make boxes slightly bigger */
   transition: transform 0.3s ease;
   cursor: pointer;
   word-wrap: break-word; /* Ensure long names wrap */

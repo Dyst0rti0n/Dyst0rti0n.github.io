@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // Start the automatic scrolling with increased speed
         let scrollAmount = 0;
         setInterval(() => {
-          reposContainer.scrollBy({ left: 1, behavior: 'smooth' }); // Adjust scroll speed as needed
-          scrollAmount += 1;
+          reposContainer.scrollBy({ left: 2, behavior: 'smooth' }); // Adjust scroll speed as needed
+          scrollAmount += 2;
           if (scrollAmount >= reposContainer.scrollWidth / 2) {
             reposContainer.scrollLeft = 0; // Reset scroll to start seamlessly
             scrollAmount = 0;
