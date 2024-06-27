@@ -23,8 +23,8 @@
 <body>
   <header>
     <div class="container">
-      <h1>{{ site.title }}</h1>
-      <p>{{ site.description }}</p>
+      <h1 class="glitch" data-text="{{ site.title }}">{{ site.title }}</h1>
+      <p class="glitch3" data-text="{{ site.description }}">{{ site.description }}</p>
       <nav>
         <ul>
           <li><a href="{{ site.baseurl }}/">Home</a></li>
@@ -49,8 +49,10 @@
   <div id="terminal">
     <div id="output">Dyst0rti0n's Blog</div>
     <input type="text" id="input" autofocus placeholder="Type 'help' for commands">
+    <div id="drag-handle"></div>
   </div>
   <script src="{{ "/assets/js/script.js" | relative_url }}"></script>
   <script src="{{ "/assets/js/repos.js" | relative_url }}"></script>
+  <script src="{{ "/assets/js/terminal.js" | relative_url }}"></script>
 </body>
 </html>
