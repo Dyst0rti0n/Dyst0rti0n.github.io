@@ -218,11 +218,6 @@ footer p {
   color: #00ff00;
 }
 
-#output div::before {
-  content: ">> ";
-  color: #ff00ff;
-}
-
 /* Glitch animations */
 @keyframes glitch1 {
   0% {
@@ -371,11 +366,17 @@ footer p {
   display: inline-block;
   background: #121212;
   border: 1px solid #00ff00;
-  padding: 0.75rem; /* Adjust padding to fit new size */
-  margin: 0 7px; /* Adjust margin to fit new size */
-  width: 150px; /* Adjust width to make boxes skinnier */
+  padding: 1rem; /* Adjust padding to fit new size */
+  margin: 0 10px; /* Adjust margin to fit new size */
+  width: 180px; /* Adjust width to make boxes slightly bigger */
   transition: transform 0.3s ease;
   cursor: pointer;
+  word-wrap: break-word; /* Ensure long names wrap */
+}
+
+.repo h3 {
+  font-size: 1rem; /* Adjust font size for better readability */
+  margin: 0;
 }
 
 .repo:hover {

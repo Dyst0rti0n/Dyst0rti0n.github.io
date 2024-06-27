@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
           repoDiv.className = 'repo';
           repoDiv.innerHTML = `
             <h3>${repo.name}</h3>
-            <p>${repo.description || 'No description'}</p>
           `;
           repoDiv.addEventListener('click', () => {
             window.open(repo.html_url, '_blank');
@@ -18,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
         // Start the automatic scrolling with increased speed
         setInterval(() => {
-          reposContainer.scrollBy({ left: 2, behavior: 'smooth' }); // Increased scroll speed
+          reposContainer.scrollBy({ left: 3, behavior: 'smooth' }); // Increased scroll speed
         }, 30); // Reduced interval for faster speed
       })
       .catch(error => console.error('Error fetching repos:', error));

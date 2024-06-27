@@ -6,10 +6,10 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentDirectory = '~/Dyst0rti0n\'s_blog/';
   
     function updatePrompt() {
-      input.placeholder = `${currentDirectory} $ `;
+      const prompt = document.createElement('span');
+      prompt.textContent = `${currentDirectory} $ `;
+      input.before(prompt);
     }
-  
-    updatePrompt();
   
     input.addEventListener('keydown', function(event) {
       if (event.key === 'Enter') {
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
     function handleCommand(command) {
       const outputLine = document.createElement('div');
-      outputLine.textContent = `${currentDirectory} $ ${command}`;
+      outputLine.innerHTML = `<span>${currentDirectory} $ ${command}</span>`;
       output.appendChild(outputLine);
   
       if (command === 'help') {
@@ -98,5 +98,8 @@ document.addEventListener('DOMContentLoaded', function() {
       document.removeEventListener('mousemove', resizeTerminal);
       document.removeEventListener('mouseup', stopResizing);
     }
+  
+    // Initialize prompt
+    updatePrompt();
   });
   
