@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const terminal = document.getElementById('terminal');
     const handle = document.getElementById('drag-handle');
   
-    const welcomeMessage = 'Welcome to the hacker-themed blog. Enjoy your stay!';
+    const welcomeMessage = ' to the hacker-themed blog. Enjoy your stay!';
     let index = 0;
   
     function typeMessage() {
