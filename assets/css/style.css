@@ -1,9 +1,10 @@
 body {
   font-family: 'Share Tech Mono', monospace;
   background-color: #121212;
-  color: #e0e0e0; /* Light grey for main text */
+  color: #00ff00;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 .container {
@@ -21,29 +22,21 @@ header {
 
 header h1 {
   margin: 0;
-  font-size: 2.5rem; /* Adjusted for better responsiveness */
-  color: #00ff00; /* Bright green for header */
+  font-size: 3rem;
+  color: #00ff00;
   position: relative;
   display: inline-block;
   animation: glitch1 2s infinite;
-}
-
-@media (min-width: 768px) {
-  header h1 {
-    font-size: 3rem;
-  }
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 
 header p {
   margin: 0.5rem 0;
-  color: #00ff00; /* Bright green for header */
-  font-size: 1.25rem; /* Adjusted for better readability on mobile */
-}
-
-@media (min-width: 768px) {
-  header p {
-    font-size: 1.5rem;
-  }
+  color: #66ff66;
+  font-size: 1.2rem;
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 
 nav ul {
@@ -58,7 +51,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #00ff00; /* Bright green for navigation links */
+  color: #00ff00;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
@@ -74,38 +67,40 @@ main {
 }
 
 .content {
-  background-color: #1e1e1e; /* Dark background for content */
-  color: #e0e0e0; /* Light grey for main text */
+  background-color: #f8f8f8; /* Light background for better readability */
+  color: #333; /* Dark text for better contrast */
   padding: 1rem 2rem;
   border-radius: 8px;
   margin: 1rem 0;
 }
 
 .content h2, .content h3, .content h4, .content h5, .content h6 {
-  color: #00ff00; /* Bright green for headers */
+  color: #00ff00; /* Keep headers in the hacker theme color */
 }
 
 .content p, .content li, .content code {
-  color: #e0e0e0; /* Light grey for main text */
+  color: #333; /* Dark text for better readability */
 }
 
 .content a {
-  color: #00ff00; /* Bright green for links */
+  color: #007acc; /* Blue links for better visibility */
   text-decoration: none;
 }
 
 .content a:hover {
-  color: #ff00ff; /* Bright magenta for hover state */
+  color: #005799;
   text-decoration: underline;
 }
 
 footer {
   background: #1e1e1e;
-  color: #e0e0e0;
+  color: #66ff66;
   text-align: center;
   padding: 1rem 0;
   border-top: 2px solid #444;
   width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 footer p {
@@ -118,7 +113,7 @@ footer p {
 }
 
 .home p {
-  color: #e0e0e0;
+  color: #66ff66;
 }
 
 .home h3 {
@@ -148,7 +143,7 @@ footer p {
 }
 
 .home ul li span {
-  color: #e0e0e0;
+  color: #66ff66;
   font-size: 0.9rem;
 }
 
@@ -158,7 +153,7 @@ footer p {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 20%; /* Smaller initial height */
+  height: 30%;
   max-height: 50%;
   border-top: 1px solid #00ff00;
   background: #1a1a1a;
@@ -185,6 +180,7 @@ footer p {
   position: absolute;
   top: -10px;
   left: 0;
+  z-index: 10; /* Ensure handle is above terminal content */
 }
 
 @keyframes typing {
@@ -213,6 +209,11 @@ footer p {
 
 #input::placeholder {
   color: #00ff00;
+}
+
+#output div::before {
+  content: ">> ";
+  color: #ff00ff;
 }
 
 /* Glitch animations */
@@ -363,19 +364,32 @@ footer p {
   display: inline-block;
   background: #121212;
   border: 1px solid #00ff00;
-  padding: 1rem; /* Adjust padding to fit new size */
-  margin: 0 10px; /* Adjust margin to fit new size */
-  width: 180px; /* Adjust width to make boxes slightly bigger */
+  padding: 1rem;
+  margin: 0 10px;
   transition: transform 0.3s ease;
   cursor: pointer;
-  word-wrap: break-word; /* Ensure long names wrap */
-}
-
-.repo h3 {
-  font-size: 1rem; /* Adjust font size for better readability */
-  margin: 0;
+  width: 250px; /* Adjusted width */
 }
 
 .repo:hover {
   transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  .repo {
+    width: 200px; /* Adjusted width for smaller screens */
+  }
+
+  #terminal {
+    height: 20%;
+  }
 }

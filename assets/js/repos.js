@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
             reposContainer.scrollLeft = 0; // Reset scroll to start seamlessly
             scrollAmount = 0;
           }
-        }, 20); // Reduced interval for faster speed
+        }, 5); // Reduced interval for faster speed
       })
       .catch(error => console.error('Error fetching repos:', error));
   });
