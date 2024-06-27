@@ -16,10 +16,10 @@ document.addEventListener('DOMContentLoaded', function() {
           reposContainer.appendChild(repoDiv);
         });
   
-        // Start the automatic scrolling
+        // Start the automatic scrolling with increased speed
         setInterval(() => {
-          reposContainer.scrollBy({ left: 1, behavior: 'smooth' });
-        }, 50);
+          reposContainer.scrollBy({ left: 2, behavior: 'smooth' }); // Increased scroll speed
+        }, 30); // Reduced interval for faster speed
       })
       .catch(error => console.error('Error fetching repos:', error));
   });
