@@ -39,11 +39,12 @@
   </main>
   <section id="repos-carousel" class="carousel">
     <h2>My GitHub Repositories</h2>
-    <div class="horizontal-scroll-wrapper squares"></div>
+    <div class="carousel-container"></div>
   </section>
   <footer>
     <div class="container">
       <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
+      <p>Follow me on <a href="https://github.com/Dyst0rti0n" target="_blank">GitHub</a> | Connect on <a href="https://www.linkedin.com/in/dyst0rti0n/" target="_blank">LinkedIn</a> | Read my <a href="/blog" target="_blank">Blog</a></p>
     </div>
   </footer>
   <div id="terminal">
@@ -51,8 +52,7 @@
     <input type="text" id="input" autofocus placeholder="Type 'help' for commands">
     <div id="drag-handle"></div>
   </div>
-  <script src="{{ "/assets/js/script.js" | relative_url }}"></script>
   <script src="{{ "/assets/js/repos.js" | relative_url }}"></script>
-  <script src="{{ "/assets/js/terminal.js" | relative_url }}"></script>
+  <script src="{{ "/assets/js/script.js" | relative_url }}"></script>
 </body>
 </html>
