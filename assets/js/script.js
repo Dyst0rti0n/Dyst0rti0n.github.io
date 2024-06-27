@@ -3,19 +3,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const output = document.getElementById('output');
     const terminal = document.getElementById('terminal');
     const handle = document.getElementById('drag-handle');
+    let currentDirectory = '~/Dyst0rti0n\'s_blog/';
   
-    const welcomeMessage = ' to the hacker-themed blog. Enjoy your stay!';
-    let index = 0;
-  
-    function typeMessage() {
-      if (index < welcomeMessage.length) {
-        output.textContent += welcomeMessage.charAt(index);
-        index++;
-        setTimeout(typeMessage, 50);
-      }
+    function updatePrompt() {
+      input.placeholder = `${currentDirectory} $ `;
     }
   
-    typeMessage();
+    updatePrompt();
   
     input.addEventListener('keydown', function(event) {
       if (event.key === 'Enter') {
@@ -26,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
     function handleCommand(command) {
       const outputLine = document.createElement('div');
-      outputLine.textContent = `> ${command}`;
+      outputLine.textContent = `${currentDirectory} $ ${command}`;
       output.appendChild(outputLine);
   
       if (command === 'help') {
@@ -67,7 +61,13 @@ document.addEventListener('DOMContentLoaded', function() {
   
     function navigateTo(page) {
       if (['home', 'about', 'contact'].includes(page)) {
-        window.location.href = `${page}`;
+        currentDirectory = `~/Dyst0rti0n's_blog/${page}/`;
+        updatePrompt();
+        if (page === 'home') {
+          window.location.href = '/';
+        } else {
+          window.location.href = `${page}`;
+        }
       } else {
         outputUnknownCommand();
       }
@@ -98,7 +98,5 @@ document.addEventListener('DOMContentLoaded', function() {
       document.removeEventListener('mousemove', resizeTerminal);
       document.removeEventListener('mouseup', stopResizing);
     }
-  
-    console.log('Welcome to the hacker-themed blog. Enjoy your stay!');
   });
   
