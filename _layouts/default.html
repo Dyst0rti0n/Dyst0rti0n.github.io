@@ -26,7 +26,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-NCTW9X1N78');
   </script>
 </head>
@@ -54,6 +53,14 @@
   <footer>
     <div class="container">
       <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
+      <p>Support my blog: 
+        <form action="https://www.paypal.com/donate" method="post" target="_top">
+          <input type="hidden" name="hosted_button_id" value="YOUR_BUTTON_ID" />
+          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+          <img alt="" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+        </form>
+        <a href="https://www.buymeacoffee.com/YOURUSERNAME" target="_blank">Buy Me a Coffee</a>
+      </p>
       <p>Follow me on <a href="https://github.com/Dyst0rti0n" target="_blank">GitHub</a> | Connect on <a href="https://www.linkedin.com/in/dyst0rti0n/" target="_blank">LinkedIn</a> | Read my <a href="/blog" target="_blank">Blog</a></p>
     </div>
   </footer>
