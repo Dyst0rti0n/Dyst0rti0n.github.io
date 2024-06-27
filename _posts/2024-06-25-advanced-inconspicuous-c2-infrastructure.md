@@ -58,7 +58,7 @@ server {
 - **Webhook Endpoint**: Create an endpoint for receiving data and status updates.
 Example Flask application to handle commands and webhooks:*
 
-[Flask Code Here](https://github.com/Dyst0rti0n/blog-scripts/c2-scripts/flask)
+[Flask Code Here](https://github.com/Dyst0rti0n/blog-scripts/blob/main/c2-scripts/flask/example.py)
 
 ## Free and Inconspicuous C2 Hosting Platforms
 #### 1. YouTube: A Video Platform Turned C2 Hub
@@ -91,7 +91,7 @@ def get_latest_video_description(api_key, channel_id):
         video_response = video_request.execute()
 ...
 ```
-[See the full script on GitHub](https://github.com/Dyst0rti0n/blog-scripts/c2-scripts/youtube-hub)
+[See the full script on GitHub](https://github.com/Dyst0rti0n/blog-scripts/tree/main/c2-scripts/youtube-hub)
 
 
 #### 2. Medium: Blogging with a Hidden Agenda
@@ -129,7 +129,7 @@ def get_latest_post(feed_url):
     return None
 ...
 ```
-[See the full script on GitHub](https://github.com/Dyst0rti0n/blog-scripts/c2-scripts/medium-fetcher)
+[See the full script on GitHub](https://github.com/Dyst0rti0n/blog-scripts/tree/main/c2-scripts/medium-fetcher)
 
 #### 3. Google Sheets: Spreadsheet C2 Mastery
 Google Sheets, a ubiquitous tool for collaboration and data storage, can also serve as an inconspicuous C2 server. By using the Google Sheets API, you can store commands and fetch them as needed.
@@ -171,7 +171,7 @@ def get_latest_command(sheet_url, creds_json):
 ...
 ```
 
-[See the full script on GitHub](https://github.com/Dyst0rti0n/blog-scripts/c2-scripts/google-sheets)
+[See the full script on GitHub](https://github.com/Dyst0rti0n/blog-scripts/tree/main/c2-scripts/google-sheets)
 
 ### Conclusion
 In an age where cybersecurity measures are becoming increasingly sophisticated, it's essential to think outside the box to stay ahead. Leveraging platforms like YouTube, Medium, and Google Sheets not only provides a cost-effective C2 infrastructure but also helps maintain a low profile. These methods allow your operations to blend seamlessly into the vast digital landscape, reducing the risk of detection.
