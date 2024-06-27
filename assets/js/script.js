@@ -1,47 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('https://api.github.com/users/Dyst0rti0n/repos')
-      .then(response => response.json())
-      .then(data => {
-        const reposContainer = document.querySelector('.carousel-container');
-        data.forEach(repo => {
-          const repoDiv = document.createElement('div');
-          repoDiv.className = 'repo';
-          repoDiv.innerHTML = `
-            <h3>${repo.name}</h3>
-          `;
-          repoDiv.addEventListener('click', () => {
-            window.open(repo.html_url, '_blank');
-          });
-          reposContainer.appendChild(repoDiv);
-        });
-  
-        // Duplicate the repos for a seamless loop
-        const repos = document.querySelectorAll('.repo');
-        repos.forEach(repo => {
-          const clone = repo.cloneNode(true);
-          reposContainer.appendChild(clone);
-        });
-  
-        // Start the automatic scrolling with increased speed
-        let scrollAmount = 0;
-        setInterval(() => {
-          reposContainer.scrollBy({ left: 3, behavior: 'smooth' }); // Increased scroll speed
-          scrollAmount += 3;
-          if (scrollAmount >= reposContainer.scrollWidth / 2) {
-            reposContainer.scrollLeft = 0; // Reset scroll to start seamlessly
-            scrollAmount = 0;
-          }
-        }, 30); // Reduced interval for faster speed
-      })
-      .catch(error => console.error('Error fetching repos:', error));
-  });
-  
-  document.addEventListener('DOMContentLoaded', function() {
     const input = document.getElementById('input');
     const output = document.getElementById('output');
     const terminal = document.getElementById('terminal');
     const handle = document.getElementById('drag-handle');
     let currentDirectory = '~/Dyst0rti0n\'s_blog/';
+    let firstUse = true; // Track if this is the first use
   
     function updatePrompt() {
       input.value = ''; // Clear the input value to prevent multiple prompts
@@ -50,13 +13,11 @@ document.addEventListener('DOMContentLoaded', function() {
       input.before(prompt);
     }
   
-    input.addEventListener('keydown', function(event) {
-      if (event.key === 'Enter') {
-        handleCommand(input.value);
-        input.value = '';
-        updatePrompt();
-      }
-    });
+    function showHelpMessage() {
+      const helpMessage = document.createElement('div');
+      helpMessage.textContent = "Type 'help' for commands";
+      output.appendChild(helpMessage);
+    }
   
     function handleCommand(command) {
       const outputLine = document.createElement('div');
@@ -94,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const helpLines = helpText.trim().split('\n');
       helpLines.forEach(line => {
         const outputLine = document.createElement('div');
-        outputLine.textContent = line;
+        outputLine.textContent = line.trim();
         output.appendChild(outputLine);
       });
     }
@@ -141,5 +102,18 @@ document.addEventListener('DOMContentLoaded', function() {
   
     // Initialize prompt
     updatePrompt();
+  
+    if (firstUse) {
+      showHelpMessage();
+      firstUse = false;
+    }
+  
+    input.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter') {
+        handleCommand(input.value);
+        input.value = '';
+        updatePrompt();
+      }
+    });
   });
   
