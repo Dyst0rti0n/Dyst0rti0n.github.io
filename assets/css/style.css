@@ -67,8 +67,8 @@ main {
 }
 
 .content {
-  background-color: #1e1e1e; /* Light background for better readability */
-  color: #ffffff; /* Dark text for better contrast */
+  background-color: #1e1e1e; /* Dark background for better readability */
+  color: #ffffff; /* White text for better readability */
   padding: 1rem 2rem;
   border-radius: 8px;
   margin: 1rem 0;
@@ -79,7 +79,7 @@ main {
 }
 
 .content p, .content li, .content code {
-  color: #ffffff; /* Dark text for better readability */
+  color: #ffffff; /* White text for better readability */
 }
 
 .content a {
@@ -181,6 +181,10 @@ footer p {
   top: -10px;
   left: 0;
   z-index: 10; /* Ensure handle is above terminal content */
+  text-align: center;
+  color: #fff;
+  line-height: 10px;
+  font-size: 12px;
 }
 
 @keyframes typing {
