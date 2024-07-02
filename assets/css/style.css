@@ -153,7 +153,7 @@ footer p {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 30%;
+  height: 5%; /* Start very thin */
   max-height: 50%;
   border-top: 1px solid #00ff00;
   background: #1a1a1a;
@@ -164,6 +164,7 @@ footer p {
   box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.5);
   z-index: 10; /* Ensure terminal is above footer */
   resize: vertical; /* Allow resizing */
+  transition: height 0.3s ease;
 }
 
 #output {
@@ -185,6 +186,17 @@ footer p {
   color: #fff;
   line-height: 10px;
   font-size: 12px;
+}
+
+#collapse-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  background: #444;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
 }
 
 @keyframes typing {
@@ -394,6 +406,6 @@ footer p {
   }
 
   #terminal {
-    height: 20%;
+    height: 5%;
   }
 }
