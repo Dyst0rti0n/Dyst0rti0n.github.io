@@ -50,6 +50,16 @@
     <h2>My GitHub Repositories</h2>
     <div class="carousel-container"></div>
   </section>
+  <section id="newsletter">
+    <h2>Subscribe to our Newsletter</h2>
+    <form id="newsletter-form" method="POST" action="YOUR_BACKEND_ENDPOINT">
+      <input type="hidden" id="csrf_token" name="csrf_token" value="GENERATED_CSRF_TOKEN">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+    <div id="newsletter-success" style="display:none;">Thank you for subscribing!</div>
+  </section>
   <footer>
     <div class="container">
       <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
@@ -72,5 +82,6 @@
   <script src="{{ "/assets/js/repos.js" | relative_url }}"></script>
   <script src="{{ "/assets/js/script.js" | relative_url }}"></script>
   <script src="{{ "/assets/js/analytics.js" | relative_url }}"></script>
+  <script src="{{ "/assets/js/newsletter.js" | relative_url }}"></script>
 </body>
 </html>

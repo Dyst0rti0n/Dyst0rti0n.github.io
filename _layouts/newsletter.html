@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newsletter Signup</title>
+</head>
+<body>
+  <form id="newsletter-form">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <input type="hidden" id="csrf_token" name="csrf_token" value="EXPECTED_CSRF_TOKEN">
+    <button type="submit">Subscribe</button>
+  </form>
+
+  <script>
+    document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      var email = document.getElementById('email').value;
+      var csrf_token = document.getElementById('csrf_token').value;
+
+      var data = {
+        email: email,
+        csrf_token: csrf_token
+      };
+
+      fetch('YOUR_WEB_APP_URL', { // Replace with the URL of your deployed web app
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          alert('Subscribed successfully!');
+        } else {
+          alert('Subscription failed: ' + data.error);
+        }
+      })
+      .catch(error => console.error('Error:', error));
+    });
+  </script>
+</body>
+</html>
