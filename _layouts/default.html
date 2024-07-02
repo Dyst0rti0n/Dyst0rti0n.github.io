@@ -28,9 +28,8 @@
     gtag('js', new Date());
     gtag('config', 'G-NCTW9X1N78');
   </script>
-
-  <!-- Buy Me a Coffee -->
-  <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="dystortion" data-color="#FFDD00" data-emoji="💻" data-font="Comic" data-text="Contribute to new computer" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
+  <!-- Buy Me a Coffee Button -->
+  <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="dystortion" data-color="#FFDD00" data-emoji="💻" data-font="Comic" data-text="Contribute to new computer" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff"></script>
 </head>
 <body>
   <header>
@@ -42,7 +41,7 @@
           <li><a href="{{ site.baseurl }}/">Home</a></li>
           <li><a href="{{ site.baseurl }}/about">About</a></li>
           <li><a href="{{ site.baseurl }}/contact">Contact</a></li>
-          <li><a href="https://buymeacoffee.com/dystortion" target="_blank">Buy Me a Coffee</a></li>
+          <li><a href="https://buymeacoffee.com/dystortion" target="_blank">Support</a></li> <!-- Adding Buy Me a Coffee Button -->
         </ul>
       </nav>
     </div>
@@ -67,6 +66,9 @@
   <footer>
     <div class="container">
       <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
+      <p>Support my blog: 
+        <a href="https://buymeacoffee.com/dystortion" target="_blank">Buy Me a Coffee</a>
+      </p>
       <p>Follow me on <a href="https://github.com/Dyst0rti0n" target="_blank">GitHub</a> | Connect on <a href="https://www.linkedin.com/in/dyst0rti0n/" target="_blank">LinkedIn</a> | Read my <a href="/blog" target="_blank">Blog</a></p>
     </div>
   </footer>
@@ -74,11 +76,21 @@
     <div id="output"></div>
     <input type="text" id="input" autofocus placeholder="Type 'help' for commands">
     <div id="drag-handle">≡</div>
-    <button id="collapse-btn">Collapse</button>
+    <button id="collapse-btn" onclick="toggleTerminal()">Collapse</button> <!-- Add Collapse Button -->
   </div>
   <script src="{{ "/assets/js/repos.js" | relative_url }}"></script>
   <script src="{{ "/assets/js/script.js" | relative_url }}"></script>
   <script src="{{ "/assets/js/analytics.js" | relative_url }}"></script>
   <script src="{{ "/assets/js/newsletter.js" | relative_url }}"></script>
+  <script>
+    function toggleTerminal() {
+      const terminal = document.getElementById('terminal');
+      if (terminal.style.display === 'none') {
+        terminal.style.display = 'block';
+      } else {
+        terminal.style.display = 'none';
+      }
+    }
+  </script>
 </body>
 </html>

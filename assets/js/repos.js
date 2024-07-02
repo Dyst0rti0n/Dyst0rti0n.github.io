@@ -6,9 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
             data.forEach(repo => {
                 const repoDiv = document.createElement('div');
                 repoDiv.className = 'repo';
-                repoDiv.innerHTML = `
-                    <h3>${repo.name}</h3>
-                `;
+                repoDiv.innerHTML = `<h3>${repo.name}</h3>`;
                 repoDiv.addEventListener('click', () => {
                     window.open(repo.html_url, '_blank');
                 });
@@ -25,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     scrollAmount = 0;
                 }
             }
-            setInterval(scrollCarousel, 20); // Increased interval time to make it faster
+            setInterval(scrollCarousel, 30); // Adjust the interval for smoother scrolling
         })
         .catch(error => console.error('Error fetching repos:', error));
 });
