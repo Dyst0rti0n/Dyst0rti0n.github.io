@@ -13,16 +13,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 reposContainer.appendChild(repoDiv);
             });
 
+            // Duplicate the repos for a seamless loop
+            const repos = document.querySelectorAll('.repo');
+            repos.forEach(repo => {
+                const clone = repo.cloneNode(true);
+                reposContainer.appendChild(clone);
+            });
+
             let scrollAmount = 0;
-            function scrollCarousel() {
-                reposContainer.scrollBy({ left: 1, behavior: 'smooth' });
+            setInterval(() => {
+                reposContainer.scrollBy({ left: 1, behavior: 'smooth' }); // Adjust scroll speed as needed
                 scrollAmount += 1;
-                if (scrollAmount >= reposContainer.scrollWidth - reposContainer.clientWidth) {
-                    reposContainer.scrollLeft = 0;
-                    scrollAmount = 0;
+                if (scrollAmount >= reposContainer.scrollWidth / 2) {
+                  reposContainer.scrollLeft = 0; // Reset scroll to start seamlessly
+                  scrollAmount = 0;
                 }
-            }
-            setInterval(scrollCarousel, 20);
+            }, 20); // Reduced interval for faster speed
 
             // Allow dragging to scroll
             let isDown = false;
