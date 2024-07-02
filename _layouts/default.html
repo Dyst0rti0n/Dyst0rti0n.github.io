@@ -28,25 +28,38 @@
     gtag('js', new Date());
     gtag('config', 'G-NCTW9X1N78');
   </script>
-  <!-- Buy Me a Coffee Button -->
+  <!-- Buy Me a Coffee -->
   <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="dystortion" data-color="#FFDD00" data-emoji="💻" data-font="Comic" data-text="Contribute to new computer" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff"></script>
 </head>
 <body>
   <header>
     <div class="container">
-      <h1 class="glitch" data-text="{{ site.title }}">{{ site.title }}</h1>
+      <div class="header-content">
+        <h1 class="glitch" data-text="{{ site.title }}">{{ site.title }}</h1>
+        <span id="bmc-button"></span>
+      </div>
       <p class="glitch3" data-text="{{ site.description }}">{{ site.description }}</p>
       <nav>
         <ul>
           <li><a href="{{ site.baseurl }}/">Home</a></li>
           <li><a href="{{ site.baseurl }}/about">About</a></li>
           <li><a href="{{ site.baseurl }}/contact">Contact</a></li>
-          <li><a href="https://buymeacoffee.com/dystortion" target="_blank">Support</a></li> <!-- Adding Buy Me a Coffee Button -->
         </ul>
       </nav>
     </div>
   </header>
   <main class="container content">
+    <section class="latest-posts">
+      <h2>Latest Posts</h2>
+      <ul>
+        {% for post in site.posts %}
+          <li>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+            <span>{{ post.date | date: "%B %d, %Y" }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
     {{ content }}
   </main>
   <section id="repos-carousel" class="carousel">
@@ -76,21 +89,10 @@
     <div id="output"></div>
     <input type="text" id="input" autofocus placeholder="Type 'help' for commands">
     <div id="drag-handle">≡</div>
-    <button id="collapse-btn" onclick="toggleTerminal()">Collapse</button> <!-- Add Collapse Button -->
   </div>
   <script src="{{ "/assets/js/repos.js" | relative_url }}"></script>
   <script src="{{ "/assets/js/script.js" | relative_url }}"></script>
   <script src="{{ "/assets/js/analytics.js" | relative_url }}"></script>
   <script src="{{ "/assets/js/newsletter.js" | relative_url }}"></script>
-  <script>
-    function toggleTerminal() {
-      const terminal = document.getElementById('terminal');
-      if (terminal.style.display === 'none') {
-        terminal.style.display = 'block';
-      } else {
-        terminal.style.display = 'none';
-      }
-    }
-  </script>
 </body>
 </html>

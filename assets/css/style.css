@@ -5,12 +5,19 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  font-size: 18px; /* Increased font size */
 }
 
 .container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 header {
@@ -23,7 +30,7 @@ header {
 header h1 {
   margin: 0;
   font-size: 3rem;
-  color: #00ff00;
+  color: #800080; /* Changed to purple */
   position: relative;
   display: inline-block;
   animation: glitch1 2s infinite;
@@ -34,7 +41,7 @@ header h1 {
 header p {
   margin: 0.5rem 0;
   color: #66ff66;
-  font-size: 1.2rem;
+  font-size: 1.5rem; /* Increased font size */
   max-width: 100%;
   overflow-wrap: break-word;
 }
@@ -47,13 +54,14 @@ nav ul {
 }
 
 nav ul li {
-  margin: 0 1rem;
+  margin: 0 1.5rem;
 }
 
 nav ul li a {
   color: #00ff00;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1.2rem; /* Increased font size */
   transition: color 0.3s;
 }
 
@@ -64,6 +72,7 @@ nav ul li a:hover {
 main {
   padding: 2rem 0;
   margin-bottom: 6rem; /* Ensure space for terminal */
+  text-align: center; /* Center align the main section */
 }
 
 .content {
@@ -92,6 +101,37 @@ main {
   text-decoration: underline;
 }
 
+.latest-posts h2 {
+  font-size: 2rem; /* Increased font size */
+}
+
+.latest-posts ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.latest-posts li {
+  margin: 1rem 0;
+  width: 100%;
+  max-width: 800px; /* Ensure posts stretch across the screen */
+  text-align: left;
+}
+
+.latest-posts li a {
+  font-size: 1.5rem; /* Increased font size */
+  color: #00ffff;
+  text-decoration: none;
+}
+
+.latest-posts li span {
+  display: block;
+  color: #ffffff;
+  font-size: 1rem; /* Increased font size */
+}
+
 footer {
   background: #1e1e1e;
   color: #66ff66;
@@ -107,53 +147,12 @@ footer p {
   margin: 0;
 }
 
-.home h2 {
-  color: #ff00ff;
-  animation: glitch1 1s infinite;
-}
-
-.home p {
-  color: #66ff66;
-}
-
-.home h3 {
-  color: #ff00ff;
-  margin-top: 2rem;
-}
-
-.home ul {
-  list-style: none;
-  padding: 0;
-}
-
-.home ul li {
-  margin: 0.5rem 0;
-}
-
-.home ul li a {
-  color: #00ffff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-.home ul li a:hover {
-  color: #ff00ff;
-  text-decoration: underline;
-}
-
-.home ul li span {
-  color: #66ff66;
-  font-size: 0.9rem;
-}
-
-/* Terminal styling */
 #terminal {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 10%; /* Reduced initial height */
+  height: 30%;
   max-height: 50%;
   border-top: 1px solid #00ff00;
   background: #1a1a1a;

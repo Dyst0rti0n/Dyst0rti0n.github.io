@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 reposContainer.appendChild(repoDiv);
             });
 
-            // Automatic scrolling
             let scrollAmount = 0;
             function scrollCarousel() {
                 reposContainer.scrollBy({ left: 1, behavior: 'smooth' });
@@ -23,9 +22,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     scrollAmount = 0;
                 }
             }
-            setInterval(scrollCarousel, 30); // Adjust the interval for smoother scrolling
+            setInterval(scrollCarousel, 20);
 
-            // Enable drag scrolling
+            // Allow dragging to scroll
             let isDown = false;
             let startX;
             let scrollLeft;
@@ -51,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (!isDown) return;
                 e.preventDefault();
                 const x = e.pageX - reposContainer.offsetLeft;
-                const walk = (x - startX) * 3; // Scroll-fast
+                const walk = (x - startX) * 1.5; 
                 reposContainer.scrollLeft = scrollLeft - walk;
             });
         })
