@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     scrollAmount = 0;
                 }
             }
-            setInterval(scrollCarousel, 10);
+            setInterval(scrollCarousel, 20); // Increased interval time to make it faster
         })
         .catch(error => console.error('Error fetching repos:', error));
 });
