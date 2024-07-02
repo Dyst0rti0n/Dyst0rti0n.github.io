@@ -24,6 +24,36 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
             setInterval(scrollCarousel, 30); // Adjust the interval for smoother scrolling
+
+            // Enable drag scrolling
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            reposContainer.addEventListener('mousedown', (e) => {
+                isDown = true;
+                reposContainer.classList.add('active');
+                startX = e.pageX - reposContainer.offsetLeft;
+                scrollLeft = reposContainer.scrollLeft;
+            });
+
+            reposContainer.addEventListener('mouseleave', () => {
+                isDown = false;
+                reposContainer.classList.remove('active');
+            });
+
+            reposContainer.addEventListener('mouseup', () => {
+                isDown = false;
+                reposContainer.classList.remove('active');
+            });
+
+            reposContainer.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - reposContainer.offsetLeft;
+                const walk = (x - startX) * 3; // Scroll-fast
+                reposContainer.scrollLeft = scrollLeft - walk;
+            });
         })
         .catch(error => console.error('Error fetching repos:', error));
 });
