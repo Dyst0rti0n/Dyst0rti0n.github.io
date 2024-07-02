@@ -1,3 +1,4 @@
+/* General body styling*/
 body {
   font-family: 'Share Tech Mono', monospace;
   background-color: #121212;
@@ -5,21 +6,24 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  font-size: 22px; /* Increased font size */
+  font-size: 22px;
 }
 
+/* Container for centering content */
 .container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
+/* Header content layout */
 .header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* Header styling */
 header {
   background: #1e1e1e;
   padding: 1.5rem 0;
@@ -30,7 +34,7 @@ header {
 header h1 {
   margin: 0;
   font-size: 4.4rem;
-  color: #800080; /* Changed to purple */
+  color: #560756;
   position: relative;
   display: inline-block;
   animation: glitch1 2s infinite;
@@ -41,11 +45,12 @@ header h1 {
 header p {
   margin: 0.5rem 0;
   color: #b12793;
-  font-size: 1.8rem; /* Increased font size */
+  font-size: 1.8rem;
   max-width: 100%;
   overflow-wrap: break-word;
 }
 
+/* Navigation styling */
 nav ul {
   list-style: none;
   padding: 0;
@@ -61,7 +66,7 @@ nav ul li a {
   color: #00ff00;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.4rem; /* Increased font size */
+  font-size: 1.8rem;
   transition: color 0.3s;
 }
 
@@ -69,30 +74,32 @@ nav ul li a:hover {
   color: #ff00ff;
 }
 
+/* Main content styling*/
 main {
   padding: 2rem 0;
-  margin-bottom: 8rem; /* Ensure space for terminal */
-  text-align: center; /* Center align the main section */
+  margin-bottom: 8rem;
+  text-align: center;
 }
 
+/* Content styling  */
 .content {
-  background-color: #1e1e1e; /* Dark background for better readability */
-  color: #ffffff; /* White text for better readability */
+  background-color: #1e1e1e;
+  color: #ffffff;
   padding: 1rem 2rem;
   border-radius: 8px;
   margin: 1rem 0;
 }
 
 .content h2, .content h3, .content h4, .content h5, .content h6 {
-  color: #00ff00; /* Keep headers in the hacker theme color */
+  color: #00ff00;
 }
 
 .content p, .content li, .content code {
-  color: #ffffff; /* White text for better readability */
+  color: #ffffff;
 }
 
 .content a {
-  color: #2079b4; /* Blue links for better visibility */
+  color: #2079b4;
   text-decoration: none;
 }
 
@@ -102,7 +109,7 @@ main {
 }
 
 .latest-posts h2 {
-  font-size: 3rem; /* Increased font size */
+  font-size: 3rem;
 }
 
 .latest-posts ul {
@@ -116,12 +123,12 @@ main {
 .latest-posts li {
   margin: 1rem 0;
   width: 100%;
-  max-width: 800px; /* Ensure posts stretch across the screen */
+  max-width: 800px;
   text-align: center;
 }
 
 .latest-posts li a {
-  font-size: 1.7rem; /* Increased font size */
+  font-size: 2rem;
   color: #00ffff;
   text-decoration: none;
 }
@@ -129,7 +136,7 @@ main {
 .latest-posts li span {
   display: block;
   color: #ffffff;
-  font-size: 1.2rem; /* Increased font size */
+  font-size: 1.5rem;
 }
 
 footer {
@@ -161,8 +168,8 @@ footer p {
   padding: 1rem;
   overflow-y: auto;
   box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.5);
-  z-index: -5; /* Ensure terminal is above footer */
-  resize: vertical; /* Allow resizing */
+  z-index: 5;
+  resize: vertical;
   transition: height 0.3s ease;
 }
 
@@ -180,7 +187,7 @@ footer p {
   position: absolute;
   top: -10px;
   left: 0;
-  z-index: 5; /* Ensure handle is above terminal content */
+  z-index: 8; 
   text-align: center;
   color: #fff;
   line-height: 10px;
@@ -198,6 +205,7 @@ footer p {
   padding: 5px;
 }
 
+/* Typing animation for terminal input */
 @keyframes typing {
   from { width: 0; }
   to { width: 100%; }
@@ -208,6 +216,7 @@ footer p {
   50% { border-color: #00ff00; }
 }
 
+/* Terminal input styling */
 #input {
   width: 100%;
   border: none;
@@ -365,17 +374,17 @@ footer p {
 
 .carousel-container {
   max-width: 100%;
-  height: 230px; /* Increased height for the container */
+  height: 230px;
   overflow-x: auto;
   white-space: nowrap;
-  scrollbar-width: none; /* Hide scrollbar for Firefox */
-  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
-  overflow-y: hidden; /* Prevent vertical scrolling */
-  cursor: grab; /* Cursor change for dragging */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow-y: hidden;
+  cursor: grab;
 }
 
 .carousel-container::-webkit-scrollbar {
-  display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+  display: none;
 }
 
 .repo {
@@ -386,8 +395,8 @@ footer p {
   margin: 0 10px;
   transition: transform 0.3s ease;
   cursor: pointer;
-  width: 300px; /* Adjusted width */
-  word-wrap: break-word; /* Ensure text wraps */
+  width: 300px;
+  word-wrap: break-word;
 }
 
 .repo:hover {
@@ -404,7 +413,7 @@ footer p {
   }
 
   .repo {
-    width: 200px; /* Adjusted width for smaller screens */
+    width: 200px;   
   }
 
   #terminal {
