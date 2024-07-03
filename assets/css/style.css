@@ -1,422 +1,57 @@
-/* General body styling*/
 body {
-  font-family: 'Share Tech Mono', monospace;
-  background-color: #121212;
-  color: #ffffff;
+  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  font-size: 22px;
-}
-
-/* Container for centering content */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Header content layout */
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Header styling */
-header {
-  background: #1e1e1e;
-  padding: 1.5rem 0;
-  text-align: center;
-  border-bottom: 2px solid #444;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 4.4rem;
-  color: #560756;
-  position: relative;
-  display: inline-block;
-  animation: glitch1 2s infinite;
-  max-width: 100%;
-  overflow-wrap: break-word;
-}
-
-header p {
-  margin: 0.5rem 0;
-  color: #b12793;
-  font-size: 1.8rem;
-  max-width: 100%;
-  overflow-wrap: break-word;
-}
-
-/* Navigation styling */
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-}
-
-nav ul li {
-  margin: 0 2rem;
-}
-
-nav ul li a {
-  color: #00ff00;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.8rem;
-  transition: color 0.3s;
-}
-
-nav ul li a:hover {
-  color: #ff00ff;
-}
-
-/* Main content styling*/
-main {
-  padding: 2rem 0;
-  margin-bottom: 8rem;
-  text-align: left;
-}
-
-/* Content styling  */
-.content {
-  background-color: #1e1e1e;
-  color: #ffffff;
-  padding: 1rem 2rem;
-  border-radius: 8px;
-  margin: 1rem 0;
-}
-
-.content h2, .content h3, .content h4, .content h5, .content h6 {
-  color: #00ff00;
-}
-
-.content p, .content li, .content code {
-  color: #ffffff;
-}
-
-.content a {
-  color: #2079b4;
-  text-decoration: none;
-}
-
-.content a:hover {
-  color: #005799;
-  text-decoration: underline;
-}
-
-.latest-posts h2 {
-  font-size: 3rem;
-}
-
-.latest-posts ul {
-  list-style: none;
   padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #f4f4f4;
+  color: #333;
 }
 
-.latest-posts li {
-  margin: 1rem 0;
-  width: 100%;
-  max-width: 800px;
+header {
   text-align: center;
+  margin-bottom: 50px;
 }
 
-.latest-posts li a {
-  font-size: 2rem;
-  color: #00ffff;
-  text-decoration: none;
-}
-
-.latest-posts li span {
-  display: block;
-  color: #ffffff;
-  font-size: 1.5rem;
-}
-
-footer {
-  background: #1e1e1e;
-  color: #66ff66;
-  text-align: center;
-  padding: 1rem 0;
-  border-top: 6px solid #444;
-  width: 100%;
-  position: relative;
-  z-index: 2;
-}
-
-footer p {
+header h1 {
+  font-size: 2.5em;
   margin: 0;
 }
 
-#terminal {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 20%;
-  max-height: 40%;
-  border-top: 3px solid #00ff00;
-  background: #1a1a1a;
-  color: #00ff00;
-  font-family: 'Share Tech Mono', monospace;
-  padding: 1rem;
-  overflow-y: auto;
-  box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.5);
-  z-index: 5;
-  resize: vertical;
-  transition: height 0.3s ease;
+header p {
+  font-size: 1.2em;
+  color: #555;
 }
 
-#output {
-  padding: 0.5rem 0;
-  white-space: pre-wrap;
-  word-wrap: break-word;
+.buttons-container {
+  display: flex;
+  gap: 20px;
 }
 
-#drag-handle {
-  width: 100%;
-  height: 20px;
-  background: #444;
-  cursor: ns-resize;
-  position: absolute;
-  top: -10px;
-  left: 0;
-  z-index: 8; 
-  text-align: center;
-  color: #fff;
-  line-height: 10px;
-  font-size: 12px;
-}
-
-#collapse-btn {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  background: #444;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  padding: 5px;
-}
-
-/* Typing animation for terminal input */
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent; }
-  50% { border-color: #00ff00; }
-}
-
-/* Terminal input styling */
-#input {
-  width: 100%;
-  border: none;
-  background: none;
-  color: #00ff00;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1rem;
-  outline: none;
-  border-right: .15em solid #00ff00;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
-}
-
-#input::placeholder {
-  color: #00ff00;
-}
-
-#output div::before {
-  content: ">> ";
-  color: #ff00ff;
-}
-
-/* Glitch animations */
-@keyframes glitch1 {
-  0% {
-    clip: rect(44px, 9999px, 56px, 0);
-  }
-  10% {
-    clip: rect(10px, 9999px, 80px, 0);
-  }
-  20% {
-    clip: rect(80px, 9999px, 20px, 0);
-  }
-  30% {
-    clip: rect(40px, 9999px, 40px, 0);
-  }
-  40% {
-    clip: rect(60px, 9999px, 40px, 0);
-  }
-  50% {
-    clip: rect(40px, 9999px, 20px, 0);
-  }
-  60% {
-    clip: rect(30px, 9999px, 50px, 0);
-  }
-  70% {
-    clip: rect(20px, 9999px, 30px, 0);
-  }
-  80% {
-    clip: rect(50px, 9999px, 50px, 0);
-  }
-  90% {
-    clip: rect(30px, 9999px, 30px, 0);
-  }
-  100% {
-    clip: rect(44px, 9999px, 56px, 0);
-  }
-}
-
-@keyframes glitch3 {
-  0%, 100% {
-    clip: rect(44px, 9999px, 56px, 0);
-  }
-  10% {
-    clip: rect(10px, 9999px, 80px, 0);
-  }
-  20% {
-    clip: rect(80px, 9999px, 20px, 0);
-  }
-  30% {
-    clip: rect(40px, 9999px, 40px, 0);
-  }
-  40% {
-    clip: rect(60px, 9999px, 40px, 0);
-  }
-  50% {
-    clip: rect(40px, 9999px, 20px, 0);
-  }
-  60% {
-    clip: rect(30px, 9999px, 50px, 0);
-  }
-  70% {
-    clip: rect(20px, 9999px, 30px, 0);
-  }
-  80% {
-    clip: rect(50px, 9999px, 50px, 0);
-  }
-  90% {
-    clip: rect(30px, 9999px, 30px, 0);
-  }
-}
-
-.glitch:before,
-.glitch:after,
-.glitch2:before,
-.glitch2:after,
-.glitch3:before,
-.glitch3:after {
-  content: attr(data-text);
-  position: absolute;
-  left: 0;
-  right: 0;
-}
-
-.glitch:before {
-  left: 2px;
-  text-shadow: -2px 0 red;
-  clip: rect(44px, 9999px, 56px, 0);
-  animation: glitch1 2s infinite;
-}
-
-.glitch:after {
-  left: -2px;
-  text-shadow: -2px 0 blue;
-  clip: rect(44px, 9999px, 56px, 0);
-  animation: glitch1 2s infinite;
-}
-
-.glitch2:before {
-  left: 2px;
-  text-shadow: -2px 0 red;
-  clip: rect(44px, 9999px, 56px, 0);
-  animation: glitch3 2s infinite;
-}
-
-.glitch2:after {
-  left: -2px;
-  text-shadow: -2px 0 blue;
-  clip: rect(44px, 9999px, 56px, 0);
-  animation: glitch3 2s infinite;
-}
-
-.glitch3:before {
-  left: 2px;
-  text-shadow: -2px 0 red;
-  clip: rect(44px, 9999px, 56px, 0);
-  animation: glitch3 2s infinite;
-}
-
-.glitch3:after {
-  left: -2px;
-  text-shadow: -2px 0 blue;
-  clip: rect(44px, 9999px, 56px, 0);
-  animation: glitch3 2s infinite;
-}
-
-/* Carousel styling */
-.carousel {
-  background: #1e1e1e;
-  color: #66ff66;
-  padding: 2rem 0;
-  text-align: center;
-}
-
-.carousel-container {
-  max-width: 100%;
-  height: 230px;
-  overflow-x: auto;
-  white-space: nowrap;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  overflow-y: hidden;
-  cursor: grab;
-}
-
-.carousel-container::-webkit-scrollbar {
-  display: none;
-}
-
-.repo {
+.button {
   display: inline-block;
-  background: #121212;
-  border: 1px solid #00ff00;
-  padding: 1rem;
-  margin: 0 10px;
+  padding: 20px 40px;
+  font-size: 1.5em;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
   transition: transform 0.3s ease;
-  cursor: pointer;
-  width: 300px;
-  word-wrap: break-word;
 }
 
-.repo:hover {
-  transform: scale(1.05);
+.button:hover {
+  transform: scale(1.1);
+  background-color: #0056b3;
 }
 
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 2rem;
-  }
-
-  header p {
-    font-size: 1rem;
-  }
-
-  .repo {
-    width: 200px;   
-  }
-
-  #terminal {
-    height: 5%;
-  }
+footer {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #777;
 }
