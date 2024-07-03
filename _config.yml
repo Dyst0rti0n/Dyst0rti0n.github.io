@@ -1,10 +1,10 @@
 # Site settings
 title: Dystortion's Academy
 email: dystorti0n@proton.me
-description:  Exploring advancements of cybersecurity and programming, whilst providing learning modules.
+description: Exploring advancements of cybersecurity and programming, whilst providing learning modules.
 baseurl: ""
-url: "https://dyst0rti0n-test.github.io" 
-github_username:  Dyst0rti0n
+url: "https://dyst0rti0n.github.io"
+github_username: Dyst0rti0n
 author: Dyst0rti0n
 
 # Build settings
@@ -44,6 +44,15 @@ data_dir: _data
 # Paths to search for Jekyll assets
 assets:
   sources:
-    - _assets/css
-    - _assets/js
-    - _assets/images
+    - assets/css
+    - assets/js
+    - assets/images
+
+# Navigation settings
+navigation:
+  - text: "Home"
+    url: "/"
+  - text: "Blog"
+    url: "/blog"
+  - text: "Learning Academy"
+    url: "/academy"
