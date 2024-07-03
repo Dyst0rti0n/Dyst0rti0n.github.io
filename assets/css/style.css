@@ -29,19 +29,25 @@ header p {
 .buttons-container {
   display: flex;
   gap: 20px;
+  justify-content: center;
 }
 
 .button {
   display: inline-block;
-  padding: 20px 40px;
+  width: 200px;
+  height: 200px;
+  padding: 20px;
   font-size: 1.5em;
   color: #fff;
   background-color: #007bff;
   border: none;
-  border-radius: 5px;
+  border-radius: 20px;
   text-align: center;
   text-decoration: none;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .button:hover {
