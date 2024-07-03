@@ -44,10 +44,10 @@ header p {
 .button {
   display: inline-block;
   width: 100%;
-  max-width: 300px;
-  height: 150px;
+  max-width: 350px;
+  height: 200px;
   padding: 20px;
-  font-size: 1.2em;
+  font-size: 1.5em;
   color: #fff;
   background-color: rgba(0, 123, 255, 0.8);
   border: none;
