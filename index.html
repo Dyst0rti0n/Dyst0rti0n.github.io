@@ -1,19 +1,51 @@
----
-layout: default
-title: "Home"
----
-
-<header>
-    <h1>Dyst0rti0n's Blog and Learning Platform</h1>
-    <p>Exploring Go and Cybersecurity</p>
-</header>
-<main>
-    <div class="buttons-container">
-        <a href="/blog" class="button" style="background-image: url('/assets/images/blog-button.png');">
-            <span class="button-text">Latest Blogs</span>
-        </a>
-        <a href="/academy" class="button" style="background-image: url('/assets/images/academy-button.png');">
-            <span class="button-text">Learning Academy</span>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Dyst0rti0n's Blog and Learning Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/navbar.css">
+</head>
+<body>
+    <div class="navbar" id="navbar">
+        <a href="/" class="active">Home</a>
+        <div class="navbar-right">
+            <a href="/blog">Blog</a>
+            <a href="/academy">Academy</a>
+            <a href="/about">About</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+            &#9776;
         </a>
     </div>
-</main>
+    <header>
+        <h1>Dyst0rti0n's Blog and Learning Platform</h1>
+        <p>Exploring Go and Cybersecurity</p>
+    </header>
+    <main>
+        <div class="buttons-container">
+            <a href="/blog" class="button" style="background-image: url('/assets/images/blog-button.png');">
+                <span class="button-text">Latest Blogs</span>
+            </a>
+            <a href="/academy" class="button" style="background-image: url('/assets/images/academy-button.png');">
+                <span class="button-text">Learning Academy</span>
+            </a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Dyst0rti0n. All rights reserved.</p>
+    </footer>
+    <script>
+        function toggleNavbar() {
+            var x = document.getElementById("navbar");
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbar";
+            }
+        }
+    </script>
+</body>
+</html>
