@@ -2,6 +2,7 @@
 layout: post
 title: "Crafting an Advanced and Inconspicuous C2 Infrastructure"
 date: 2024-06-25
+image: /assets/images/first-c2-post.jpg
 categories: security c2
 ---
 
