@@ -1,14 +1,20 @@
-body {
-  font-family: Arial, sans-serif;
+/* Reset some default browser styles */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #f06, #aaf);
+  color: #333;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: #f4f4f4;
-  color: #333;
+  padding: 20px;
 }
 
 header {
@@ -17,47 +23,52 @@ header {
 }
 
 header h1 {
-  font-size: 2.5em;
-  margin: 0;
+  font-size: 3em;
+  margin-bottom: 10px;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 header p {
-  font-size: 1.2em;
-  color: #555;
+  font-size: 1.5em;
+  color: #eee;
 }
 
 .buttons-container {
   display: flex;
-  gap: 20px;
+  gap: 30px;
   justify-content: center;
 }
 
 .button {
   display: inline-block;
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
   padding: 20px;
-  font-size: 1.5em;
+  font-size: 1.2em;
   color: #fff;
-  background-color: #007bff;
+  background-color: rgba(0, 123, 255, 0.8);
   border: none;
-  border-radius: 20px;
+  border-radius: 25px;
   text-align: center;
   text-decoration: none;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
 }
 
 .button:hover {
   transform: scale(1.1);
-  background-color: #0056b3;
+  background-color: rgba(0, 123, 255, 1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 footer {
   margin-top: 50px;
   text-align: center;
   font-size: 0.9em;
-  color: #777;
+  color: #eee;
 }
