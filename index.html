@@ -6,10 +6,8 @@
     <title>Welcome to Dyst0rti0n's Blog and Learning Platform</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css/navbar.css">
 </head>
 <body>
-    {% include navbar.html %}
     <header>
         <h1>Dyst0rti0n's Blog and Learning Platform</h1>
         <p>Exploring Go and Cybersecurity</p>
@@ -34,15 +32,5 @@
             <img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee">
         </a>
     </footer>
-    <script>
-        function toggleNavbar() {
-            var x = document.getElementById("navbar");
-            if (x.className === "navbar") {
-                x.className += " responsive";
-            } else {
-                x.className = "navbar";
-            }
-        }
-    </script>
 </body>
 </html>
