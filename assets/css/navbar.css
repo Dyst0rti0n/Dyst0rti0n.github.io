@@ -9,6 +9,7 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
+  margin-top: 60px; /* Add top margin to avoid overlap with navbar */
 }
 
 .navbar {
@@ -84,8 +85,4 @@ body {
     flex-direction: column;
     width: 100%;
   }
-}
-
-body {
-  margin-top: 60px;
 }
