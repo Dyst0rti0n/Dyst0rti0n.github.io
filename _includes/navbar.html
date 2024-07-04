@@ -1,9 +1,9 @@
 <div class="navbar" id="navbar">
     <div class="navbar-center">
-        <a href="/" class="active">Home</a>
-        <a href="/blog">Blog</a>
-        <a href="/academy">Academy</a>
-        <a href="/about">About</a>
+        <a href="/" class="{% if page.url == "/" %}active{% endif %}">Home</a>
+        <a href="/blog" class="{% if page.url contains 'blog' %}active{% endif %}">Blog</a>
+        <a href="/academy" class="{% if page.url contains 'academy' %}active{% endif %}">Academy</a>
+        <a href="/about" class="{% if page.url contains 'about' %}active{% endif %}">About</a>
         <a class="bmc-button-nav" href="https://www.buymeacoffee.com/dystortion" target="_blank">
             <img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee">
             <span>Buy me a coffee</span>
