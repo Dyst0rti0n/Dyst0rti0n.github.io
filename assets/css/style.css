@@ -282,6 +282,8 @@ footer {
   }
 }
 
+
+/* Buy Me a Coffee Button Styles */
 .bmc-button {
   display: inline-flex;
   align-items: center;
@@ -303,4 +305,19 @@ footer {
 .bmc-button:hover {
   background-color: #444444;
   color: #ffdd00;
+}
+
+.bmc-button-nav img,
+.bmc-button-footer img {
+  height: 30px;
+}
+
+.bmc-button-nav {
+  display: inline-block;
+  padding: 0;
+}
+
+.bmc-button-footer {
+  display: inline-block;
+  padding: 0;
 }
