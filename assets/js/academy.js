@@ -13,10 +13,4 @@ document.addEventListener('DOMContentLoaded', function () {
         module2Link.setAttribute('href', '/academy/module2/lesson1');
         module2Link.removeAttribute('onclick');
     }
-
-    // Listen for completion of module 1
-    module1Link.addEventListener('click', function () {
-        // Simulate module 1 completion
-        localStorage.setItem('module1Completed', true);
-    });
 });
