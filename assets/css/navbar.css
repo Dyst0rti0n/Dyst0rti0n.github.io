@@ -7,7 +7,8 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  margin-top: 60px; /* Add a margin to prevent overlap with the navbar */
+  margin: 0;
+  padding: 0;
 }
 
 .navbar {
@@ -17,7 +18,7 @@ body {
   top: 0;
   width: 100%;
   z-index: 1000;
-  height: 60px; /* Adjust height as needed */
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;

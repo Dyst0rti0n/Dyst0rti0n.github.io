@@ -10,7 +10,7 @@ body {
   background: linear-gradient(135deg, #f06, #aaf);
   color: #333;
   padding: 20px;
-  margin: 0;
+  margin-top: 60px;
 }
 
 header {
@@ -269,15 +269,38 @@ footer {
 
 @media screen and (max-width: 768px) {
   header h1 {
-    font-size: 2em; /* Further reduced for mobile */
+    font-size: 2em;
   }
   
   header p {
-    font-size: 1.2em; /* Further reduced for mobile */
+    font-size: 1.2em;
   }
   
   .button {
     height: 150px;
     font-size: 1.2em;
   }
+}
+
+.bmc-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #ffffff;
+  background-color: #000000;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.bmc-button img {
+  margin-right: 10px;
+  height: 30px;
+}
+
+.bmc-button:hover {
+  background-color: #444444;
+  color: #ffdd00;
 }
