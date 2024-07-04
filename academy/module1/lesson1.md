@@ -63,11 +63,11 @@ Earn badges for completing modules and share them in your GitHub profile!
 
 ![Beginner Badge](../assets/images/beginner_badge.png)
 
-<button id="complete-module1">Complete Module 1</button>
+```<button id="complete-module1">Complete Module 1</button>
 
 <script>
     document.getElementById('complete-module1').addEventListener('click', function() {
         localStorage.setItem('module1Completed', true);
         alert('Module 1 completed! You can now access Module 2.');
     });
-</script>
+</script>```
