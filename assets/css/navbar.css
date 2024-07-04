@@ -56,6 +56,25 @@ body {
   display: none;
 }
 
+.bmc-button-nav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-size: 1em;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.bmc-button-nav img {
+  margin-right: 5px;
+  height: 20px; /* Adjusted image height */
+}
+
+.bmc-button-nav span {
+  vertical-align: middle;
+}
+
 @media screen and (max-width: 768px) {
   .navbar a:not(:first-child), .navbar-center {
     display: none;
@@ -88,14 +107,4 @@ body {
     display: block;
     text-align: left;
   }
-}
-
-.bmc-button-nav img {
-  vertical-align: middle;
-  margin-bottom: -5px;
-}
-
-.bmc-button-nav span {
-  vertical-align: middle;
-  margin-top: -5px;
 }
