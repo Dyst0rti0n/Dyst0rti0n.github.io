@@ -22,9 +22,16 @@ body {
   height: 60px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center; /* Center the content */
   padding: 0 20px;
   transition: background-color 0.3s;
+}
+
+.navbar-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Adjust spacing between items */
 }
 
 .navbar a {
@@ -49,13 +56,8 @@ body {
   display: none;
 }
 
-.navbar-right {
-  display: flex;
-  gap: 10px;
-}
-
 @media screen and (max-width: 768px) {
-  .navbar a:not(:first-child), .navbar-right {
+  .navbar a:not(:first-child), .navbar-center {
     display: none;
   }
   .navbar a.icon {
@@ -75,14 +77,15 @@ body {
     right: 0;
     top: 0;
   }
+  .navbar.responsive .navbar-center {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
   .navbar.responsive a {
     float: none;
     display: block;
     text-align: left;
-  }
-  .navbar.responsive .navbar-right {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
   }
 }

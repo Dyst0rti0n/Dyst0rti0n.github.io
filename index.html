@@ -9,20 +9,14 @@
     <link rel="stylesheet" href="/assets/css/navbar.css">
 </head>
 <body>
-    <div class="navbar" id="navbar">
-        <a href="/" class="active">Home</a>
-        <div class="navbar-right">
-            <a href="/blog">Blog</a>
-            <a href="/academy">Academy</a>
-            <a href="/about">About</a>
-        </div>
-        <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
-            &#9776;
-        </a>
-    </div>
+    {% include navbar.html %}
     <header>
         <h1>Dyst0rti0n's Blog and Learning Platform</h1>
         <p>Exploring Go and Cybersecurity</p>
+        <a class="bmc-button" href="https://www.buymeacoffee.com/dystortion" target="_blank">
+            <img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee">
+            <span>Buy me a coffee</span>
+        </a>
     </header>
     <main>
         <div class="buttons-container">
@@ -36,6 +30,9 @@
     </main>
     <footer>
         <p>&copy; 2024 Dyst0rti0n. All rights reserved.</p>
+        <a class="bmc-button-footer" href="https://www.buymeacoffee.com/dystortion" target="_blank">
+            <img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee">
+        </a>
     </footer>
     <script>
         function toggleNavbar() {
