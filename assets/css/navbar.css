@@ -89,3 +89,13 @@ body {
     text-align: left;
   }
 }
+
+.bmc-button-nav img {
+  vertical-align: middle;
+  margin-bottom: -5px;
+}
+
+.bmc-button-nav span {
+  vertical-align: middle;
+  margin-top: -5px;
+}
