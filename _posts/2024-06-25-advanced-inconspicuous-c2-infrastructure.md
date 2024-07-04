@@ -52,6 +52,7 @@ server {
 }
 ```
 
+
 #### 4. Implement Encrypted Command and Control
 - **Commands Endpoint**: Create an endpoint for fetching commands.
 - **Webhook Endpoint**: Create an endpoint for receiving data and status updates.
@@ -130,6 +131,7 @@ def get_latest_post(feed_url):
 ```
 [See the full script on GitHub](https://github.com/Dyst0rti0n/blog-scripts/tree/main/c2-scripts/medium-fetcher)
 
+
 #### 3. Google Sheets: Spreadsheet C2 Mastery
 Google Sheets, a ubiquitous tool for collaboration and data storage, can also serve as an inconspicuous C2 server. By using the Google Sheets API, you can store commands and fetch them as needed.
 
@@ -144,7 +146,6 @@ Google Sheets, a ubiquitous tool for collaboration and data storage, can also se
 3. **Fetch Commands**: Use the Google Sheets API to retrieve commands.
 
 *Example: Fetching Commands from Google Sheets*
-
 
 ```python
 import gspread
@@ -171,6 +172,7 @@ def get_latest_command(sheet_url, creds_json):
 ```
 
 [See the full script on GitHub](https://github.com/Dyst0rti0n/blog-scripts/tree/main/c2-scripts/google-sheets)
+
 
 ### Conclusion
 In an age where cybersecurity measures are becoming increasingly sophisticated, it's essential to think outside the box to stay ahead. Leveraging platforms like YouTube, Medium, and Google Sheets not only provides a cost-effective C2 infrastructure but also helps maintain a low profile. These methods allow your operations to blend seamlessly into the vast digital landscape, reducing the risk of detection.
