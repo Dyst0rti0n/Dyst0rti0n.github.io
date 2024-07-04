@@ -38,6 +38,9 @@ sass:
 includes_dir: _includes
 layouts_dir: _layouts
 
+include:
+  - _includes
+
 # Paths to search for Jekyll data files
 data_dir: _data
 
