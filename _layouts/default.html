@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/navbar.css">
-    <link rel="stylesheet" href="/assets/css/post.css">
 </head>
 <body>
     {% include navbar.html %}
@@ -20,13 +19,14 @@
             <img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee">
         </a>
     </footer>
+    <script src="/assets/js/navbar.js"></script>
     <script>
         function toggleNavbar() {
-            var x = document.getElementById("navbar");
-            if (x.className === "navbar") {
-                x.className += " responsive";
+            var x = document.getElementById("navbar-center");
+            if (x.style.display === "flex") {
+                x.style.display = "none";
             } else {
-                x.className = "navbar";
+                x.style.display = "flex";
             }
         }
     </script>
