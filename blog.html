@@ -3,18 +3,20 @@ layout: default
 title: "Latest Blogs"
 ---
 
-<h1>Latest Blogs</h1>
-<div class="blog-container">
-    {% for post in site.posts %}
-    <a href="{{ post.url }}" class="blog-card-link">
-        <div class="blog-card">
-            <img src="{{ post.image }}" alt="{{ post.title }}">
-            <div class="blog-card-content">
-                <h2 class="blog-card-title">{{ post.title }}</h2>
-                <p class="blog-card-date">{{ post.date | date: "%B %d, %Y" }}</p>
-                <p class="blog-card-excerpt">{{ post.excerpt | truncate: 100 }}</p>
+<div class="page-container">
+    <h1 class="page-title">Latest Blogs</h1>
+    <div class="blog-container">
+        {% for post in site.posts %}
+        <a href="{{ post.url }}" class="blog-card-link">
+            <div class="blog-card">
+                <img src="{{ post.image }}" alt="{{ post.title }}">
+                <div class="blog-card-content">
+                    <h2 class="blog-card-title">{{ post.title }}</h2>
+                    <p class="blog-card-date">{{ post.date | date: "%B %d, %Y" }}</p>
+                    <p class="blog-card-excerpt">{{ post.excerpt | truncate: 100 }}</p>
+                </div>
             </div>
-        </div>
-    </a>
-    {% endfor %}
+        </a>
+        {% endfor %}
+    </div>
 </div>
