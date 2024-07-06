@@ -42,4 +42,4 @@
 
 **Practical Task**: Create a glossary of terms and provide examples.
 
-[Continue to Module 2](chapter2.html)
+[Continue to Module 2](../module2/lesson2.md)
