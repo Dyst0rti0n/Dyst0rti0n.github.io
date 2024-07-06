@@ -61,7 +61,7 @@ Use [Repl.it](https://repl.it) or similar services to create live coding exercis
 
 Earn badges for completing modules and share them in your GitHub profile!
 
-![Beginner Badge](../../assets/images/beginner_badge.jpg)
+![Beginner Badge](../../../assets/images/golang/beginner_badge.jpg)
 
 <button id="complete-module1">Complete Module 1</button>
 
