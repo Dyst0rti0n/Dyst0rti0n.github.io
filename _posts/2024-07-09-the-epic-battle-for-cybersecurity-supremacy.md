@@ -83,7 +83,7 @@ Instances where AI-driven security systems face off against AI-powered attacks c
 **Example: AI vs. AI in the 2023 DEF CON CTF**
 During the DEF CON Capture The Flag (CTF) competition in 2023, AI systems were pitted against each other in a series of hacking and defending challenges. This duel demonstrated the rapid advancements in both offensive and defensive AI technologies, emphasising the escalating arms race in cybersecurity.
 
-![AI Cybersecurity Showdowns](/Dyst0rti0n.github.io/assets/images/blogs/ai-battle/ai-colosseum-battle.jpg)
+![AI Cybersecurity Showdowns](/assets/images/blogs/ai-battle/ai-colosseum-battle.jpg)
 
 ### Conclusion
 
