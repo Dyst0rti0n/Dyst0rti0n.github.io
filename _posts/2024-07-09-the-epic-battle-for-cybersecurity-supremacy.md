@@ -11,7 +11,7 @@ In a world where data is the new gold and cyber threats lurk in every digital sh
 
 Imagine a world where cybercriminals deploy AI as their secret weapon, launching sophisticated and nearly undetectable attacks. Think of a rogue AI learning its tricks from binge-watching "Mr. Robot" and deciding it can do better. *It can't, Elliot is elite*
 
-![AI-Powered Cyber Attacks](/Dyst0rti0n.github.io/assets/images/blogs/ai-battle/ai-powered-cyber-attacks.jpg)
+![AI-Powered Cyber Attacks](/assets/images/blogs/ai-battle/ai-powered-cyber-attacks.jpg)
 
 #### The AI Cyber Assassin
 
@@ -31,7 +31,7 @@ The infamous SolarWinds attack saw state-sponsored hackers using AI to analyse a
 
 On the defence side, AI systems act like digital Sherlock Holmes, predicting and preventing attacks by analysing vast amounts of data and spotting patterns.
 
-![AI-Driven Defence Systems](/Dyst0rti0n.github.io/assets/images/blogs/ai-battle/ai-defense.jpg)
+![AI-Driven Defence Systems](/assets/images/blogs/ai-battle/ai-defense.jpg)
 
 #### Predictive Analysis: The AI Oracles
 
@@ -51,7 +51,7 @@ CrowdStrike’s AI-driven platform, Falcon, autonomously identifies and mitigate
 
 Governments and corporations are using AI for surveillance, raising concerns about privacy and civil liberties. It’s like living in a sci-fi dystopia where Big Brother is not just watching, but analysing your every move. "Hey, did you really need to buy those extra biscuits?"
 
-![The Ethical Dilemma of AI Surveillance](/Dyst0rti0n.github.io/assets/images/blogs/ai-battle/cityscape-ai-surveillance.jpg)
+![The Ethical Dilemma of AI Surveillance](/assets/images/blogs/ai-battle/cityscape-ai-surveillance.jpg)
 
 #### Surveillance and AI: The Watchful Eyes
 
