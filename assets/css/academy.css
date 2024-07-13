@@ -1,22 +1,4 @@
-/* Complete Button Styles */
-#complete-module1 {
-  display: block;
-  margin: 20px auto;
-  padding: 10px 20px;
-  font-size: 1em;
-  color: #fff;
-  background-color: #007bff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#complete-module1:hover {
-  background-color: #0056b3;
-}
-
-/* Academy Page Styles */
+/* General Page Styles */
 .page-container {
   text-align: center;
   padding: 20px;
@@ -25,23 +7,23 @@
 .page-title {
   font-size: 2.5em;
   margin-bottom: 20px;
-  position: relative;
 }
 
-.page-title::after {
-  content: '';
-  display: block;
-  width: 50px;
-  height: 4px;
-  background-color: #007bff;
-  margin: 10px auto 0;
-  border-radius: 2px;
+.academy-section {
+  margin-bottom: 40px;
 }
 
+.section-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+/* Academy Container Styles */
 .academy-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: nowrap;  /* Prevent wrapping */
+  overflow-x: auto;  /* Enable horizontal scrolling */
   gap: 20px;
   padding: 20px;
   width: 100%;
@@ -54,15 +36,13 @@
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  width: 100%;
-  max-width: 350px;
+  min-width: 300px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
   cursor: pointer;
   text-decoration: none;
   color: inherit;
-  align-items: center; /* Center align the content */
 }
 
 .academy-card.locked {
@@ -76,7 +56,7 @@
 }
 
 .academy-card img {
-  width: 100%; /* Ensure the image fits the width of the card */
+  width: 100%;
   height: auto;
   object-fit: cover;
   transition: transform 0.3s ease;
@@ -87,8 +67,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
-  text-align: center; /* Center align the text */
+  text-align: center;
 }
 
 .academy-card-title {
