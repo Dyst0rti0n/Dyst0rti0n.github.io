@@ -46,10 +46,21 @@ body {
 
 .learning-path {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: nowrap;
   gap: 20px;
+  position: relative;
+}
+
+.path-heading {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  transform: rotate(180deg);
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #007bff;
+  margin-right: 20px;
 }
 
 .academy-card-large, .academy-card-small {
@@ -138,6 +149,12 @@ body {
   .learning-path {
       flex-direction: column;
       align-items: center;
+  }
+
+  .path-heading {
+      writing-mode: horizontal-tb;
+      transform: rotate(0deg);
+      margin-bottom: 10px;
   }
 
   .academy-card-large {
