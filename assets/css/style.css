@@ -16,22 +16,43 @@ body {
 header {
   text-align: center;
   margin-bottom: 50px;
-  padding: 50px 20px;
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-header h1 {
+.hero {
+  padding: 50px 20px;
+  background: url('/assets/images/hero-bg.jpg') no-repeat center center/cover;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero h1 {
   font-size: 3em;
   margin-bottom: 10px;
   color: #fff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-header p {
+.hero p {
   font-size: 1.5em;
-  color: #eee;
+  margin-bottom: 20px;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 30px;
+  animation: slideIn 2s ease-in-out;
+}
+
+.intro h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.intro p {
+  font-size: 1.2em;
+  color: #555;
 }
 
 .buttons-container {
@@ -39,6 +60,8 @@ header p {
   flex-direction: column;
   gap: 30px;
   justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .button {
@@ -109,6 +132,27 @@ footer {
   background: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* Blog Page Styles */
@@ -196,11 +240,11 @@ footer {
   header h1 {
     font-size: 2em;
   }
-  
+
   header p {
     font-size: 1.2em;
   }
-  
+
   .button {
     height: 150px;
     font-size: 1.2em;
