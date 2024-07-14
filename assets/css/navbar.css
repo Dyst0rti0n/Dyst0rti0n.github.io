@@ -50,7 +50,7 @@
   padding: 14px 20px;
 }
 
-.bmc-button {
+.bmc-button-nav {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -63,19 +63,14 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.bmc-button img {
+.bmc-button-nav img {
   margin-right: 10px;
   height: 30px;
 }
 
-.bmc-button:hover {
+.bmc-button-nav:hover {
   background-color: #444444;
   color: #ffdd00;
-}
-
-.bmc-button-nav img,
-.bmc-button-footer img {
-  height: 30px;
 }
 
 @media screen and (max-width: 768px) {
