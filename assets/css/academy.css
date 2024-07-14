@@ -1,12 +1,43 @@
 /* General Page Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #f06, #aaf);
+  color: #333;
+  padding: 20px;
+  margin: 0;
+}
+
 .page-container {
   text-align: center;
   padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .page-title {
   font-size: 2.5em;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  position: relative;
+  color: #333;
+}
+
+.page-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #007bff;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.page-description {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  color: #555;
 }
 
 .academy-section {
@@ -43,6 +74,7 @@
   width: 100%;
   height: auto;
   object-fit: cover;
+  border-bottom: 3px solid #007bff;
 }
 
 .academy-card-small {
@@ -54,6 +86,7 @@
   width: 100%;
   height: auto;
   object-fit: cover;
+  border-bottom: 3px solid #007bff;
 }
 
 .academy-card-content {
@@ -65,13 +98,13 @@
 }
 
 .academy-card-title {
-  font-size: 1.2em;
+  font-size: 1.4em;
   margin-bottom: 10px;
   color: #007bff;
 }
 
 .academy-card-excerpt {
-  font-size: 0.9em;
+  font-size: 1em;
   color: #333;
   margin-bottom: 15px;
   flex-grow: 1;
@@ -91,6 +124,11 @@
 }
 
 .academy-card-small:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.academy-card-large:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
