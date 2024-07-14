@@ -41,7 +41,7 @@ body {
 }
 
 .academy-section {
-  margin-bottom: 40px;
+  margin-bottom: 60px; /* Increased margin for better spacing */
 }
 
 .learning-path {
@@ -59,7 +59,7 @@ body {
   color: #007bff;
   transform: rotate(180deg);
   margin-right: 20px;
-  margin-left: 0; /* Ensure the text is fully within the container */
+  margin-left: 10px; /* Adjusted for centering the text within the container */
 }
 
 .path-content {
