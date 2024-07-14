@@ -6,8 +6,11 @@
     <title>Welcome to Dyst0rti0n's Blog and Learning Platform</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
 </head>
 <body>
+    {% include navbar.html %}
     <header>
         <div class="hero">
             <h1>Welcome to Dyst0rti0n's Blog and Learning Platform</h1>
@@ -23,6 +26,25 @@
             <h2>Discover</h2>
             <p>Stay updated with the latest trends and enhance your skills with our learning paths.</p>
         </div>
+        <div class="featured-content">
+            <h2>Featured Content</h2>
+            <div class="cards-container">
+                <a href="/blog/featured-post" class="card">
+                    <img src="/assets/images/featured-blog.jpg" alt="Featured Blog">
+                    <div class="card-content">
+                        <h3>Featured Blog Post</h3>
+                        <p>Discover our most popular blog post on cybersecurity trends.</p>
+                    </div>
+                </a>
+                <a href="/academy/featured-module" class="card">
+                    <img src="/assets/images/featured-module.jpg" alt="Featured Module">
+                    <div class="card-content">
+                        <h3>Featured Learning Module</h3>
+                        <p>Enhance your skills with our top-rated GoLang learning module.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
         <div class="buttons-container">
             <a href="/blog" class="button" style="background-image: url('/assets/images/blog-button.png');">
                 <span class="button-text">Latest Blogs</span>
@@ -31,12 +53,21 @@
                 <span class="button-text">Learning Academy</span>
             </a>
         </div>
+        <div class="carousel-section">
+            <h2>My GitHub Repositories</h2>
+            <div class="carousel-strip"></div>
+        </div>
+        <div class="newsletter-signup">
+            <h2>Subscribe to Our Newsletter</h2>
+            <form>
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
     </main>
-    <footer>
-        <p>&copy; 2024 Dystortion. All rights reserved.</p>
-        <a class="bmc-button-footer" href="https://www.buymeacoffee.com/dystortion" target="_blank">
-            <img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee">
-        </a>
-    </footer>
+    {% include footer.html %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="/assets/js/githubrepos.js"></script>
 </body>
 </html>
