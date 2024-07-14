@@ -3,20 +3,26 @@ layout: default
 title: "Latest Blogs"
 ---
 
-<div class="page-container">
-    <h1 class="page-title">Latest Blogs</h1>
-    <div class="blog-container">
-        {% for post in site.posts %}
-        <a href="{{ post.url }}" class="blog-card-link">
-            <div class="blog-card">
-                <img src="{{ post.image }}" alt="{{ post.title }}">
-                <div class="blog-card-content">
-                    <h2 class="blog-card-title">{{ post.title }}</h2>
-                    <p class="blog-card-date">{{ post.date | date: "%B %d, %Y" }}</p>
-                    <p class="blog-card-excerpt">{{ post.excerpt | truncate: 100 }}</p>
+<head>
+    <link rel="stylesheet" href="/assets/css/blog.css">
+</head>
+<body>
+    <div class="page-container">
+        <h1 class="page-title">Latest Blogs</h1>
+        <p class="page-description">Stay updated with our latest blog posts covering various topics in technology, programming, and more.</p>
+        <div class="blog-container">
+            {% for post in site.posts %}
+            <a href="{{ post.url }}" class="blog-card-link">
+                <div class="blog-card">
+                    <img src="{{ post.image }}" alt="{{ post.title }}">
+                    <div class="blog-card-content">
+                        <h2 class="blog-card-title">{{ post.title }}</h2>
+                        <p class="blog-card-date">{{ post.date | date: "%B %d, %Y" }}</p>
+                        <p class="blog-card-excerpt">{{ post.excerpt | truncate: 100 }}</p>
+                    </div>
                 </div>
-            </div>
-        </a>
-        {% endfor %}
+            </a>
+            {% endfor %}
+        </div>
     </div>
-</div>
+</body>
