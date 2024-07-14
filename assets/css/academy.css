@@ -13,56 +13,19 @@
   margin-bottom: 40px;
 }
 
-.section-title {
-  font-size: 2em;
-  margin-bottom: 20px;
-  color: #007bff;
-}
-
-/* Academy Content Styles */
-.academy-content {
+.learning-path {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 20px;
 }
 
-.academy-intro {
-  flex: 1 1 300px;
-  max-width: 300px;
-  text-align: left;
-}
-
-.academy-intro img {
-  width: 100%;
-  height: auto;
-  border-radius: 15px;
-  margin-bottom: 20px;
-}
-
-.academy-intro p {
-  font-size: 1em;
-  color: #333;
-}
-
-/* Academy Modules Styles */
-.academy-modules {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  gap: 10px;
-  padding: 10px;
-  flex: 2 1 auto;
-  max-width: 700px;
-}
-
-.academy-card {
+.academy-card-large, .academy-card-small {
   background: #fff;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  min-width: 200px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
@@ -71,21 +34,26 @@
   color: inherit;
 }
 
-.academy-card.locked {
-  filter: grayscale(100%);
-  pointer-events: none;
+.academy-card-large {
+  flex: 1;
+  max-width: 300px;
 }
 
-.academy-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.academy-card img {
+.academy-card-large img {
   width: 100%;
   height: auto;
   object-fit: cover;
-  transition: transform 0.3s ease;
+}
+
+.academy-card-small {
+  min-width: 150px;
+  max-width: 150px;
+}
+
+.academy-card-small img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .academy-card-content {
@@ -109,34 +77,41 @@
   flex-grow: 1;
 }
 
+.academy-modules {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 10px;
+  max-width: 600px;
+}
+
+.academy-card-small.locked {
+  filter: grayscale(100%);
+  pointer-events: none;
+}
+
+.academy-card-small:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
 /* Media Queries for Responsive Design */
 @media screen and (max-width: 768px) {
-  .academy-content {
+  .learning-path {
       flex-direction: column;
       align-items: center;
   }
 
-  .academy-intro {
+  .academy-card-large {
       width: 100%;
-      padding: 0 10px;
-      text-align: center;
   }
 
   .academy-modules {
       width: 100%;
-      padding: 0 10px;
   }
 
-  .academy-card {
-      min-width: 150px;
-      max-width: 150px;
-  }
-
-  .academy-card-title {
-      font-size: 1em;
-  }
-
-  .academy-card-excerpt {
-      font-size: 0.8em;
+  .academy-card-small {
+      min-width: 100px;
+      max-width: 100px;
   }
 }
