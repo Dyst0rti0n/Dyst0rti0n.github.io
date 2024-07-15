@@ -1,53 +1,66 @@
-/* Navbar Styles */
 .navbar {
-  background-color: rgba(51, 51, 51, 0.9);
-  position: fixed;
+  background-color: rgba(51, 51, 51, 0.8);
+  position: sticky;
   top: 0;
   width: 100%;
   z-index: 1000;
-  height: 60px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  padding: 10px 20px;
   transition: background-color 0.3s;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.navbar-center {
+.navbar-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 20px;
   width: 100%;
 }
 
-.navbar a {
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
-  font-size: 17px;
-  transition: color 0.3s, background-color 0.3s;
-  border-radius: 5px;
+.navbar-logo-img {
+  height: 40px;
 }
 
-.navbar a:hover {
-  color: #4CAF50;
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.navbar a.active {
-  color: #4CAF50;
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-.navbar .icon {
+.navbar-toggle {
   display: none;
-  font-size: 24px;
-  color: #f2f2f2;
+  flex-direction: column;
   cursor: pointer;
-  padding: 14px 20px;
+}
+
+.bar {
+  height: 3px;
+  width: 25px;
+  background-color: #fff;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+.navbar-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-menu-list {
+  display: flex;
+  list-style: none;
+}
+
+.navbar-item {
+  margin-left: 20px;
+}
+
+.navbar-links {
+  color: #f2f2f2;
+  text-decoration: none;
+  padding: 8px 16px;
+  transition: color 0.3s;
+}
+
+.navbar-links:hover {
+  color: #4CAF50;
 }
 
 .bmc-button-nav {
@@ -74,31 +87,33 @@
 }
 
 @media screen and (max-width: 768px) {
-  .navbar-center {
+  .navbar-toggle {
+      display: flex;
+  }
+  
+  .navbar-menu {
       display: none;
       flex-direction: column;
       width: 100%;
-      align-items: center;
   }
-  .navbar .icon {
-      display: block;
-  }
-  .navbar.responsive .navbar-center {
+  
+  .navbar-menu.active {
       display: flex;
   }
-  .navbar.responsive a {
-      display: block;
-      text-align: center;
-      padding: 10px;
+  
+  .navbar-menu-list {
+      flex-direction: column;
       width: 100%;
   }
-}
-
-@media screen and (min-width: 769px) {
-  .navbar {
-      justify-content: center;
+  
+  .navbar-item {
+      width: 100%;
+      text-align: center;
+      margin: 0;
   }
-  .navbar-center {
-      justify-content: center;
+  
+  .navbar-links {
+      width: 100%;
+      padding: 15px 0;
   }
 }

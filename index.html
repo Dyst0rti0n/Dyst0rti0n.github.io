@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Dyst0rti0n's Blog and Learning Platform</title>
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
@@ -60,9 +61,10 @@
         </div>
         <div class="newsletter-signup">
             <h2>Subscribe to Our Newsletter</h2>
-            <form>
-                <input type="email" placeholder="Enter your email" required>
-                <button type="submit">Subscribe</button>
+            <form action="YOUR_MAILCHIMP_FORM_ACTION_URL" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter your email" required>
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_XXXXXXXXXXXXXX_XXXXXXXXXX" tabindex="-1" value=""></div>
+                <button type="submit" name="subscribe" id="mc-embedded-subscribe">Subscribe</button>
             </form>
         </div>
     </main>
