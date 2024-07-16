@@ -11,9 +11,9 @@ Have you ever thought about creating your own URL shortener with Go? Today, we'r
 
 Let’s be honest. At some point, you’ve used Bitly, TinyURL, or one of those other URL shorteners. But wouldn’t it be cooler to say, “Oh, I just use my own custom URL shortener”? Plus, it’s a great way to learn the ins and outs of Go, web servers, and databases.
 
-![Setting up Go environment](/assets/images/blogs/url-shortener/go-environment.jpg)
-
 ### Step 1: Setting Up Your Go Environment
+
+![Setting up Go environment](/assets/images/blogs/url-shortener/go-environment.jpg)
 
 First things first, make sure you have Go installed. If not, head over to [golang.org](https://golang.org/) and follow the instructions. Once you’re set up, create a new project directory:
 
@@ -23,9 +23,9 @@ cd go-url-shortener
 go mod init go-url-shortener
 ```
 
-![Web Server](/assets/images/blogs/url-shortener/simple-web-server.jpg)
-
 ### Step 2: Creating a Simple Web Server
+
+![Web Server](/assets/images/blogs/url-shortener/simple-web-server.jpg)
 
 Let’s start by creating a basic web server. Open up your favourite text editor *I'm a vscode nerd* and create a file called `main.go`:
 
@@ -56,9 +56,9 @@ func main() {
 
 Run your server with `go run main.go` and visit [http://localhost:8080](http://localhost:8080). You should see "Hello, Go URL Shortener!" on your screen. That's it! You've just created a basic web server in Go.
 
-![Shortener Logic](/assets/images/blogs/url-shortener/shortener-logic.jpg)
-
 ### Step 3: Designing the URL Shortening Logic
+
+![Shortener Logic](/assets/images/blogs/url-shortener/shortener-logic.jpg)
 
 Now, let's move on to the fun part: shortening URLs. We’ll need a way to map long URLs to short URLs and vice versa. For simplicity, we’ll use an in-memory map (you can replace this with a database later if you’re feeling adventurous).
 
@@ -106,9 +106,10 @@ func main() {
 
 Now, run your server again and visit [http://localhost:8080/shorten?url=https://golang.org/](http://localhost:8080/shorten?url=https://golang.org/). You should get a short URL in response. Try accessing the short URL, and it should redirect you to the long URL. Magic!
 
-![Persistence](/assets/images/blogs/url-shortener/persistence.jpg)
-
 ### Step 4: Adding a Touch of Persistence
+
+
+![Persistence](/assets/images/blogs/url-shortener/persistence.jpg)
 
 Okay, an in-memory map is great for quick demos, but what happens when your server restarts? Goodbye, URLs! Let’s add some persistence using a simple file-based storage.
 
@@ -174,9 +175,10 @@ func main() {
 
 Now your URLs will be saved to a file and reloaded when the server restarts. Try it out by shortening a URL, stopping the server, and starting it again. Your short URL should still work!
 
-![html site](/assets/images/blogs/url-shortener/html-site.jpg)
-
 ### Step 5: Making It Slightly Pretty
+
+
+![html site](/assets/images/blogs/url-shortener/html-site.jpg)
 
 Finally, let’s add a simple HTML form to make our URL shortener user-friendly. Create an `index.html` file:
 

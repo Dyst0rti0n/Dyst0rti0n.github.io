@@ -4,23 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/navbar.css">
     <link rel="stylesheet" href="/assets/css/post.css">
 </head>
 <body>
-    <div class="navbar" id="navbar">
-        <a href="/" class="active">Home</a>
-        <div class="navbar-right">
-            <a href="/blog">Blog</a>
-            <a href="/academy">Academy</a>
-            <a href="/about">About</a>
-        </div>
-        <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
-            &#9776;
-        </a>
-    </div>
+    {% include navbar.html %}
     <header>
         <h1>{{ page.title }}</h1>
         <p>{{ page.date | date: "%B %d, %Y" }}</p>
@@ -28,18 +19,7 @@
     <main>
         {{ content }}
     </main>
-    <footer>
-        <p>&copy; 2024 Dyst0rti0n. All rights reserved.</p>
-    </footer>
-    <script>
-        function toggleNavbar() {
-            var x = document.getElementById("navbar");
-            if (x.className === "navbar") {
-                x.className += " responsive";
-            } else {
-                x.className = "navbar";
-            }
-        }
-    </script>
+    {% include footer.html %}
+    <script src="/assets/js/navbar.js"></script>
 </body>
 </html>
