@@ -14,14 +14,47 @@
   transition: background-color 0.3s;
 }
 
-.navbar-center {
+.navbar-container {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 20px;
+  justify-content: space-between;
+  width: 100%;
 }
 
-.navbar a {
+.navbar-logo-img {
+  height: 40px;
+}
+
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  height: 4px;
+  width: 25px;
+  background-color: #fff;
+  margin: 3px 0;
+  transition: 0.4s;
+}
+
+.navbar-menu {
+  display: flex;
+}
+
+.navbar-menu-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  margin: 0 10px;
+}
+
+.navbar-links {
   display: block;
   color: #f2f2f2;
   text-align: center;
@@ -31,16 +64,8 @@
   transition: color 0.3s;
 }
 
-.navbar a:hover {
+.navbar-links:hover {
   color: #4CAF50;
-}
-
-.navbar a.active {
-  color: #4CAF50;
-}
-
-.navbar .icon {
-  display: none;
 }
 
 .bmc-button-nav {
@@ -67,28 +92,36 @@
 }
 
 @media screen and (max-width: 768px) {
-  .navbar .icon {
-      display: block;
+  .navbar-toggle {
+      display: flex;
   }
   
-  .navbar-center {
+  .navbar-menu {
       display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: rgba(51, 51, 51, 0.9);
+      position: absolute;
+      top: 60px;
+      left: 0;
+  }
+  
+  .navbar-menu.active {
+      display: flex;
+  }
+  
+  .navbar-menu-list {
       flex-direction: column;
       width: 100%;
   }
   
-  .navbar.active .navbar-center {
-      display: flex;
-  }
-  
-  .navbar a {
-      float: none;
-      display: block;
-      text-align: left;
+  .navbar-item {
       width: 100%;
+      text-align: center;
   }
   
-  .navbar-center a {
-      padding: 10px 20px;
+  .navbar-links {
+      padding: 14px 0;
+      width: 100%;
   }
 }
