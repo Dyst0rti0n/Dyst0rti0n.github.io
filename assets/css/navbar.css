@@ -2,7 +2,7 @@
 .navbar {
   background-color: rgba(51, 51, 51, 0.8);
   overflow: hidden;
-  position: fixed; /* Ensures the navbar is always at the top */
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;

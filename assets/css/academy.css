@@ -3,7 +3,7 @@ body {
   font-family: 'Roboto', sans-serif;
   background: linear-gradient(135deg, #1c1c1c, #333333);
   color: #e0e0e0;
-  padding-top: 80px; /* Ensure the content starts below the navbar */
+  padding-top: 80px;
   margin: 0;
 }
 
@@ -12,9 +12,10 @@ body {
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: #333;
 }
 
 .page-title {
@@ -41,7 +42,7 @@ body {
 }
 
 .academy-section {
-  margin-bottom: 60px; /* Increased margin for better spacing */
+  margin-bottom: 60px; 
 }
 
 .learning-path {
@@ -59,11 +60,11 @@ body {
   color: #ffdd00;
   transform: rotate(180deg);
   margin-right: 20px;
-  margin-left: 10px; /* Adjusted for centering the text within the container */
-  background: rgba(0, 0, 0, 0.1); /* Background for the heading */
-  padding: 10px; /* Padding for better spacing */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin-left: 10px; 
+  background: rgba(0, 0, 0, 0.1);
+  padding: 10px; 
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
 }
 
 .path-content {
@@ -121,7 +122,7 @@ body {
 .academy-card-title {
   font-size: 1.4em;
   margin-bottom: 10px;
-  color: #ffdd00;
+  color: #333;
 }
 
 .academy-card-excerpt {

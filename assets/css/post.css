@@ -11,65 +11,40 @@ header {
   text-align: center;
   margin-bottom: 20px;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 header h1 {
   font-size: 2.5em;
   margin-bottom: 10px;
   color: #ffdd00;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 header p {
   font-size: 1.2em;
-  color: #eee;
+  color: #ccc;
 }
 
 main {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.95);
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   max-width: 800px;
   margin: auto;
+  color: #333;
 }
 
 h2, h3, h4 {
-  color: #ffdd00;
+  color: #333;
 }
 
 p {
-  line-height: 1.6;
+  line-height: 1.8;
   margin-bottom: 20px;
-}
-
-code {
-  background: rgba(0, 0, 0, 0.1);
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-family: 'Courier New', Courier, monospace;
-}
-
-pre {
-  background: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  padding: 15px;
-  border-radius: 10px;
-  overflow-x: auto;
-  font-size: 0.9em;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px;
-}
-
-blockquote {
-  background: rgba(0, 0, 0, 0.05);
-  border-left: 5px solid #ffdd00;
-  padding: 10px 20px;
-  margin: 20px 0;
-  font-style: italic;
 }
 
 img {
@@ -79,20 +54,50 @@ img {
   margin-bottom: 20px;
 }
 
+/* Code block styles */
+pre {
+  background: #282c34;
+  color: #e0e0e0;
+  padding: 20px;
+  border-radius: 10px;
+  overflow-x: auto;
+  font-size: 1em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+code {
+  background: #2e2e2e;
+  color: #ffdd00;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+blockquote {
+  background: rgba(255, 255, 0, 0.1);
+  border-left: 5px solid #ffdd00;
+  padding: 10px 20px;
+  margin: 20px 0;
+  font-style: italic;
+}
+
 footer {
   text-align: center;
   margin-top: 50px;
   font-size: 0.9em;
-  color: #777;
+  color: #eee;
   width: 100%;
   padding: 10px;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 ol, ul {
   margin-bottom: 20px;
+  color: #333;
 }
 
 li {
@@ -118,6 +123,6 @@ li code {
   }
   
   pre {
-      font-size: 0.8em;
+      font-size: 0.9em;
   }
 }
