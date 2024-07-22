@@ -29,20 +29,26 @@
         <div class="featured-content">
             <h2>Featured Content</h2>
             <div class="cards-container">
-                <a href="/blog/featured-post" class="card">
-                    <img src="/assets/images/blogs/battle-for-ai-supremacy.jpg" alt="Featured Blog">
+                {% assign featured_post = site.posts | where: "featured", true | first %}
+                {% if featured_post %}
+                <a href="{{ featured_post.url }}" class="card">
+                    <img src="{{ featured_post.image }}" alt="{{ featured_post.title }}">
                     <div class="card-content">
-                        <h3>Featured Blog Post</h3>
-                        <p>Discover our most popular blog post on cybersecurity trends.</p>
+                        <h3>{{ featured_post.title }}</h3>
+                        <p>{{ featured_post.excerpt | truncate: 100 }}</p>
                     </div>
                 </a>
-                <a href="/academy/featured-module" class="card">
-                    <img src="/assets/images/golang.png" alt="Featured Module">
+                {% endif %}
+                {% assign featured_module = site.pages | where: "featured", true | where: "layout", "module" | first %}
+                {% if featured_module %}
+                <a href="{{ featured_module.url }}" class="card">
+                    <img src="{{ featured_module.image }}" alt="{{ featured_module.title }}">
                     <div class="card-content">
-                        <h3>Featured Learning Module</h3>
-                        <p>Enhance your skills with our top-rated GoLang learning module.</p>
+                        <h3>{{ featured_module.title }}</h3>
+                        <p>{{ featured_module.excerpt | truncate: 100 }}</p>
                     </div>
                 </a>
+                {% endif %}
             </div>
         </div>
         <div class="buttons-container">

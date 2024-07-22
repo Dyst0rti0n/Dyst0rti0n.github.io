@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Module 1: The Initiation"
+featured: true
 ---
 
 ## Mission 1: Welcome to the Cyber Academy

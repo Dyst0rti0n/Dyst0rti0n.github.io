@@ -4,6 +4,7 @@ title: "AI Wars: The Epic Battle for Cybersecurity Supremacy"
 date: 2024-07-09
 image: /assets/images/blogs/battle-for-ai-supremacy.jpg
 categories: ai security
+featured: true
 ---
 In a world where data is the new gold and cyber threats lurk in every digital shadow, a new kind of warfare is emerging. Welcome to the AI Wars: a high-stakes, high-tech battle between artificial intelligence wielded by cybercriminals and the AI defences deployed by cybersecurity experts. Buckle up, because we're about to embark on a thrilling journey through the digital battleground where machines duel for supremacy.
 
