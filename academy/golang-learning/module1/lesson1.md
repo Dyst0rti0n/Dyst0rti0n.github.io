@@ -21,6 +21,48 @@ Before we dive into action, let's gear up! Download and install Go from the [off
 
 What's your favorite code editor? Vote in the poll and see what other cyber detectives are using!
 
+<div id="poll">
+  <p>What's your favorite code editor?</p>
+  <form>
+    <input type="radio" id="vscode" name="editor" value="VSCode">
+    <label for="vscode">VSCode</label><br>
+    <input type="radio" id="sublime" name="editor" value="Sublime Text">
+    <label for="sublime">Sublime Text</label><br>
+    <input type="radio" id="vim" name="editor" value="Vim">
+    <label for="vim">Vim</label><br>
+    <input type="radio" id="other" name="editor" value="Other">
+    <label for="other">Other</label><br><br>
+    <input type="button" value="Vote" onclick="submitPoll()">
+  </form>
+</div>
+
+<script>
+  function submitPoll() {
+    var radios = document.getElementsByName('editor');
+    var selected = '';
+    for (var i = 0; i < radios.length; i++) {
+      if (radios[i].checked) {
+        selected = radios[i].value;
+        break;
+      }
+    }
+    if (selected) {
+      localStorage.setItem('favoriteEditor', selected);
+      alert('Thank you for voting for ' + selected + '!');
+    } else {
+      alert('Please select an option before voting.');
+    }
+  }
+
+  // On page load, check if the user has already voted
+  document.addEventListener('DOMContentLoaded', (event) => {
+    var favoriteEditor = localStorage.getItem('favoriteEditor');
+    if (favoriteEditor) {
+      alert('You have already voted for ' + favoriteEditor);
+    }
+  });
+</script>
+
 **Step 3: Write and Run Your First Go Program**
 
 Time to test your new gear! Create a new file named `main.go` and type the following code. Watch the magic happen as you run your first Go program.
