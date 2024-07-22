@@ -245,7 +245,7 @@ header {
 }
 
 .coming-soon-section img {
-  max-width: 100%;
+  max-width: 800px;
   height: 600px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -359,7 +359,7 @@ footer {
   opacity: 0;
   transform: translateY(20px);
   transition-property: opacity, transform;
-  transition-duration: 1s;
+  transition-duration: 2s;
 }
 
 [data-aos="fade-in"].aos-animate {
