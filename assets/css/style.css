@@ -233,7 +233,9 @@ header {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Coming Soon Section */
 .coming-soon-section {
+  position: relative;
   text-align: center;
   margin: 50px 0;
   padding: 30px 20px;
@@ -253,7 +255,23 @@ header {
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  margin-bottom: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation: fadeIn 5s forwards;
+}
+
+/* Matrix Canvas */
+#matrixCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
 }
 
 .newsletter-signup {
@@ -370,3 +388,4 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+

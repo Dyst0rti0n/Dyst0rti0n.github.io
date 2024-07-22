@@ -1,4 +1,3 @@
-// Fetch GitHub Repos
 async function fetchGitHubRepos() {
     const response = await fetch('https://api.github.com/users/Dyst0rti0n/repos');
     const repos = await response.json();
@@ -19,7 +18,11 @@ function displayRepos(repos) {
         carousel.appendChild(repoCard);
     });
 
-    // Initialize Slick Carousel
+    // Initialize Slick Carousel after the repos have been appended
+    initializeSlickCarousel();
+}
+
+function initializeSlickCarousel() {
     $(document).ready(function(){
         $('.carousel-strip').slick({
           infinite: true,
