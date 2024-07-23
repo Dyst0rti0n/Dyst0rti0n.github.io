@@ -39,7 +39,7 @@ Curious about exploring the Dark Web? Here are some tips to keep you safe:
 
 #### Do:
 - **Use Tor Browser**: This is your gateway to the Dark Web. It anonymizes your traffic, making it harder to trace.
-- **Practice Safe Browsing**: Use a VPN for extra security and keep your software up to date.
+- **Practice Safe Browsing**: Be very careful about links and downloads also keep your software up to date.
 - **Stay Anonymous**: Never use your real name or personal information. Create a separate email account and use pseudonyms.
 
 #### Don’t:
