@@ -72,6 +72,17 @@ title: "Latest Blogs"
                 latestBtn.classList.remove('active');
                 communityBtn.classList.add('active');
             }
+        
+            const pageContainer = document.querySelector('.page-container');
+            const latestHeight = latestBlogs.offsetHeight;
+            const communityHeight = communityBlogs.offsetHeight;
+            const maxHeight = Math.max(latestHeight, communityHeight);
+
+            pageContainer.style.minHeight = `${maxHeight}px`;
         }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            toggleBlogs('latest');
+        });
     </script>
 </body>
