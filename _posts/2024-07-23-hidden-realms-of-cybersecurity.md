@@ -5,7 +5,7 @@ image: /assets/images/blogs/hidden-realms/hidden-realms.jpg
 categories: cybersecurity dark-web
 ---
 
-Ah, the internet. The vast expanse of cat memes, social media, and endless scrolling. But did you know there’s a hidden side to it? A place where secrets are whispered, shady deals are made, and anonymity is king. Welcome to the Dark Web. Think of it as the digital equivalent of a mysterious alleyway in a bustling city. Ready to explore? Grab your flashlight, and let’s dive into the shadowy corners of the web.
+Ah, the internet. The vast expanse of cat memes, social media, and endless scrolling. But did you know there’s a hidden side to it? A place where secrets are whispered, shady deals are made, and anonymity is king. Welcome to the Dark Web. Think of it as the digital equivalent of a mysterious alleyway in a bustling city.
 
 ### What is the Dark Web?
 
@@ -17,7 +17,7 @@ Imagine the internet as an iceberg. The part you see above water is the surface 
 
 ![Tor Browser](/assets/images/blogs/hidden-realms/tor-browser.jpg)
 
-The Dark Web has a bit of a split personality. It was initially developed by the U.S. Navy to protect intelligence communications. Tor, the software that makes the Dark Web possible, anonymizes your traffic by bouncing it through multiple servers around the world. This means you can browse without anyone tracking your every move. Sounds great, right? But this anonymity also attracts some less-than-savory characters.
+The Dark Web has a bit of a split personality. It was initially developed by the U.S. Navy to protect intelligence communications. Tor, the software that makes the Dark Web possible, anonymises your traffic by bouncing it through multiple servers around the world called nodes. This means you can browse without anyone tracking your every move. Sounds great, right? But this anonymity also attracts some interesting figures.
 
 ### The Dark Web Economy: A Bazaar of Bizarre
 
