@@ -1,88 +1,76 @@
----
-layout: default
-title: "Latest Blogs"
----
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest Blogs</title>
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/blog.css">
 </head>
 <body>
-    <div class="page-container">
-        <h1 class="page-title">Latest Blogs</h1>
-        <p class="page-description">Stay updated with our latest blog posts covering various topics in technology, programming, and more.</p>
-        
-        <!-- Toggle Button -->
-        <div class="toggle-button-container">
-            <button id="latest-blogs-btn" class="toggle-button active" onclick="toggleBlogs('latest')">Latest Blogs</button>
-            <button id="community-blogs-btn" class="toggle-button" onclick="toggleBlogs('community')">Community Blogs</button>
-        </div>
-        
-        <!-- Latest Blogs Section -->
-        <div id="latest-blogs" class="blog-container">
-            {% for post in site.posts %}
-            {% unless post.path contains '/com-blogs/' %}
-            <a href="{{ post.url }}" class="blog-card-link">
-                <div class="blog-card">
-                    <img src="{{ post.image }}" alt="{{ post.title }}">
-                    <div class="blog-card-content">
-                        <h2 class="blog-card-title">{{ post.title }}</h2>
-                        <p class="blog-card-date">{{ post.date | date: "%B %d, %Y" }}</p>
-                        <p class="blog-card-excerpt">{{ post.excerpt | truncate: 100 }}</p>
-                    </div>
-                </div>
-            </a>
-            {% endunless %}
-            {% endfor %}
-        </div>
+    <header>
+        {% include navbar.html %}
+    </header>
+    <main>
+        <div class="page-container">
+            <h1 class="page-title">Latest Blogs</h1>
+            <p class="page-description">Stay updated with our latest blog posts covering various topics in technology, programming, and more.</p>
+            <div class="blog-toggle">
+                <button id="latest-blogs-btn" class="blog-toggle-btn active" onclick="showLatestBlogs()">Latest Blogs</button>
+                <button id="community-blogs-btn" class="blog-toggle-btn" onclick="showCommunityBlogs()">Community Blogs</button>
+            </div>
 
-        <!-- Community Blogs Section -->
-        <div id="community-blogs" class="blog-container">
-            {% for post in site.posts %}
-            {% if post.path contains '/com-blogs/' %}
-            <a href="{{ post.url }}" class="blog-card-link">
-                <div class="blog-card">
-                    <img src="{{ post.image }}" alt="{{ post.title }}">
-                    <div class="blog-card-content">
-                        <h2 class="blog-card-title">{{ post.title }}</h2>
-                        <p class="blog-card-date">{{ post.date | date: "%B %d, %Y" }}</p>
-                        <p class="blog-card-excerpt">{{ post.excerpt | truncate: 100 }}</p>
+            <!-- Latest Blogs Section -->
+            <div id="latest-blogs" class="blog-container">
+                {% for post in site.posts %}
+                <a href="{{ post.url }}" class="blog-card-link">
+                    <div class="blog-card">
+                        <img src="{{ post.image }}" alt="{{ post.title }}">
+                        <div class="blog-card-content">
+                            <h2 class="blog-card-title">{{ post.title }}</h2>
+                            <p class="blog-card-date">{{ post.date | date: "%B %d, %Y" }}</p>
+                            <p class="blog-card-excerpt">{{ post.excerpt | truncate: 100 }}</p>
+                        </div>
                     </div>
-                </div>
-            </a>
-            {% endif %}
-            {% endfor %}
-        </div>
-    </div>
+                </a>
+                {% endfor %}
+            </div>
 
+            <!-- Community Blogs Section -->
+            <div id="community-blogs" class="blog-container">
+                {% for post in site.categories.community %}
+                <a href="{{ post.url }}" class="blog-card-link">
+                    <div class="blog-card">
+                        <img src="{{ post.image }}" alt="{{ post.title }}">
+                        <div class="blog-card-content">
+                            <h2 class="blog-card-title">{{ post.title }}</h2>
+                            <p class="blog-card-date">{{ post.date | date: "%B %d, %Y" }}</p>
+                            <p class="blog-card-excerpt">{{ post.excerpt | truncate: 100 }}</p>
+                        </div>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </main>
+    <footer>
+        {% include footer.html %}
+    </footer>
     <script>
-        function toggleBlogs(view) {
-            const latestBtn = document.getElementById('latest-blogs-btn');
-            const communityBtn = document.getElementById('community-blogs-btn');
-            const latestBlogs = document.getElementById('latest-blogs');
-            const communityBlogs = document.getElementById('community-blogs');
-
-            if (view === 'latest') {
-                latestBlogs.style.display = 'flex';
-                communityBlogs.style.display = 'none';
-                latestBtn.classList.add('active');
-                communityBtn.classList.remove('active');
-            } else {
-                latestBlogs.style.display = 'none';
-                communityBlogs.style.display = 'flex';
-                latestBtn.classList.remove('active');
-                communityBtn.classList.add('active');
-            }
-        
-            const pageContainer = document.querySelector('.page-container');
-            const latestHeight = latestBlogs.offsetHeight;
-            const communityHeight = communityBlogs.offsetHeight;
-            const maxHeight = Math.max(latestHeight, communityHeight);
-
-            pageContainer.style.minHeight = `${maxHeight}px`;
+        function showLatestBlogs() {
+            document.getElementById('latest-blogs').style.display = 'flex';
+            document.getElementById('community-blogs').style.display = 'none';
+            document.getElementById('latest-blogs-btn').classList.add('active');
+            document.getElementById('community-blogs-btn').classList.remove('active');
         }
 
-        document.addEventListener('DOMContentLoaded', () => {
-            toggleBlogs('latest');
-        });
+        function showCommunityBlogs() {
+            document.getElementById('latest-blogs').style.display = 'none';
+            document.getElementById('community-blogs').style.display = 'flex';
+            document.getElementById('latest-blogs-btn').classList.remove('active');
+            document.getElementById('community-blogs-btn').classList.add('active');
+        }
     </script>
 </body>
+</html>
