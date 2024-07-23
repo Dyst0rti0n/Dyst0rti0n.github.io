@@ -68,7 +68,7 @@ In the event of a data breach, the Dark Web is scanned for any signs of the stol
 
 As technology evolves, so does the Dark Web. The rise of cryptocurrencies has fueled anonymous transactions, while advancements in encryption make it harder to crack down on illicit activities. However, with increased awareness and better security practices, navigating the Dark Web can become safer.
 
-Law enforcement agencies are also ramping up efforts to dismantle illegal networks. The takedown of major marketplaces like Silk Road, AlphaBay, and Hansa has shown that even the darkest corners of the web are not beyond the reach of the law.
+Law enforcement agencies are also ramping up efforts to dismantle illegal networks. The takedown of major marketplaces like Silk Road, AlphaBay, and more notably breachforums and raidforums has shown that even the darkest corners of the web are not beyond the reach of the law.
 
 ### Conclusion
 
