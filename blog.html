@@ -36,7 +36,7 @@ title: "Latest Blogs"
         </div>
 
         <!-- Community Blogs Section -->
-        <div id="community-blogs" class="blog-container" style="display: none;">
+        <div id="community-blogs" class="blog-container">
             {% for post in site.posts %}
             {% if post.path contains '/com-blogs/' %}
             <a href="{{ post.url }}" class="blog-card-link">
