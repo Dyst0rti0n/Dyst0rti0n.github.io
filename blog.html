@@ -1,5 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+title: "Latest Blogs"
+---
+
 <head>
     <link rel="stylesheet" href="/assets/css/blog.css">
 </head>
@@ -69,7 +72,7 @@
                 latestBtn.classList.remove('active');
                 communityBtn.classList.add('active');
             }
-
+        
             const pageContainer = document.querySelector('.page-container');
             const latestHeight = latestBlogs.offsetHeight;
             const communityHeight = communityBlogs.offsetHeight;
@@ -83,4 +86,3 @@
         });
     </script>
 </body>
-</html>
