@@ -10,8 +10,17 @@ title: "Latest Blogs"
     <div class="page-container">
         <h1 class="page-title">Latest Blogs</h1>
         <p class="page-description">Stay updated with our latest blog posts covering various topics in technology, programming, and more.</p>
-        <div class="blog-container">
+        
+        <!-- Toggle Button -->
+        <div class="toggle-button-container">
+            <button id="latest-blogs-btn" class="toggle-button active" onclick="toggleBlogs('latest')">Latest Blogs</button>
+            <button id="community-blogs-btn" class="toggle-button" onclick="toggleBlogs('community')">Community Blogs</button>
+        </div>
+        
+        <!-- Latest Blogs Section -->
+        <div id="latest-blogs" class="blog-container">
             {% for post in site.posts %}
+            {% unless post.path contains '/com-blogs/' %}
             <a href="{{ post.url }}" class="blog-card-link">
                 <div class="blog-card">
                     <img src="{{ post.image }}" alt="{{ post.title }}">
@@ -22,7 +31,47 @@ title: "Latest Blogs"
                     </div>
                 </div>
             </a>
+            {% endunless %}
+            {% endfor %}
+        </div>
+
+        <!-- Community Blogs Section -->
+        <div id="community-blogs" class="blog-container" style="display: none;">
+            {% for post in site.posts %}
+            {% if post.path contains '/com-blogs/' %}
+            <a href="{{ post.url }}" class="blog-card-link">
+                <div class="blog-card">
+                    <img src="{{ post.image }}" alt="{{ post.title }}">
+                    <div class="blog-card-content">
+                        <h2 class="blog-card-title">{{ post.title }}</h2>
+                        <p class="blog-card-date">{{ post.date | date: "%B %d, %Y" }}</p>
+                        <p class="blog-card-excerpt">{{ post.excerpt | truncate: 100 }}</p>
+                    </div>
+                </div>
+            </a>
+            {% endif %}
             {% endfor %}
         </div>
     </div>
+
+    <script>
+        function toggleBlogs(view) {
+            const latestBtn = document.getElementById('latest-blogs-btn');
+            const communityBtn = document.getElementById('community-blogs-btn');
+            const latestBlogs = document.getElementById('latest-blogs');
+            const communityBlogs = document.getElementById('community-blogs');
+
+            if (view === 'latest') {
+                latestBlogs.style.display = 'flex';
+                communityBlogs.style.display = 'none';
+                latestBtn.classList.add('active');
+                communityBtn.classList.remove('active');
+            } else {
+                latestBlogs.style.display = 'none';
+                communityBlogs.style.display = 'flex';
+                latestBtn.classList.remove('active');
+                communityBtn.classList.add('active');
+            }
+        }
+    </script>
 </body>
