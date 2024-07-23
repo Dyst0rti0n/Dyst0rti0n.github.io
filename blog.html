@@ -1,8 +1,5 @@
----
-layout: default
-title: "Latest Blogs"
----
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <link rel="stylesheet" href="/assets/css/blog.css">
 </head>
@@ -36,7 +33,7 @@ title: "Latest Blogs"
         </div>
 
         <!-- Community Blogs Section -->
-        <div id="community-blogs" class="blog-container">
+        <div id="community-blogs" class="blog-container" style="display: none;">
             {% for post in site.posts %}
             {% if post.path contains '/com-blogs/' %}
             <a href="{{ post.url }}" class="blog-card-link">
@@ -53,8 +50,6 @@ title: "Latest Blogs"
             {% endfor %}
         </div>
     </div>
-    
-    
 
     <script>
         function toggleBlogs(view) {
@@ -88,3 +83,4 @@ title: "Latest Blogs"
         });
     </script>
 </body>
+</html>
