@@ -166,8 +166,6 @@ func main() {
 
 **Interactive Coding:**
 
-<iframe height="400px" width="100%" src="https://replit.com/@Dyst0rti0n/go-lesson-1?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true"></iframe>
-
 ### Achievements and Badges
 
 Earn badges for completing modules and share them in your GitHub profile!
