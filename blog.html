@@ -20,6 +20,7 @@ title: "Latest Blogs"
         <!-- Latest Blogs Section -->
         <div id="latest-blogs" class="blog-container">
             {% for post in site.posts %}
+            {% unless post.category == "community" %}
             <a href="{{ post.url }}" class="blog-card-link">
                 <div class="blog-card">
                     <img src="{{ post.image }}" alt="{{ post.title }}">
@@ -37,7 +38,7 @@ title: "Latest Blogs"
         <!-- Community Blogs Section -->
         <div id="community-blogs" class="blog-container" style="display: none;">
             {% for post in site.posts %}
-            {% if post.path contains '/com-blogs/' %}
+            {% if post.category == "community" %}
             <a href="{{ post.url }}" class="blog-card-link">
                 <div class="blog-card">
                     <img src="{{ post.image }}" alt="{{ post.title }}">
