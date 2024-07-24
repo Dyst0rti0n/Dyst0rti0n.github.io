@@ -66,34 +66,17 @@ What's your favorite code editor? Vote in the poll and see what other cyber dete
     }
     if (selected) {
       localStorage.setItem('favoriteEditor', selected);
-      incrementVote(selected);
       alert('Thank you for voting for ' + selected + '!');
     } else {
       alert('Please select an option before voting.');
     }
   }
 
-  function incrementVote(editor) {
-    var votes = JSON.parse(localStorage.getItem('pollResults')) || {VSCode: 0, "Sublime Text": 0, Vim: 0, Other: 0};
-    votes[editor]++;
-    localStorage.setItem('pollResults', JSON.stringify(votes));
-    displayResults();
-  }
-
-  function displayResults() {
-    var votes = JSON.parse(localStorage.getItem('pollResults')) || {VSCode: 0, "Sublime Text": 0, Vim: 0, Other: 0};
-    document.getElementById('result-vscode').innerText = votes.VSCode;
-    document.getElementById('result-sublime').innerText = votes["Sublime Text"];
-    document.getElementById('result-vim').innerText = votes.Vim;
-    document.getElementById('result-other').innerText = votes.Other;
-    document.getElementById('poll-results').style.display = 'block';
-  }
-
+  // On page load, check if the user has already voted
   document.addEventListener('DOMContentLoaded', (event) => {
     var favoriteEditor = localStorage.getItem('favoriteEditor');
     if (favoriteEditor) {
       alert('You have already voted for ' + favoriteEditor);
-      displayResults();
     }
   });
 </script>
@@ -119,52 +102,9 @@ func main() {
 
 ---------------------------------------------------------------------
 
-### Quiz: Getting to Know Go
-
-**Question 1:** What command do you use to check the installed version of Go?
-- [ ] go --version
-- [ ] go version
-- [ ] go -v
-
-**Question 2:** Which package is used to format input and output in Go?
-- [ ] fmt
-- [ ] io
-- [ ] os
-
-<script>
-  document.querySelectorAll('input[type="radio"]').forEach(function (radio) {
-    radio.addEventListener('change', function () {
-      var correctAnswers = {
-        'go version': 'Question 1',
-        'fmt': 'Question 2'
-      };
-      var questionId = this.name.split('-')[1];
-      var isCorrect = correctAnswers[this.value];
-      if (isCorrect) {
-        alert('Correct!');
-        localStorage.setItem('quizAnswer' + questionId, this.value);
-      } else {
-        alert('Incorrect, try again.');
-      }
-    });
-  });
-
-  // On page load, check if the user has already answered the quiz
-  document.addEventListener('DOMContentLoaded', (event) => {
-    var correctAnswers = {
-      'go version': 'Question 1',
-      'fmt': 'Question 2'
-    };
-    for (var questionId in correctAnswers) {
-      var answer = localStorage.getItem('quizAnswer' + questionId);
-      if (answer) {
-        document.querySelector('input[name="quiz-' + questionId + '"][value="' + answer + '"]').checked = true;
-      }
-    }
-  });
-</script>
-
 **Interactive Coding:**
+
+<iframe height="400px" width="100%" src="https://replit.com/@Dyst0rti0n/go-lesson-1?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true"></iframe>
 
 ### Achievements and Badges
 
