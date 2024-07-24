@@ -22,18 +22,36 @@ Before we dive into action, let's gear up! Download and install Go from the [off
 What's your favorite code editor? Vote in the poll and see what other cyber detectives are using!
 
 <div id="poll">
-  <p>What's your favorite code editor?</p>
+  <h3>What's your favorite code editor?</h3>
   <form>
-    <input type="radio" id="vscode" name="editor" value="VSCode">
-    <label for="vscode">VSCode</label><br>
-    <input type="radio" id="sublime" name="editor" value="Sublime Text">
-    <label for="sublime">Sublime Text</label><br>
-    <input type="radio" id="vim" name="editor" value="Vim">
-    <label for="vim">Vim</label><br>
-    <input type="radio" id="other" name="editor" value="Other">
-    <label for="other">Other</label><br><br>
+    <label class="poll-option">
+      <input type="radio" id="vscode" name="editor" value="VSCode">
+      <span>VSCode</span>
+    </label>
+    <label class="poll-option">
+      <input type="radio" id="sublime" name="editor" value="Sublime Text">
+      <span>Sublime Text</span>
+    </label>
+    <label class="poll-option">
+      <input type="radio" id="vim" name="editor" value="Vim">
+      <span>Vim</span>
+    </label>
+    <label class="poll-option">
+      <input type="radio" id="other" name="editor" value="Other">
+      <span>Other</span>
+    </label>
+    <br>
     <input type="button" value="Vote" onclick="submitPoll()">
   </form>
+  <div id="poll-results" style="display:none;">
+    <h4>Poll Results</h4>
+    <ul>
+      <li>VSCode: <span id="result-vscode">0</span> votes</li>
+      <li>Sublime Text: <span id="result-sublime">0</span> votes</li>
+      <li>Vim: <span id="result-vim">0</span> votes</li>
+      <li>Other: <span id="result-other">0</span> votes</li>
+    </ul>
+  </div>
 </div>
 
 <script>
@@ -48,20 +66,38 @@ What's your favorite code editor? Vote in the poll and see what other cyber dete
     }
     if (selected) {
       localStorage.setItem('favoriteEditor', selected);
+      incrementVote(selected);
       alert('Thank you for voting for ' + selected + '!');
     } else {
       alert('Please select an option before voting.');
     }
   }
 
-  // On page load, check if the user has already voted
+  function incrementVote(editor) {
+    var votes = JSON.parse(localStorage.getItem('pollResults')) || {VSCode: 0, "Sublime Text": 0, Vim: 0, Other: 0};
+    votes[editor]++;
+    localStorage.setItem('pollResults', JSON.stringify(votes));
+    displayResults();
+  }
+
+  function displayResults() {
+    var votes = JSON.parse(localStorage.getItem('pollResults')) || {VSCode: 0, "Sublime Text": 0, Vim: 0, Other: 0};
+    document.getElementById('result-vscode').innerText = votes.VSCode;
+    document.getElementById('result-sublime').innerText = votes["Sublime Text"];
+    document.getElementById('result-vim').innerText = votes.Vim;
+    document.getElementById('result-other').innerText = votes.Other;
+    document.getElementById('poll-results').style.display = 'block';
+  }
+
   document.addEventListener('DOMContentLoaded', (event) => {
     var favoriteEditor = localStorage.getItem('favoriteEditor');
     if (favoriteEditor) {
       alert('You have already voted for ' + favoriteEditor);
+      displayResults();
     }
   });
 </script>
+
 
 **Step 3: Write and Run Your First Go Program**
 
@@ -95,9 +131,42 @@ func main() {
 - [ ] io
 - [ ] os
 
+<script>
+  document.querySelectorAll('input[type="radio"]').forEach(function (radio) {
+    radio.addEventListener('change', function () {
+      var correctAnswers = {
+        'go version': 'Question 1',
+        'fmt': 'Question 2'
+      };
+      var questionId = this.name.split('-')[1];
+      var isCorrect = correctAnswers[this.value];
+      if (isCorrect) {
+        alert('Correct!');
+        localStorage.setItem('quizAnswer' + questionId, this.value);
+      } else {
+        alert('Incorrect, try again.');
+      }
+    });
+  });
+
+  // On page load, check if the user has already answered the quiz
+  document.addEventListener('DOMContentLoaded', (event) => {
+    var correctAnswers = {
+      'go version': 'Question 1',
+      'fmt': 'Question 2'
+    };
+    for (var questionId in correctAnswers) {
+      var answer = localStorage.getItem('quizAnswer' + questionId);
+      if (answer) {
+        document.querySelector('input[name="quiz-' + questionId + '"][value="' + answer + '"]').checked = true;
+      }
+    }
+  });
+</script>
+
 **Interactive Coding:**
 
-Use [Repl.it](https://repl.it) or similar services to create live coding exercises. Embed these in your lessons.
+<iframe height="400px" width="100%" src="https://replit.com/@Dyst0rti0n/go-lesson-1?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true"></iframe>
 
 ### Achievements and Badges
 
