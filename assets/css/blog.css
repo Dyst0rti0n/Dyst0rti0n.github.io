@@ -84,6 +84,7 @@ body {
   overflow: hidden;
   width: 100%;
   max-width: 350px;
+  min-width: 300px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
