@@ -56,3 +56,5 @@ navigation:
     url: "/blog"
   - text: "Learning Academy"
     url: "/academy"
+  - text: "Contact"
+    url: "/contact"
