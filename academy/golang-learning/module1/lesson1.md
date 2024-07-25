@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: module
 title: "Module 1: The Initiation"
 ---
 
@@ -23,7 +23,7 @@ What's your favorite code editor? Vote in the poll and see what other cyber dete
 
 <div id="poll">
   <h3>What's your favorite code editor?</h3>
-  <form>
+  <form id="poll-form">
     <label class="poll-option">
       <input type="radio" id="vscode" name="editor" value="VSCode">
       <span>VSCode</span>
@@ -66,21 +66,30 @@ What's your favorite code editor? Vote in the poll and see what other cyber dete
     }
     if (selected) {
       localStorage.setItem('favoriteEditor', selected);
-      alert('Thank you for voting for ' + selected + '!');
+      document.getElementById('poll-form').style.display = 'none';
+      document.getElementById('poll-results').style.display = 'block';
+      updatePollResults(selected);
     } else {
       alert('Please select an option before voting.');
     }
+  }
+
+  function updatePollResults(selected) {
+    var resultElement = document.getElementById('result-' + selected.toLowerCase());
+    var currentVotes = parseInt(resultElement.innerText);
+    resultElement.innerText = currentVotes + 1;
   }
 
   // On page load, check if the user has already voted
   document.addEventListener('DOMContentLoaded', (event) => {
     var favoriteEditor = localStorage.getItem('favoriteEditor');
     if (favoriteEditor) {
-      alert('You have already voted for ' + favoriteEditor);
+      document.getElementById('poll-form').style.display = 'none';
+      document.getElementById('poll-results').style.display = 'block';
+      updatePollResults(favoriteEditor);
     }
   });
 </script>
-
 
 **Step 3: Write and Run Your First Go Program**
 
@@ -105,6 +114,7 @@ func main() {
 **Interactive Coding:**
 
 <iframe src="https://replit.com/@Dyst0rti0n/go-lesson-11?embed=true" width="600" height="400"></iframe>
+<div id="editor" contenteditable="true" style="border:1px solid #ccc; padding: 10px; margin-top: 20px;">
 
 ### Achievements and Badges
 

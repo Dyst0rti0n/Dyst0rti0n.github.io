@@ -14,3 +14,19 @@ document.addEventListener('DOMContentLoaded', function () {
         module2Link.removeAttribute('onclick');
     }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    initializeEditor('editor', 'user-code');
+});
+
+function initializeEditor(editorId, storageKey) {
+    const editorElement = document.getElementById(editorId);
+    const savedCode = localStorage.getItem(storageKey) || editorElement.innerText;
+    
+    editorElement.contentEditable = true;
+    editorElement.innerText = savedCode;
+
+    editorElement.addEventListener('input', () => {
+        localStorage.setItem(storageKey, editorElement.innerText);
+    });
+}

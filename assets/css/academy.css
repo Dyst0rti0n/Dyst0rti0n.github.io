@@ -154,6 +154,16 @@ body {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+.poll-option {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.poll-option input {
+  margin-right: 10px;
+}
+
 /* Media Queries for Responsive Design */
 @media screen and (max-width: 768px) {
   .learning-path {
