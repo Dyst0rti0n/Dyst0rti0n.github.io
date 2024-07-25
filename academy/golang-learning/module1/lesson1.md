@@ -147,12 +147,13 @@ fmt.Println("Hello, Hackers!")
       },
       body: JSON.stringify({
         language: 'go',
-        source: code
+        version: 'latest',
+        files: [{ name: 'main.go', content: code }]
       })
     })
     .then(response => response.json())
     .then(data => {
-      if (data.run) {
+      if (data.run && data.run.output) {
         outputElement.textContent = data.run.output;
       } else {
         outputElement.textContent = 'Error running code.';
