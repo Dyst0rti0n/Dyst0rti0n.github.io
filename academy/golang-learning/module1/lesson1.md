@@ -113,8 +113,55 @@ func main() {
 
 **Interactive Coding:**
 
-<iframe src="https://replit.com/@Dyst0rti0n/go-lesson-11?embed=true" width="600" height="400"></iframe>
-<div id="editor" contenteditable="true" style="border:1px solid #ccc; padding: 10px; margin-top: 20px;">
+<div id="editor">package main
+import "fmt"
+
+func main() {
+fmt.Println("Hello, Cyber World!")
+}
+
+</div>
+<button id="run-code">Run Code</button>
+
+<pre id="output"></pre>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" integrity="sha512-DtT9g5pN5+yoK++vQO9+pyflly3j58sUlB7K7OdFyRklzTkQ8UNZsm8QxQvsGeVG41fDkM9X2iHkFgtJ7Fk1ew==" crossorigin="anonymous"></script>
+<script>
+  var editor = ace.edit("editor");
+  editor.setTheme("ace/theme/monokai");
+  editor.session.setMode("ace/mode/golang");
+
+  document.getElementById('run-code').addEventListener('click', function() {
+    var userCode = editor.getValue();
+    runCode(userCode);
+  });
+
+  function runCode(code) {
+    const outputElement = document.getElementById('output');
+    outputElement.textContent = 'Running...';
+
+    fetch('https://emkc.org/api/v2/piston/execute', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        language: 'go',
+        source: code
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.run) {
+        outputElement.textContent = data.run.output;
+      } else {
+        outputElement.textContent = 'Error running code.';
+      }
+    })
+    .catch(error => {
+      outputElement.textContent = 'Error: ' + error;
+    });
+  }
+</script>
 
 ### Achievements and Badges
 
