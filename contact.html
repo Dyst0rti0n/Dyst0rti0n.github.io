@@ -10,37 +10,26 @@
     <link rel="stylesheet" href="/assets/css/contact.css">
 </head>
 <body>
+    {% include navbar.html %}
     <header>
         <div class="hero">
             <h1>Contact Us</h1>
-            <p>We'd love to hear from you.</p>
+            <p>I'd love to hear from you.</p>
         </div>
     </header>
     <main>
         <section class="contact-content">
             <h2>Get in Touch</h2>
-            <p>If you have any questions or just want to connect, you can reach me at:</p>
+            <p>If you have any questions or just want to connect, you can reach us at:</p>
             <p>Email: <a href="mailto:dystorti0n@proton.me">dystorti0n@proton.me</a></p>
-            <p>Join our Discord server: <a href="https://discord.gg/PgQjS3t4vj" target="_blank">Nokturnal Academy</a></p>
+            <p>Join our Discord server: <a href="https://discord.gg/PgQjS3t4vj" target="_blank">Dyst0rti0n Discord</a></p>
         </section>
         <section class="hire-me">
             <h2>Hire Me for Short Term Work</h2>
             <p>Need help with building scripts, web development, or any short-term tech projects? I'm available for hire! Please reach out to me at <a href="mailto:dystorti0n@proton.me">dystorti0n@proton.me</a> with details about your project, and let's discuss how I can assist you.</p>
         </section>
     </main>
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 Dyst0rti0n. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="/privacy-policy.html">Privacy Policy</a>
-                <a href="/terms-of-service.html">Terms of Service</a>
-                <a href="/contact.html">Contact</a>
-            </div>
-            <a class="bmc-button-footer" href="https://www.buymeacoffee.com/dystortion" target="_blank">
-                <img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee">
-            </a>
-        </div>        
-    </footer>
+    {% include footer.html %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="/assets/js/githubrepos.js"></script>
