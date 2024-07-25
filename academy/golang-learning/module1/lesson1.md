@@ -113,17 +113,18 @@ func main() {
 
 **Interactive Coding:**
 
-<div id="editor">package main
+<div id="editor-container">
+  <div id="editor">package main
 import "fmt"
 
 func main() {
-fmt.Println("Hello, Cyber World!")
+fmt.Println("Hello, Hackers!")
 }
 
 </div>
-<button id="run-code">Run Code</button>
-
-<pre id="output"></pre>
+  <button id="run-code">Run Code</button>
+  <pre id="output"></pre>
+</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" integrity="sha512-DtT9g5pN5+yoK++vQO9+pyflly3j58sUlB7K7OdFyRklzTkQ8UNZsm8QxQvsGeVG41fDkM9X2iHkFgtJ7Fk1ew==" crossorigin="anonymous"></script>
 <script>
   var editor = ace.edit("editor");
