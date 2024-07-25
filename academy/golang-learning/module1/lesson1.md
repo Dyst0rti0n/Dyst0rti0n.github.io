@@ -147,18 +147,20 @@ func main() {
 
   document.getElementById('run-code').addEventListener('click', function() {
     var userCode = editor.getValue();
+    showPopup('Running code...');
     runCode(userCode);
   });
 
   document.getElementById('reset-code').addEventListener('click', function() {
     editor.setValue(defaultCode);
+    showPopup('Code reset to default.');
   });
 
   document.getElementById('copy-code').addEventListener('click', function() {
     navigator.clipboard.writeText(editor.getValue()).then(function() {
-      alert('Code copied to clipboard');
+      showPopup('Code copied to clipboard');
     }, function() {
-      alert('Failed to copy code');
+      showPopup('Failed to copy code');
     });
   });
 
@@ -181,13 +183,26 @@ func main() {
     .then(data => {
       if (data.run && data.run.output) {
         outputElement.textContent = data.run.output;
+        showPopup('Code executed successfully.');
       } else {
         outputElement.textContent = 'Error running code.';
+        showPopup('Error running code.');
       }
     })
     .catch(error => {
       outputElement.textContent = 'Error: ' + error;
+      showPopup('Error: ' + error);
     });
+  }
+
+  function showPopup(message) {
+    const popup = document.createElement('div');
+    popup.className = 'popup';
+    popup.innerText = message;
+    document.body.appendChild(popup);
+    setTimeout(() => {
+      popup.remove();
+    }, 3000);
   }
 </script>
 
