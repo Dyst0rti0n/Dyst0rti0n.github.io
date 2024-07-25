@@ -41,7 +41,7 @@ What's your favorite code editor? Vote in the poll and see what other cyber dete
       <span>Other</span>
     </label>
     <br>
-    <input type="button" value="Vote" onclick="submitPoll()">
+    <input type="button" class="vote-button" value="Vote" onclick="submitPoll()">
   </form>
   <div id="poll-results" style="display:none;">
     <h4>Poll Results</h4>
@@ -122,7 +122,11 @@ fmt.Println("Hello, Hackers!")
 }
 
 </div>
-  <button id="run-code">Run Code</button>
+  <div class="editor-buttons">
+    <button id="run-code">Run Code</button>
+    <button id="reset-code">Reset Code</button>
+    <button id="copy-code">Copy Code</button>
+  </div>
   <pre id="output"></pre>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" integrity="sha512-DtT9g5pN5+yoK++vQO9+pyflly3j58sUlB7K7OdFyRklzTkQ8UNZsm8QxQvsGeVG41fDkM9X2iHkFgtJ7Fk1ew==" crossorigin="anonymous"></script>
@@ -131,9 +135,31 @@ fmt.Println("Hello, Hackers!")
   editor.setTheme("ace/theme/monokai");
   editor.session.setMode("ace/mode/golang");
 
+  const defaultCode = `package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, Hackers!")
+}`;
+
+  editor.setValue(defaultCode);
+
   document.getElementById('run-code').addEventListener('click', function() {
     var userCode = editor.getValue();
     runCode(userCode);
+  });
+
+  document.getElementById('reset-code').addEventListener('click', function() {
+    editor.setValue(defaultCode);
+  });
+
+  document.getElementById('copy-code').addEventListener('click', function() {
+    navigator.clipboard.writeText(editor.getValue()).then(function() {
+      alert('Code copied to clipboard');
+    }, function() {
+      alert('Failed to copy code');
+    });
   });
 
   function runCode(code) {
