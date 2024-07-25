@@ -20,36 +20,36 @@ title: "Latest Blogs"
         <!-- Latest Blogs Section -->
         <div id="latest-blogs" class="blog-container">
             {% for post in site.posts %}
-            {% unless post.path contains '/com-blogs/' %}
-            <a href="{{ post.url }}" class="blog-card-link">
-                <div class="blog-card">
-                    <img src="{{ post.image }}" alt="{{ post.title }}">
-                    <div class="blog-card-content">
-                        <h2 class="blog-card-title">{{ post.title }}</h2>
-                        <p class="blog-card-date">{{ post.date | date: "%B %d, %Y" }}</p>
-                        <p class="blog-card-excerpt">{{ post.excerpt | truncate: 100 }}</p>
-                    </div>
-                </div>
-            </a>
-            {% endunless %}
+                {% unless post.path contains '/com-blogs/' %}
+                    <a href="{{ post.url }}" class="blog-card-link">
+                        <div class="blog-card">
+                            <img src="{{ post.image }}" alt="{{ post.title }}">
+                            <div class="blog-card-content">
+                                <h2 class="blog-card-title">{{ post.title }}</h2>
+                                <p class="blog-card-date">{{ post.date | date: "%B %d, %Y" }}</p>
+                                <p class="blog-card-excerpt">{{ post.excerpt | truncate: 100 }}</p>
+                            </div>
+                        </div>
+                    </a>
+                {% endunless %}
             {% endfor %}
         </div>
 
         <!-- Community Blogs Section -->
         <div id="community-blogs" class="blog-container" style="display: none;">
             {% for post in site.posts %}
-            {% if post.path contains '/com-blogs/' %}
-            <a href="{{ post.url }}" class="blog-card-link">
-                <div class="blog-card">
-                    <img src="{{ post.image }}" alt="{{ post.title }}">
-                    <div class="blog-card-content">
-                        <h2 class="blog-card-title">{{ post.title }}</h2>
-                        <p class="blog-card-date">{{ post.date | date: "%B %d, %Y" }}</p>
-                        <p class="blog-card-excerpt">{{ post.excerpt | truncate: 100 }}</p>
-                    </div>
-                </div>
-            </a>
-            {% endif %}
+                {% if post.path contains '/com-blogs/' %}
+                    <a href="{{ post.url }}" class="blog-card-link">
+                        <div class="blog-card">
+                            <img src="{{ post.image }}" alt="{{ post.title }}">
+                            <div class="blog-card-content">
+                                <h2 class="blog-card-title">{{ post.title }}</h2>
+                                <p class="blog-card-date">{{ post.date | date: "%B %d, %Y" }}</p>
+                                <p class="blog-card-excerpt">{{ post.excerpt | truncate: 100 }}</p>
+                            </div>
+                        </div>
+                    </a>
+                {% endif %}
             {% endfor %}
         </div>
     </div>
