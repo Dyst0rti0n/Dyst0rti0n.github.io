@@ -132,6 +132,29 @@ body {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+.coming-soon {
+  background: #f5f5f5;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.coming-soon h2 {
+  margin: 0;
+  color: #333;
+}
+
+.coming-soon a {
+  color: #ffdd00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.coming-soon a:hover {
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 768px) {
   .page-container {
       padding: 15px;
