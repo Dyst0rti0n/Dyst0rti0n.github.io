@@ -54,43 +54,6 @@ What's your favorite code editor? Vote in the poll and see what other cyber dete
   </div>
 </div>
 
-<script>
-  function submitPoll() {
-    var radios = document.getElementsByName('editor');
-    var selected = '';
-    for (var i = 0; i < radios.length; i++) {
-      if (radios[i].checked) {
-        selected = radios[i].value;
-        break;
-      }
-    }
-    if (selected) {
-      localStorage.setItem('favoriteEditor', selected);
-      document.getElementById('poll-form').style.display = 'none';
-      document.getElementById('poll-results').style.display = 'block';
-      updatePollResults(selected);
-    } else {
-      alert('Please select an option before voting.');
-    }
-  }
-
-  function updatePollResults(selected) {
-    var resultElement = document.getElementById('result-' + selected.toLowerCase());
-    var currentVotes = parseInt(resultElement.innerText);
-    resultElement.innerText = currentVotes + 1;
-  }
-
-  // On page load, check if the user has already voted
-  document.addEventListener('DOMContentLoaded', (event) => {
-    var favoriteEditor = localStorage.getItem('favoriteEditor');
-    if (favoriteEditor) {
-      document.getElementById('poll-form').style.display = 'none';
-      document.getElementById('poll-results').style.display = 'block';
-      updatePollResults(favoriteEditor);
-    }
-  });
-</script>
-
 **Step 3: Write and Run Your First Go Program**
 
 Time to test your new gear! Create a new file named `main.go` and type the following code. Watch the magic happen as you run your first Go program.
@@ -129,82 +92,6 @@ fmt.Println("Hello, Hackers!")
   </div>
   <pre id="output"></pre>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" integrity="sha512-DtT9g5pN5+yoK++vQO9+pyflly3j58sUlB7K7OdFyRklzTkQ8UNZsm8QxQvsGeVG41fDkM9X2iHkFgtJ7Fk1ew==" crossorigin="anonymous"></script>
-<script>
-  var editor = ace.edit("editor");
-  editor.setTheme("ace/theme/monokai");
-  editor.session.setMode("ace/mode/golang");
-
-  const defaultCode = `package main
-
-import "fmt"
-
-func main() {
-    fmt.Println("Hello, Hackers!")
-}`;
-
-  editor.setValue(defaultCode);
-
-  document.getElementById('run-code').addEventListener('click', function() {
-    var userCode = editor.getValue();
-    showPopup('Running code...');
-    runCode(userCode);
-  });
-
-  document.getElementById('reset-code').addEventListener('click', function() {
-    editor.setValue(defaultCode);
-    showPopup('Code reset to default.');
-  });
-
-  document.getElementById('copy-code').addEventListener('click', function() {
-    navigator.clipboard.writeText(editor.getValue()).then(function() {
-      showPopup('Code copied to clipboard');
-    }, function() {
-      showPopup('Failed to copy code');
-    });
-  });
-
-  function runCode(code) {
-    const outputElement = document.getElementById('output');
-    outputElement.textContent = 'Running...';
-
-    fetch('https://emkc.org/api/v2/piston/execute', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        language: 'go',
-        version: 'latest',
-        files: [{ name: 'main.go', content: code }]
-      })
-    })
-    .then(response => response.json())
-    .then(data => {
-      if (data.run && data.run.output) {
-        outputElement.textContent = data.run.output;
-        showPopup('Code executed successfully.');
-      } else {
-        outputElement.textContent = 'Error running code.';
-        showPopup('Error running code.');
-      }
-    })
-    .catch(error => {
-      outputElement.textContent = 'Error: ' + error;
-      showPopup('Error: ' + error);
-    });
-  }
-
-  function showPopup(message) {
-    const popup = document.createElement('div');
-    popup.className = 'popup';
-    popup.innerText = message;
-    document.body.appendChild(popup);
-    setTimeout(() => {
-      popup.remove();
-    }, 3000);
-  }
-</script>
 
 ### Achievements and Badges
 
@@ -214,9 +101,5 @@ Earn badges for completing modules and share them in your GitHub profile!
 
 <button id="complete-module1">Complete Module 1</button>
 
-<script>
-    document.getElementById('complete-module1').addEventListener('click', function() {
-        localStorage.setItem('module1Completed', true);
-        alert('Module 1 completed! You can now access Module 2.');
-    });
-</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" integrity="sha512-DtT9g5pN5+yoK++vQO9+pyflly3j58sUlB7K7OdFyRklzTkQ8UNZsm8QxQvsGeVG41fDkM9X2iHkFgtJ7Fk1ew==" crossorigin="anonymous"></script>
+<script src="/assets/js/module1.js"></script>
