@@ -21,5 +21,20 @@
     </main>
     {% include footer.html %}
     <script src="/assets/js/navbar.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const posts = document.querySelectorAll('.blog-card');
+            posts.forEach(post => {
+                const content = post.querySelector('.blog-card-content').innerText;
+                const wordCount = content.split(/\s+/).length;
+                const readingTime = Math.ceil(wordCount / 200); // Average reading speed: 200 wpm
+                const readingTimeElement = document.createElement('div');
+                readingTimeElement.className = 'reading-time';
+                readingTimeElement.innerHTML = `<img src="path/to/eye-icon.png" alt="Reading time icon" /> ${readingTime} min read`;
+                post.querySelector('.blog-card-title').appendChild(readingTimeElement);
+            });
+        });
+        </script>
+        
 </body>
 </html>
