@@ -49,3 +49,11 @@ function initializeSlickCarousel() {
 
 // Initialize the fetch function on page load
 document.addEventListener('DOMContentLoaded', fetchGitHubRepos);
+
+// For book cover
+document.addEventListener('DOMContentLoaded', function() {
+    const bookCover = document.querySelector('.book-cover');
+    bookCover.addEventListener('click', function() {
+        window.location.href = '/pages/first-chapter.html';
+    });
+});
