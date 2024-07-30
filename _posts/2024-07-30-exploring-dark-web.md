@@ -46,7 +46,7 @@ The Dark Web is a place where moral ambiguity thrives. While some use it for nob
 **Reality #6: Visiting a .onion on surface web**
 You are currently reading this post on the surface web but did you know you could visit .onion links without actually connecting to the TOR network for example. One way can be using a built in tor on browsers such as Brave and you open protonmail as an example - you can opt to view this within TOR. Now this certainly isn't as secure as visiting through Tails etc. 
 
-Second way is one **I absolutely advise NOBODY should do** but it's still an option to do - which is to add `.ly` at the end of an onion address on your regular browser such as Chrom.
+Second way is one **I absolutely advise NOBODY should do** but it's still an option to do - which is to add `.ly` at the end of an onion address on your regular browser such as Chrome.
 
 ### Navigating the Dark Web: Must-Visit .onion Sites
 
@@ -55,52 +55,52 @@ Second way is one **I absolutely advise NOBODY should do** but it's still an opt
 Whilst I don’t endorse illegal activities, there are several interesting and legitimate .onion sites worth visiting:
 
 1. **The Hidden Wiki**
-   - **Address**: [http://wikitjerrta4qgz4.onion/](http://wikitjerrta4qgz4.onion/)
-   - **Description**: A directory of links to various .onion sites. Be cautious as not all links are safe or legal.
+   - Address: [http://wikitjerrta4qgz4.onion/](http://wikitjerrta4qgz4.onion/)
+   - *Description*: A directory of links to various .onion sites. Be cautious as not all links are safe or legal.
 
 2. **ProPublica**
-   - **Address**: [http://propub3r6espa33w.onion/](http://propub3r6espa33w.onion/)
-   - **Description**: An independent, nonprofit newsroom that produces investigative journalism with moral force.
+   - Address: [http://propub3r6espa33w.onion/](http://propub3r6espa33w.onion/)
+   - *Description*: An independent, nonprofit newsroom that produces investigative journalism with moral force.
 
 3. **TORCH Search Engine**
-   - **Address**: [http://xmh57jrzrnw6insl.onion/](http://xmh57jrzrnw6insl.onion/)
-   - **Description**: A search engine specifically for the Dark Web.
+   - Address: [http://xmh57jrzrnw6insl.onion/](http://xmh57jrzrnw6insl.onion/)
+   - *Description*: A search engine specifically for the Dark Web.
 
 4. **Intel Exchange**
-   - **Address**: [http://rrcc5uuudhh4oz3c.onion/](http://rrcc5uuudhh4oz3c.onion/)
-   - **Description**: A forum for discussing intelligence, security, and technology.
+   - Address: [http://rrcc5uuudhh4oz3c.onion/](http://rrcc5uuudhh4oz3c.onion/)
+   - *Description*: A forum for discussing intelligence, security, and technology.
 
 5. **Deep Web Radio**
-   - **Address**: [http://76qugh5bey5gum7l.onion/](http://76qugh5bey5gum7l.onion/)
-   - **Description**: Listen to radio stations via the Dark Web.
+   - Address: [http://76qugh5bey5gum7l.onion/](http://76qugh5bey5gum7l.onion/)
+   - *Description*: Listen to radio stations via the Dark Web.
 
 6. **PrivacyTools.io Mirror**
-   - **Address**: [http://privacy2zbidut4m4.onion/](http://privacy2zbidut4m4.onion/)
-   - **Description**: Tools and services to protect your online privacy.
+   - Address: [http://privacy2zbidut4m4.onion/](http://privacy2zbidut4m4.onion/)
+   - *Description*: Tools and services to protect your online privacy.
 
 7. **Imperial Library**
-   - **Address**: [http://xfmro77i3lixucja.onion/](http://xfmro77i3lixucja.onion/)
-   - **Description**: A large collection of books and academic texts.
+   - Address: [http://xfmro77i3lixucja.onion/](http://xfmro77i3lixucja.onion/)
+   - *Description*: A large collection of books and academic texts.
 
 8. **ZeroBin**
-   - **Address**: [http://zerobinqmdqd236y.onion/](http://zerobinqmdqd236y.onion/)
-   - **Description**: A secure pastebin service for sharing information anonymously.
+   - Address: [http://zerobinqmdqd236y.onion/](http://zerobinqmdqd236y.onion/)
+   - *Description*: A secure pastebin service for sharing information anonymously.
 
 9. **Sci-Hub**
-   - **Address**: [http://scihub22266oqcxt.onion/](http://scihub22266oqcxt.onion/)
-   - **Description**: Access millions of research papers for free.
+   - Address: [http://scihub22266oqcxt.onion/](http://scihub22266oqcxt.onion/)
+   - *Description*: Access millions of research papers for free.
 
 10. **OnionLinks**
-    - **Address**: [http://onionlinksv3g43.onion/](http://onionlinksv3g43.onion/)
-    - **Description**: Another directory of .onion sites, with a focus on security and privacy.
+    - Address: [http://onionlinksv3g43.onion/](http://onionlinksv3g43.onion/)
+    - *Description*: Another directory of .onion sites, with a focus on security and privacy.
 
 11. **Tunnels**: 
-    - **Address**: [http://tunnelz3qqhxlwkv.onion/](http://tunnelz3qqhxlwkv.onion/)
-    - **Description**: Provides a list of hidden services and community-vetted sites.
+    - Address: [http://tunnelz3qqhxlwkv.onion/](http://tunnelz3qqhxlwkv.onion/)
+    - *Description*: Provides a list of hidden services and community-vetted sites.
 
 12. **The Hub**
-    - **Address**: [http://thehub7xbw4dc5r2.onion/](http://thehub7xbw4dc5r2.onion/)
-    - **Description**: A popular forum for general discussions, including technology and privacy.
+    - Address: [http://thehub7xbw4dc5r2.onion/](http://thehub7xbw4dc5r2.onion/)
+    - *Description*: A popular forum for general discussions, including technology and privacy.
 
 ### Hidden and Dark Places on the Dark Web
 
