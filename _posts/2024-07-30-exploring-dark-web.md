@@ -48,7 +48,7 @@ You are currently reading this post on the surface web but did you know you coul
 
 Second way is one **I absolutely advise NOBODY should do** but it's still an option to do - which is to add `.ly` at the end of an onion address on your regular browser such as Chrome.
 
-### Navigating the Dark Web: Must-Visit .onion Sites
+### Must-Visit .onion Sites
 
 ![Onion Addresses](/assets/images/blogs/exploring-darkweb/onion-addresses.jpg)
 
