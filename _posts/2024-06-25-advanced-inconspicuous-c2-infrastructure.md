@@ -3,7 +3,7 @@ layout: post
 title: "Crafting an Advanced and Inconspicuous C2 Infrastructure"
 date: 2024-06-25
 image: /assets/images/blogs/first-c2-post.jpg
-categories: security c2
+categories: cybersecurity malware
 ---
 
 In today's cybersecurity landscape, creating a Command and Control (C2) infrastructure that is both advanced and inconspicuous is paramount. Whether you're involved in ethical hacking, penetration testing, or other legitimate purposes, your C2 operations must remain undetectable. This blog post explores innovative ways to establish an advanced C2 infrastructure using free platforms such as YouTube, Medium, and Google Sheets. Let's dive into the art of blending in with regular web traffic while maintaining the stealth you need.

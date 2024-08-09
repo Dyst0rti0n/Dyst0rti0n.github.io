@@ -3,7 +3,7 @@ layout: post
 title: "Building a URL Shortener in Go"
 date: 2024-07-16
 image: /assets/images/blogs/url-go-shortener.jpg
-categories: golang programming
+categories: programming golang
 ---
 Have you ever thought about creating your own URL shortener with Go? Today, we're going to do just that. So, grab a coffee, get comfortable, and let's dive into the world of URL shortening with a touch of scary web design.
 
