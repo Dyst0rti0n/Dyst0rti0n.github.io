@@ -47,7 +47,7 @@ While megapixels determine the resolution of an image, they’re not the only fa
 
 **Why It Exists:** Camera manufacturers have long used megapixels as a simple, easy-to-understand number to market their products. It’s a convenient selling point, even if it doesn’t tell the whole story.
 
-![Megapixel Myth](https://your-website.com/assets/images/blogs/tech-myths/megapixel-myth.jpg)
+![Megapixel Myth](/assets/images/blogs/tech-myths/megapixel-myth.jpg)
 
 ---
 
@@ -59,7 +59,7 @@ Macs can and do get viruses, though they’re less common than on Windows PCs. A
 
 **Why It Exists:** For years, Macs were less targeted because there were fewer of them, and Windows was the dominant operating system. As a result, people started to believe that Macs were somehow invincible.
 
-![Macs don't get viruses](https://your-website.com/assets/images/blogs/tech-myths/mac-virus-myth.jpg)
+![Macs don't get viruses](/assets/images/blogs/tech-myths/mac-virus-myth.jpg)
 
 ---
 
@@ -72,8 +72,6 @@ The Dark Web is just a part of the internet that isn’t indexed by traditional 
 **Why It Exists:** The Dark Web has a reputation for being shady because of the illegal activities that take place there, but that’s only one aspect of it. The media often sensationalises these elements, feeding the myth.
 
 // I've wrote two previous blog posts discussing the Dark Web and how to access it safely
-
-![Dark Web Myth](/assets/images/blogs/tech-myths/dark-web-myth.jpg)
 
 ---
 
