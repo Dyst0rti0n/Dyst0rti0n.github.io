@@ -7,7 +7,6 @@ categories: cybersecurity technology
 
 Technology has a way of weaving itself into our everyday lives, and with it comes a whole lot of myths that refuse to die. These myths are like the internet’s version of urban legends—stories passed around so often that they become truth in the minds of many. Whether you’re a seasoned techie or just someone who enjoys a good chuckle at the expense of misinformation, let’s take a journey through some of the most stubborn and amusing tech myths still out there. Some of these are absolute crackers and others, so bizarre.
 
-
 ### Myth #1: The Internet is a Cloud
 
 When someone says, “I’m saving this to the cloud,” do they picture fluffy white clouds floating in the sky holding onto their precious data? If so, we’re here to burst that bubble (or cloud). The “cloud” isn’t some ethereal realm where your files are suspended in the sky—it’s just someone else’s server farm, probably in a massive, unremarkable data center in a secure (hopefully) data center owned by companies like Amazon, Google, or Microsoft; in the middle of nowhere
@@ -72,7 +71,7 @@ The Dark Web is just a part of the internet that isn’t indexed by traditional 
 
 **Why It Exists:** The Dark Web has a reputation for being shady because of the illegal activities that take place there, but that’s only one aspect of it. The media often sensationalises these elements, feeding the myth.
 
-*I've wrote two previous blog posts discussing the Dark Web and how to access it safely*
+// I've wrote two previous blog posts discussing the Dark Web and how to access it safely
 
 ![Dark Web Myth](/assets/images/blogs/tech-myths/dark-web-myth.jpg)
 
