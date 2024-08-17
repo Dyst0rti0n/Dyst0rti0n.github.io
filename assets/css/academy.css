@@ -103,6 +103,32 @@ body {
   background-color: #e6c700;
 }
 
+#achievement-counter {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: #ffdd00;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#achievement-counter:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+#achievement-count {
+    display: inline-block;
+    padding-left: 10px;
+}
+
 pre#output {
   background: #1e1e1e;
   color: #fff;
