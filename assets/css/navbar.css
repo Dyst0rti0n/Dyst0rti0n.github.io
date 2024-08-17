@@ -40,10 +40,29 @@
   transition: 0.4s;
 }
 
+.navbar-toggle.is-active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.navbar-toggle.is-active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle.is-active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
 .navbar-menu {
   display: flex;
   justify-content: center;
   width: 100%;
+  overflow: hidden; /* Important for max-height transition */
+  max-height: 0;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.navbar-menu.active {
+  max-height: 500px; /* Adjust this value as necessary for your content */
 }
 
 .navbar-menu-list {
@@ -98,32 +117,28 @@
   .navbar-toggle {
       display: flex;
   }
-  
+
   .navbar-menu {
-      display: none;
+      display: block;
       flex-direction: column;
       width: 100%;
       background-color: rgba(51, 51, 51, 0.9);
       position: absolute;
       top: 60px;
       left: 0;
-      padding: 20px 0;
+      padding: 0;
   }
-  
-  .navbar-menu.active {
-      display: flex;
-  }
-  
+
   .navbar-menu-list {
       flex-direction: column;
       width: 100%;
   }
-  
+
   .navbar-item {
       width: 100%;
       text-align: center;
   }
-  
+
   .navbar-links {
       padding: 14px 0;
       width: 100%;
