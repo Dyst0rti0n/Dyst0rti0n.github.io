@@ -1,7 +1,6 @@
 /* Navbar Styles */
 .navbar {
   background-color: rgba(51, 51, 51, 0.8);
-  overflow: hidden;
   position: fixed;
   top: 0;
   width: 100%;
@@ -56,13 +55,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  overflow: hidden;
-  max-height: 0;
   transition: max-height 0.5s ease-in-out;
-}
-
-.navbar-menu.active {
-  max-height: 500px; /* Adjust this value as necessary for your content */
 }
 
 .navbar-menu-list {
@@ -119,15 +112,18 @@
   }
 
   .navbar-menu {
-      display: block;
+      display: none;
       flex-direction: column;
       width: 100%;
       background-color: rgba(51, 51, 51, 0.9);
       position: absolute;
       top: 60px;
       left: 0;
-      padding: 0;
-      overflow: hidden;
+      padding: 20px 0;
+  }
+
+  .navbar-menu.is-active {
+      display: flex;
   }
 
   .navbar-menu-list {
@@ -143,10 +139,5 @@
   .navbar-links {
       padding: 14px 0;
       width: 100%;
-  }
-
-  /* Ensure the transition only happens when toggled, not during resizing */
-  .navbar-menu.active {
-      max-height: none; /* Reset max-height on active class for mobile */
   }
 }
