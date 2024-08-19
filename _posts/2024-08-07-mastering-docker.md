@@ -62,12 +62,13 @@ Running pre-built images is cool, but building your own image is where the real 
 
 1. **Create Your Application**:
 Create a new directory for your project:
-```sh
+``` sh
   mkdir my-python-app
   cd my-python-app
 ```
 Inside this directory, create a file named `app.py` with the following content:
-```python
+
+``` python
   from flask import Flask
   app = Flask(__name__)
 
@@ -177,6 +178,4 @@ Remove an image:
 
 ### Conclusion
 
-Congratulations! You’ve taken your first steps into the world of Docker. By mastering containerisation, you’re well on your way to making your software development process more efficient, scalable, and fun. Docker isn’t just a tool; it’s a game-changer. So keep experimenting, keep learning, and happy containerising!
-
-A checklist-style infographic on how to stop and remove Docker containers and images.
+Congratulations! You’ve taken your first steps into the world of Docker. By mastering containerisation, you’re well on your way to making your software development process more efficient, scalable, and fun. Docker isn’t just a tool; it’s a game-changer.
