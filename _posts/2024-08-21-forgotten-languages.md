@@ -79,7 +79,7 @@ LISP introduced concepts like garbage collection and recursion, which are now co
 
 ### **Chapter 5: Ada – The Language of Safety**
 
-![A stern military officer inspecting code written in Ada with a magnifying glass, ensuring precision in a high-security control room](/assets/images/blogs/lost-lang/ada.jpg)
+![A stern military officer inspecting code written in Ada with a magnifying glass, ensuring precision in a high-security control room](/assets/images/blogs/lost-langs/ada.jpg)
 
 **Tombstone Engraving:** *“Ada: The code that doesn’t mess around when lives are on the line.”*
 
