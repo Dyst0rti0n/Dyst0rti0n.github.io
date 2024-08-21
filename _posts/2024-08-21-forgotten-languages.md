@@ -11,7 +11,7 @@ Picture this: You’re wandering through a digital graveyard, where the ghosts o
 
 ### **Chapter 1: ALGOL – The Ancestor We All Forgot**
 
-![ALGOL’s tombstone](/assets/images/blogs/lost-lang/algol.jpg)
+![ALGOL’s tombstone](/assets/images/blogs/lost-langs/algol.jpg)
 
 **Tombstone Engraving:** *“Here lies ALGOL, the unsung hero who taught us structure but never got invited to the cool kids’ table.”*
 
@@ -28,7 +28,7 @@ Every time you write a block of code inside curly braces, you’re channelling A
 
 ### **Chapter 2: COBOL – The Language That Refuses to Die**
 
-![A dusty, vintage computer with COBOL](/assets/images/blogs/lost-lang/cobol.jpg)
+![A dusty, vintage computer with COBOL](/assets/images/blogs/lost-langs/cobol.jpg)
 
 **Tombstone Engraving:** *“COBOL: Old, wordy, but still running the world’s banks and governments.”*
 
@@ -45,7 +45,7 @@ Even if you don’t write COBOL, the importance of clear, readable code hasn’t
 
 ### **Chapter 3: FORTRAN – The Scientist’s Best Friend**
 
-![A scientist with FORTRAN manual](/assets/images/blogs/lost-lang/fortran.jpg)
+![A scientist with FORTRAN manual](/assets/images/blogs/lost-langs/fortran.jpg)
 
 **Tombstone Engraving:** *“FORTRAN: The number-crunching wizard that powered scientific discoveries.”*
 
@@ -62,7 +62,7 @@ Whenever you see a language optimised for performance, you’re witnessing FORTR
 
 ### **Chapter 4: LISP – The Parenthesis Overload**
 
-![A quirky professor writing LISP](/assets/images/blogs/lost-lang/lisp.jpg)
+![A quirky professor writing LISP](/assets/images/blogs/lost-langs/lisp.jpg)
 
 **Tombstone Engraving:** *“LISP: Loved by AI researchers, feared by everyone else.”*
 
@@ -96,7 +96,7 @@ Ada’s emphasis on safety and strong typing influenced many modern languages. I
 
 ### **Epilogue**
 
-![A modern programmer](/assets/images/blogs/lost-lang/conclusion.jpg)
+![A modern programmer](/assets/images/blogs/lost-langs/conclusion.jpg)
 
 Why should we care about these dusty old languages? Because they’re the foundation on which modern programming is built. Understanding their quirks, strengths, and weaknesses gives us a deeper appreciation for the tools we use today. Plus, there’s something poetic about knowing the history of your craft—about acknowledging the giants on whose shoulders we stand.
 
