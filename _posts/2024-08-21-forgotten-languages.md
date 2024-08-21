@@ -5,15 +5,13 @@ image: /assets/images/blogs/lost-langs/lost-langs.jpg
 categories: programming 
 ---
 
-#### **Prologue**
-
 Picture this: You’re wandering through a digital graveyard, where the ghosts of old programming languages float like forgotten legends. It’s eerily quiet, until you start noticing names on the tombstones: ALGOL, COBOL, FORTRAN, LISP, and Ada. These languages aren’t just relics; they’re the ancestors of the code we write today. They’ve got stories, legacies, and even a touch of humour. So why did they fade away?
 
 ---
 
 ### **Chapter 1: ALGOL – The Ancestor We All Forgot**
 
-![ALGOL’s tombstone in a misty digital graveyard, surrounded by old computer hardware and ancient books](/assets/images/blog/lost-lang/algol.jpg)
+![ALGOL’s tombstone in a misty digital graveyard, surrounded by old computer hardware and ancient books](/assets/images/blogs/lost-lang/algol.jpg)
 
 **Tombstone Engraving:** *“Here lies ALGOL, the unsung hero who taught us structure but never got invited to the cool kids’ table.”*
 
@@ -30,7 +28,7 @@ Every time you write a block of code inside curly braces, you’re channelling A
 
 ### **Chapter 2: COBOL – The Language That Refuses to Die**
 
-![A dusty, vintage computer with COBOL code on the screen, set in an old office full of paper files and clunky machinery](/assets/images/blog/lost-lang/cobol.jpg)
+![A dusty, vintage computer with COBOL code on the screen, set in an old office full of paper files and clunky machinery](/assets/images/blogs/lost-lang/cobol.jpg)
 
 **Tombstone Engraving:** *“COBOL: Old, wordy, but still running the world’s banks and governments.”*
 
@@ -47,7 +45,7 @@ Even if you don’t write COBOL, the importance of clear, readable code hasn’t
 
 ### **Chapter 3: FORTRAN – The Scientist’s Best Friend**
 
-![A scientist in a lab, holding a FORTRAN manual with mathematical equations floating in the background, with a chalkboard full of complex algorithms](/assets/images/blog/lost-lang/fortran.jpg)
+![A scientist in a lab, holding a FORTRAN manual with mathematical equations floating in the background, with a chalkboard full of complex algorithms](/assets/images/blogs/lost-lang/fortran.jpg)
 
 **Tombstone Engraving:** *“FORTRAN: The number-crunching wizard that powered scientific discoveries.”*
 
@@ -64,7 +62,7 @@ Whenever you see a language optimised for performance, you’re witnessing FORTR
 
 ### **Chapter 4: LISP – The Parenthesis Overload**
 
-![A quirky professor writing LISP code on a blackboard overflowing with parentheses, with books and papers scattered around the room](/assets/images/blog/lost-lang/lisp.jpg)
+![A quirky professor writing LISP code on a blackboard overflowing with parentheses, with books and papers scattered around the room](/assets/images/blogs/lost-lang/lisp.jpg)
 
 **Tombstone Engraving:** *“LISP: Loved by AI researchers, feared by everyone else.”*
 
@@ -81,7 +79,7 @@ LISP introduced concepts like garbage collection and recursion, which are now co
 
 ### **Chapter 5: Ada – The Language of Safety**
 
-![A stern military officer inspecting code written in Ada with a magnifying glass, ensuring precision in a high-security control room](/assets/images/blog/lost-lang/ada.jpg)
+![A stern military officer inspecting code written in Ada with a magnifying glass, ensuring precision in a high-security control room](/assets/images/blogs/lost-lang/ada.jpg)
 
 **Tombstone Engraving:** *“Ada: The code that doesn’t mess around when lives are on the line.”*
 
@@ -98,7 +96,7 @@ Ada’s emphasis on safety and strong typing influenced many modern languages. I
 
 ### **Epilogue**
 
-![A modern programmer looking at an old computer screen with nostalgic curiosity, comparing it to their sleek laptop](/assets/images/blog/lost-lang/conclusion.jpg)
+![A modern programmer looking at an old computer screen with nostalgic curiosity, comparing it to their sleek laptop](/assets/images/blogs/lost-lang/conclusion.jpg)
 
 Why should we care about these dusty old languages? Because they’re the foundation on which modern programming is built. Understanding their quirks, strengths, and weaknesses gives us a deeper appreciation for the tools we use today. Plus, there’s something poetic about knowing the history of your craft—about acknowledging the giants on whose shoulders we stand.
 
