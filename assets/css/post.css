@@ -38,9 +38,11 @@ main {
   color: #333;
 }
 
-h2, h3, h4 {
+h2,
+h3,
+h4 {
   color: #333;
-  font-size: 1.8em;;
+  font-size: 1.8em;
 }
 
 p {
@@ -84,24 +86,38 @@ img {
 
 /* Code block styles */
 pre {
-  background: #282c34;
-  color: #e0e0e0;
+  background: #1e1e1e;
+  /* Darker background for pre blocks */
+  color: #ffffff;
+  /* Lighter text for better contrast */
   padding: 20px;
   border-radius: 10px;
   overflow-x: auto;
-  font-size: 1.2em;
+  font-size: 1.1em;
+  /* Slightly smaller font for pre blocks */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   margin-bottom: 20px;
   line-height: 1.5;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 code {
   background: #2e2e2e;
+  /* Background for inline code */
   color: #ffdd00;
+  /* Text color for inline code */
   padding: 2px 6px;
   border-radius: 4px;
   font-family: 'Courier New', Courier, monospace;
   font-size: 1.1em;
+}
+
+/* Code block within a list item */
+li code {
+  margin-top: 10px;
+  display: block;
+  font-size: 1em;
+  /* Adjusted font size to match list context */
 }
 
 blockquote {
@@ -125,7 +141,8 @@ footer {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-ol, ul {
+ol,
+ul {
   margin-bottom: 20px;
   color: #333;
   font-size: 1.2em;
@@ -135,26 +152,20 @@ li {
   margin-bottom: 10px;
 }
 
-li code {
-  margin-top: 10px;
-  display: block;
-  font-size: 1.1em;
-}
-
 @media screen and (max-width: 768px) {
   header h1 {
-      font-size: 2.4em;
+    font-size: 2.4em;
   }
-  
+
   header p {
-      font-size: 1.2em;
+    font-size: 1.2em;
   }
-  
+
   main {
-      padding: 15px;
+    padding: 15px;
   }
-  
+
   pre {
-      font-size: 1em;
+    font-size: 1em;
   }
 }
