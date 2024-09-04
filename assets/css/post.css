@@ -59,6 +59,7 @@ img {
   margin-bottom: 20px;
 }
 
+/* Reading time section */
 .reading-time {
   position: absolute;
   bottom: 10px;
@@ -78,12 +79,6 @@ img {
   margin-right: 5px;
 }
 
-@media screen and (min-width: 1200px) {
-  img {
-    max-height: 300px;
-  }
-}
-
 /* Code block styles */
 pre {
   background: #1e1e1e;
@@ -99,6 +94,8 @@ pre {
   margin-bottom: 20px;
   line-height: 1.5;
   font-family: 'Courier New', Courier, monospace;
+  word-wrap: break-word;
+  /* Prevent horizontal scrolling */
 }
 
 code {
@@ -110,9 +107,10 @@ code {
   border-radius: 4px;
   font-family: 'Courier New', Courier, monospace;
   font-size: 1.1em;
+  word-wrap: break-word;
+  /* Ensure inline code doesn't overflow */
 }
 
-/* Code block within a list item */
 li code {
   margin-top: 10px;
   display: block;
@@ -152,6 +150,7 @@ li {
   margin-bottom: 10px;
 }
 
+/* Responsive Adjustments */
 @media screen and (max-width: 768px) {
   header h1 {
     font-size: 2.4em;
@@ -167,5 +166,15 @@ li {
 
   pre {
     font-size: 1em;
+  }
+
+  code {
+    font-size: 1em;
+  }
+
+  /* Ensure inline code blocks do not cause horizontal scrolling */
+  code {
+    white-space: normal;
+    word-wrap: break-word;
   }
 }
