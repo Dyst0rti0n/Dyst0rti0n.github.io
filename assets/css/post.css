@@ -96,7 +96,7 @@ pre {
   margin-bottom: 20px;
   line-height: 1.5;
   font-family: 'Courier New', Courier, monospace;
-  word-wrap: break-word;
+  word-wrap: normal;
   /* Prevent horizontal scrolling */
 }
 
@@ -112,8 +112,6 @@ code {
   font-family: 'Courier New', Courier, monospace;
   font-size: 0.9em;
   /* Reduced font size */
-  word-wrap: break-word;
-  /* Ensure inline code doesn't overflow */
 }
 
 li code {
@@ -157,6 +155,11 @@ li {
 
 /* Responsive Adjustments */
 @media screen and (max-width: 768px) {
+  body {
+    padding: 10px;
+    /* Reduce padding to fit the screen */
+  }
+
   header h1 {
     font-size: 2.4em;
   }
@@ -167,10 +170,18 @@ li {
 
   main {
     padding: 15px;
+    margin: 0;
+    border-radius: 5px ;
   }
 
    pre {
-    font-size: 0.85em; /* Slightly smaller font size for smaller screens */
+    font-size: 0.85em;
+    padding: 8px 10px;
+    white-space: pre;
+    overflow-x: auto;
+    margin: 0;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   code {
