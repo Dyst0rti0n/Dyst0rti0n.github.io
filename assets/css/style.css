@@ -192,7 +192,7 @@ header {
 
 .carousel-strip {
   display: flex;
-  overflow-x: hidden;
+  overflow-x: hidden;    /* Hides the scrollbar */
   height: 100%;
   min-height: 100px;
   max-height: 120px;
@@ -201,6 +201,7 @@ header {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   height: auto;
+  margin: 0 20px;        /* Add some margin to the sides to expand the container */
 }
 
 .carousel-item {
@@ -210,7 +211,7 @@ header {
   width: 300px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-right: 10px;
+  margin-right: 20px;    /* Increase margin between items to prevent overlap */
   flex-shrink: 0;
   height: auto;
 }
