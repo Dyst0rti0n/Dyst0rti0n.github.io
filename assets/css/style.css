@@ -194,8 +194,8 @@ header {
   display: flex;
   overflow-x: hidden;    /* Hides the scrollbar */
   height: 100%;
-  min-height: 100px;
-  max-height: 120px;
+  min-height: 150px;
+  max-height: 200px;
   padding: 10px;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
@@ -241,6 +241,27 @@ header {
 .carousel-item:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.slick-dots {
+  display: flex !important;
+  justify-content: center;
+  flex-wrap: nowrap !important;
+}
+
+.slick-dots li {
+  margin: 0 5px;
+}
+
+.slick-dots li button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ffdd00;
+}
+
+.slick-dots li.slick-active button {
+  background-color: #ff8800;
 }
 
 /* Book Cover Styles */
