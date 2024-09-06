@@ -229,6 +229,12 @@ header {
 .carousel-item p {
   font-size: 1em;
   color: #bbb;
+  display: -webkit-box;          /* Required for limiting text to multiple lines */
+  -webkit-line-clamp: 2;         /* Vendor-prefixed version for WebKit-based browsers */
+  line-clamp: 2;                 /* Standard property for better compatibility */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;       /* Add "..." at the end of long text */
 }
 
 .carousel-item:hover {

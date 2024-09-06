@@ -26,35 +26,38 @@ function initializeSlickCarousel() {
     const carouselStrip = document.querySelector('.carousel-strip');
     if (carouselStrip) {
         $(carouselStrip).slick({
-            autoplay: true,          // Automatically cycle through items
-            autoplaySpeed: 2000,     // Set autoplay speed (in milliseconds)
-            infinite: true,          // Infinite looping
-            slidesToShow: 3,         // Show 3 slides by default
-            slidesToScroll: 1,       // Scroll one slide at a time
-            arrows: true,            // Show navigation arrows
-            dots: true,              // Show navigation dots
-            draggable: true,         // Enable dragging with the mouse
-            pauseOnHover: true,      // Pause autoplay on hover
+            autoplay: true,
+            autoplaySpeed: 2000, // Default autoplay speed for desktop
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: true,
+            dots: true,
+            draggable: true,
+            swipeToSlide: true,
+            touchThreshold: 10,
+            pauseOnHover: true,
             responsive: [
                 {
                     breakpoint: 1024,
                     settings: {
-                        slidesToShow: 2,  // Show 2 slides on medium screens
-                        slidesToScroll: 1
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        autoplaySpeed: 1500 // Faster autoplay for medium-sized screens
                     }
                 },
                 {
                     breakpoint: 768,
                     settings: {
-                        slidesToShow: 1,  // Show 1 slide on small screens
-                        slidesToScroll: 1
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        autoplaySpeed: 1000 // Faster autoplay for mobile screens
                     }
                 }
             ]
         });
     }
 }
-
 
 // Initialize the fetch function on page load
 document.addEventListener('DOMContentLoaded', fetchGitHubRepos);
