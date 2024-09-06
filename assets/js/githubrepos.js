@@ -26,24 +26,27 @@ function initializeSlickCarousel() {
     const carouselStrip = document.querySelector('.carousel-strip');
     if (carouselStrip) {
         $(carouselStrip).slick({
-            autoplay: true,
-            infinite: true,
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            arrows: true,
-            dots: true,
+            autoplay: true,          // Automatically cycle through items
+            autoplaySpeed: 2000,     // Set autoplay speed (in milliseconds)
+            infinite: true,          // Infinite looping
+            slidesToShow: 3,         // Show 3 slides by default
+            slidesToScroll: 1,       // Scroll one slide at a time
+            arrows: true,            // Show navigation arrows
+            dots: true,              // Show navigation dots
+            draggable: true,         // Enable dragging with the mouse
+            pauseOnHover: true,      // Pause autoplay on hover
             responsive: [
                 {
                     breakpoint: 1024,
                     settings: {
-                        slidesToShow: 2,
+                        slidesToShow: 2,  // Show 2 slides on medium screens
                         slidesToScroll: 1
                     }
                 },
                 {
                     breakpoint: 768,
                     settings: {
-                        slidesToShow: 1,
+                        slidesToShow: 1,  // Show 1 slide on small screens
                         slidesToScroll: 1
                     }
                 }
@@ -51,6 +54,7 @@ function initializeSlickCarousel() {
         });
     }
 }
+
 
 // Initialize the fetch function on page load
 document.addEventListener('DOMContentLoaded', fetchGitHubRepos);
