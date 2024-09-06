@@ -193,14 +193,12 @@ header {
 .carousel-strip {
   display: flex;
   overflow-x: hidden;    /* Hides the scrollbar */
-  height: 100%;
   min-height: 150px;
   max-height: 200px;
   padding: 10px;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  height: auto;
   margin: 0 20px;        /* Add some margin to the sides to expand the container */
 }
 
