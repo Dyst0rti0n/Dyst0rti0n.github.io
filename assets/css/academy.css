@@ -41,31 +41,6 @@ body {
   color: #555;
 }
 
-/* Poll Styles */
-.poll-option {
-  display: block;
-  margin-bottom: 10px;
-  font-size: 1.2em;
-}
-
-.poll-option input {
-  margin-right: 10px;
-}
-
-.vote-button {
-  padding: 10px 20px;
-  background-color: #ffdd00;
-  border: none;
-  border-radius: 5px;
-  color: #333;
-  cursor: pointer;
-  font-size: 1.2em;
-}
-
-.vote-button:hover {
-  background-color: #e6c700;
-}
-
 /* Code Editor Styles */
 #editor-container {
   margin-top: 20px;
@@ -103,53 +78,26 @@ body {
   background-color: #e6c700;
 }
 
+/* Achievement Counter */
 #achievement-counter {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    background: #ffdd00;
-    color: #333;
-    padding: 10px 15px;
-    border-radius: 50px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    font-size: 1em;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 1000;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: #ffdd00;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #achievement-counter:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-#achievement-count {
-    display: inline-block;
-    padding-left: 10px;
-}
-
-pre#output {
-  background: #1e1e1e;
-  color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  overflow-x: auto;
-  font-size: 1.2em;
-  margin-top: 20px;
-}
-
-.popup {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.8);
-  color: #ffdd00;
-  padding: 10px 20px;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  z-index: 1000;
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 /* Academy Section */
@@ -187,7 +135,8 @@ pre#output {
 }
 
 /* Cards */
-.academy-card-large, .academy-card-small {
+.academy-card-large,
+.academy-card-small {
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -257,7 +206,8 @@ pre#output {
   pointer-events: none;
 }
 
-.academy-card-small:hover, .academy-card-large:hover {
+.academy-card-small:hover,
+.academy-card-large:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
@@ -332,22 +282,22 @@ code {
   }
 
   .page-title {
-      font-size: 2em;
+    font-size: 2em;
   }
 
   .page-description {
-      font-size: 1em;
+    font-size: 1em;
   }
 
   #editor {
-      height: 300px;
+    height: 300px;
   }
 
   .editor-buttons button {
-      font-size: 1em;
+    font-size: 1em;
   }
 
   pre#output {
-      font-size: 1em;
+    font-size: 1em;
   }
 }
