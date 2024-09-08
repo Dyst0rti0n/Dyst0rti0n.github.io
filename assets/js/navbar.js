@@ -9,9 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Smooth transition for the menu height
         if (navbarMenu.classList.contains('is-active')) {
-            navbarMenu.style.maxHeight = navbarMenu.scrollHeight + 'px';
+            navbarMenu.style.maxHeight = navbarMenu.scrollHeight + 'px';  // Set maxHeight based on content height
         } else {
-            navbarMenu.style.maxHeight = '0';
+            navbarMenu.style.maxHeight = '0';  // Collapse the menu when closed
         }
     });
 
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!navbarMenu.contains(e.target) && !mobileMenu.contains(e.target)) {
             navbarMenu.classList.remove('is-active');
             mobileMenu.classList.remove('is-active');
-            navbarMenu.style.maxHeight = '0';
+            navbarMenu.style.maxHeight = '0';  // Ensure menu collapses when clicked outside
         }
     });
 
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (window.innerWidth > 768) {
             navbarMenu.classList.remove('is-active');
             mobileMenu.classList.remove('is-active');
-            navbarMenu.style.maxHeight = 'none'; // Remove max-height limitation for desktop
+            navbarMenu.style.maxHeight = 'none';  // Reset maxHeight for desktop
         }
     });
 });
