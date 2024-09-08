@@ -192,15 +192,17 @@ header {
 
 .carousel-strip {
   display: flex;
-  overflow-x: hidden;    /* Hides the scrollbar */
-  min-height: 150px;
-  max-height: 200px;
+  flex-direction: row;
+  /* Default horizontal layout for larger screens */
+  overflow: hidden;
+  /* Completely hide scrollbars (no scrolling) */
+  height: auto;
+  /* Auto height to fit content */
   padding: 10px;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  margin: 0 20px;        /* Add some margin to the sides to expand the container */
-  box-sizing: border-box;
+  margin: 0 20px;
 }
 
 .carousel-item {
@@ -208,11 +210,14 @@ header {
   border-radius: 10px;
   padding: 20px;
   width: 300px;
+  /* Fixed width for horizontal view */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-right: 20px;    /* Increase margin between items to prevent overlap */
+  margin-right: 20px;
+  /* Space between items in horizontal view */
   flex-shrink: 0;
   height: auto;
+  /* Auto height to fit content */
 }
 
 .carousel-item a {
@@ -246,6 +251,7 @@ header {
   display: flex !important;
   justify-content: center;
   flex-wrap: nowrap !important;
+  margin-top: 15px;
 }
 
 .slick-dots li {
@@ -261,6 +267,24 @@ header {
 
 .slick-dots li.slick-active button {
   background-color: #ff8800;
+}
+
+@media (max-width: 768px) {
+  .carousel-strip {
+    flex-direction: column;
+    /* Change to vertical layout */
+    align-items: center;
+    /* Center the items */
+  }
+
+  .carousel-item {
+    width: 100%;
+    /* Make each item take full width */
+    margin-bottom: 20px;
+    /* Add space between items vertically */
+    margin-right: 0;
+    /* Remove right margin since it's now vertical */
+  }
 }
 
 /* Book Cover Styles */
