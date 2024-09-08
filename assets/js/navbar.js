@@ -1,12 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     const mobileMenu = document.querySelector('#mobile-menu');
-    const navbarMenu = document.querySelector('.navbar-menu');
+    const navbarMenu = document.querySelector('#navbar-menu');
 
     mobileMenu.addEventListener('click', () => {
+        // Toggle 'is-active' on both the button and menu
         mobileMenu.classList.toggle('is-active');
         navbarMenu.classList.toggle('is-active');
 
-        // Smooth transition for the menu
+        // Smooth transition for the menu height
         if (navbarMenu.classList.contains('is-active')) {
             navbarMenu.style.maxHeight = navbarMenu.scrollHeight + 'px';
         } else {
@@ -28,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (window.innerWidth > 768) {
             navbarMenu.classList.remove('is-active');
             mobileMenu.classList.remove('is-active');
-            navbarMenu.style.maxHeight = 'none';
+            navbarMenu.style.maxHeight = 'none'; // Remove max-height limitation for desktop
         }
     });
 });
