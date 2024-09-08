@@ -112,6 +112,20 @@
 @media screen and (max-width: 768px) {
   .navbar-toggle {
     display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .navbar-toggle.is-active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .navbar-toggle.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar-toggle.is-active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
   }
 
   .navbar-menu {
@@ -124,7 +138,6 @@
     left: 0;
     padding: 20px 0;
     max-height: 0;
-    /* Initial state, collapsed */
     overflow: hidden;
     transition: max-height 0.5s ease-in-out;
   }
