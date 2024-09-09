@@ -10,11 +10,14 @@ body {
 .page-container {
   text-align: center;
   padding: 20px;
-  max-width: 900px;
+  max-width: 1200px;
+  /* Reduced from 1500px */
   margin: 0 auto;
   background: rgba(255, 255, 255, 0.95);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  /* Matching blog's rounded borders */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* Softer shadow */
   color: #333;
 }
 
@@ -39,6 +42,125 @@ body {
   font-size: 1.2em;
   margin-bottom: 30px;
   color: #555;
+}
+
+/* Academy Section */
+.academy-section {
+  margin-bottom: 40px;
+  /* Reduced margin for compact layout */
+}
+
+.learning-path {
+  display: flex;
+  flex-direction: column;
+  /* Stack vertically on all devices */
+  align-items: center;
+  gap: 20px;
+}
+
+/* Cards */
+.academy-card-large,
+.academy-card-small {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Softer shadow */
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.academy-card-large {
+  flex: 0 0 250px;
+  /* Reduced card width */
+  max-width: 250px;
+  /* Reduced from 300px for compactness */
+}
+
+.academy-card-large img {
+  width: 100%;
+  height: 150px;
+  /* Reduced image height */
+  object-fit: cover;
+  border-bottom: 3px solid #ffdd00;
+}
+
+.academy-card-small {
+  min-width: 120px;
+  /* Smaller cards for compactness */
+  max-width: 120px;
+}
+
+.academy-card-small img {
+  width: 100%;
+  height: 100px;
+  /* Reduced image height for small cards */
+  object-fit: cover;
+  border-bottom: 3px solid #ffdd00;
+}
+
+.academy-card-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.academy-card-title {
+  font-size: 1.3em;
+  /* Slightly smaller title */
+  margin-bottom: 8px;
+  /* Tightened spacing */
+  color: #333;
+}
+
+.academy-card-excerpt {
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+/* Mobile Styling */
+@media screen and (max-width: 768px) {
+  .page-container {
+    padding: 15px;
+  }
+
+  .academy-card-large {
+    width: 100%;
+    /* Full width on mobile */
+    max-width: none;
+  }
+
+  .academy-card-small {
+    min-width: 100px;
+    max-width: 100px;
+  }
+
+  .academy-card-large img,
+  .academy-card-small img {
+    height: auto;
+    /* Auto height for images on mobile */
+  }
+
+  .academy-card-title {
+    font-size: 1.2em;
+    /* Adjusted for readability on mobile */
+  }
+
+  .academy-card-excerpt {
+    font-size: 0.9em;
+    /* Slightly smaller excerpt on mobile */
+  }
+
+  .learning-path {
+    flex-direction: column;
+    /* Stack everything vertically */
+  }
 }
 
 /* Code Editor Styles */
@@ -100,118 +222,6 @@ body {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-/* Academy Section */
-.academy-section {
-  margin-bottom: 60px;
-}
-
-.learning-path {
-  display: flex;
-  align-items: flex-start;
-  position: relative;
-  margin-bottom: 40px;
-}
-
-.path-heading {
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #ffdd00;
-  transform: rotate(180deg);
-  margin-right: 20px;
-  margin-left: 10px;
-  background: rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.path-content {
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: nowrap;
-  gap: 20px;
-}
-
-/* Cards */
-.academy-card-large,
-.academy-card-small {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
-  text-decoration: none;
-  color: inherit;
-}
-
-.academy-card-large {
-  flex: 0 0 300px;
-  max-width: 300px;
-}
-
-.academy-card-large img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-bottom: 3px solid #ffdd00;
-}
-
-.academy-card-small {
-  min-width: 150px;
-  max-width: 150px;
-}
-
-.academy-card-small img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-bottom: 3px solid #ffdd00;
-}
-
-.academy-card-content {
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
-}
-
-.academy-card-title {
-  font-size: 1.4em;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.academy-card-excerpt {
-  font-size: 1em;
-  color: #333;
-  margin-bottom: 15px;
-  flex-grow: 1;
-}
-
-.academy-modules {
-  display: flex;
-  overflow-x: auto;
-  gap: 10px;
-  padding: 10px;
-}
-
-.academy-card-small.locked {
-  filter: grayscale(100%);
-  pointer-events: none;
-}
-
-.academy-card-small:hover,
-.academy-card-large:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
 /* Poll Styles */
 .poll-option {
   display: block;
@@ -221,6 +231,34 @@ body {
 
 .poll-option input {
   margin-right: 10px;
+}
+
+.vote-button {
+  padding: 10px 20px;
+  background-color: #ffdd00;
+  border: none;
+  border-radius: 5px;
+  color: #333;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+.vote-button:hover {
+  background-color: #e6c700;
+}
+
+/* Popup Styles */
+.popup {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: #ffdd00;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
 }
 
 /* Code Block Styles */
@@ -243,61 +281,4 @@ code {
   border-radius: 4px;
   font-family: 'Courier New', Courier, monospace;
   font-size: 1.1em;
-}
-
-/* Media Queries for Responsive Design */
-@media screen and (max-width: 768px) {
-  .learning-path {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .path-heading {
-    writing-mode: horizontal-tb;
-    transform: rotate(0deg);
-    position: static;
-    margin-bottom: 10px;
-  }
-
-  .path-content {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .academy-card-large {
-    width: 100%;
-  }
-
-  .academy-modules {
-    width: 100%;
-  }
-
-  .academy-card-small {
-    min-width: 100px;
-    max-width: 100px;
-  }
-
-  .page-container {
-    padding: 15px;
-  }
-
-  .page-title {
-    font-size: 2em;
-  }
-
-  .page-description {
-    font-size: 1em;
-  }
-
-  #editor {
-    height: 300px;
-  }
-
-  .editor-buttons button {
-    font-size: 1em;
-  }
-
-  pre#output {
-    font-size: 1em;
-  }
 }
