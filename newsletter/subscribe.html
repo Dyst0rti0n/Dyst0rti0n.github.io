@@ -1,0 +1,356 @@
+--- layout: default title: Subscribe to Newsletter | Dyst0rti0n ---
+
+<div class="subscribe-container">
+    <div class="subscribe-header">
+        <h1>Subscribe to My Newsletter</h1>
+        <p>Get the latest insights, tutorials, and exclusive content delivered directly to your inbox.</p>
+    </div>
+
+    <div class="subscribe-content">
+        <div class="subscribe-benefits">
+            <h2>Why Subscribe?</h2>
+            <ul class="benefits-list">
+                <li>
+                    <div class="benefit-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Exclusive Content</h3>
+                        <p>Receive content that's not available anywhere else, including in-depth tutorials, analysis, and insights.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="benefit-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Early Access</h3>
+                        <p>Be the first to know about new articles, projects, and resources before they're publicly available.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="benefit-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Direct Access</h3>
+                        <p>Subscribers can reply directly to newsletters to ask questions or provide feedback.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="benefit-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Subscriber Discounts</h3>
+                        <p>Get exclusive discounts on digital products, courses, and resources.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="subscribe-form-container">
+            <div class="subscribe-form">
+                <h2>Join the Newsletter</h2>
+                <p>No spam, unsubscribe anytime.</p>
+                <form action="https://github.us22.list-manage.com/subscribe/post?u=3ed3e50ade7f26a6da205308b&amp;id=680c50bfe5&amp;f_id=0037d2e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <div class="form-group">
+                        <label for="mce-FNAME">First Name</label>
+                        <input type="text" value="" name="FNAME" class="required" id="mce-FNAME" placeholder="Your first name">
+                    </div>
+                    <div class="form-group">
+                        <label for="mce-EMAIL">Email Address</label>
+                        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Your email address">
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" value="1" name="group[1234][1]" id="mce-group[1234]-1234-0">
+                        <label for="mce-group[1234]-1234-0">I agree to receive emails from Dyst0rti0n</label>
+                    </div>
+                    <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                        <input type="text" name="b_3ed3e50ade7f26a6da205308b_680c50bfe5" tabindex="-1" value="">
+                    </div>
+                    <input type="hidden" name="utm_source" value="blog-site">
+                    <input type="hidden" name="utm_medium" value="subscribe-page">
+                    <input type="hidden" name="utm_campaign" value="newsletter-signup">
+                    <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="button">Subscribe</button>
+                </form>
+            </div>
+
+            <div class="testimonials">
+                <h3>What Subscribers Say</h3>
+                <div class="testimonial">
+                    <p>"The newsletter is a goldmine of information. I always learn something new and valuable."</p>
+                    <span class="testimonial-author">— Alex K.</span>
+                </div>
+                <div class="testimonial">
+                    <p>"I've been a subscriber for months and the quality of content is consistently excellent."</p>
+                    <span class="testimonial-author">— Sarah M.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="newsletter-preview">
+        <h2>Recent Newsletters</h2>
+        <div class="preview-grid">
+            {% for newsletter in site.newsletters limit:3 %}
+            <a href="{{ newsletter.url }}" class="preview-card">
+                <div class="preview-image">
+                    <img src="{{ newsletter.image }}" alt="{{ newsletter.title }}">
+                </div>
+                <div class="preview-content">
+                    <h3>{{ newsletter.title }}</h3>
+                    <span class="preview-date">{{ newsletter.date | date: "%B %d, %Y" }}</span>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+        <a href="/newsletter" class="view-all-link">View All Newsletters</a>
+    </div>
+</div>
+
+<style>
+    .subscribe-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+    
+    .subscribe-header {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    
+    .subscribe-header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .subscribe-header p {
+        font-size: 1.2rem;
+        color: #555;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    
+    .subscribe-content {
+        display: flex;
+        gap: 40px;
+        margin-bottom: 60px;
+    }
+    
+    .subscribe-benefits {
+        flex: 1;
+    }
+    
+    .subscribe-benefits h2 {
+        margin-bottom: 30px;
+    }
+    
+    .benefits-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .benefits-list li {
+        display: flex;
+        margin-bottom: 30px;
+    }
+    
+    .benefit-icon {
+        width: 50px;
+        height: 50px;
+        background-color: #e1f5fe;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+        flex-shrink: 0;
+    }
+    
+    .benefit-icon svg {
+        color: #0066cc;
+    }
+    
+    .benefit-content h3 {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+    
+    .benefit-content p {
+        margin: 0;
+        color: #555;
+    }
+    
+    .subscribe-form-container {
+        flex: 1;
+    }
+    
+    .subscribe-form {
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        padding: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .subscribe-form h2 {
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+    
+    .subscribe-form>p {
+        margin-bottom: 20px;
+        color: #555;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+    
+    .form-group input[type="text"],
+    .form-group input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+    
+    .checkbox-group {
+        display: flex;
+        align-items: center;
+    }
+    
+    .checkbox-group input {
+        margin-right: 10px;
+    }
+    
+    .checkbox-group label {
+        margin-bottom: 0;
+        font-weight: normal;
+    }
+    
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #0066cc;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+        width: 100%;
+    }
+    
+    .button:hover {
+        background-color: #004c99;
+    }
+    
+    .testimonials h3 {
+        margin-bottom: 20px;
+    }
+    
+    .testimonial {
+        background-color: #f8f9fa;
+        border-left: 4px solid #0066cc;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 0 4px 4px 0;
+    }
+    
+    .testimonial p {
+        margin: 0 0 10px 0;
+        font-style: italic;
+    }
+    
+    .testimonial-author {
+        display: block;
+        text-align: right;
+        font-weight: 600;
+    }
+    
+    .newsletter-preview {
+        margin-top: 60px;
+    }
+    
+    .newsletter-preview h2 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .preview-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .preview-card {
+        border: 1px solid #eee;
+        border-radius: 8px;
+        overflow: hidden;
+        text-decoration: none;
+        color: inherit;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .preview-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .preview-image {
+        height: 150px;
+        overflow: hidden;
+    }
+    
+    .preview-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .preview-content {
+        padding: 15px;
+    }
+    
+    .preview-content h3 {
+        margin-top: 0;
+        margin-bottom: 5px;
+        font-size: 1.1rem;
+    }
+    
+    .preview-date {
+        color: #777;
+        font-size: 0.8rem;
+    }
+    
+    .view-all-link {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        color: #0066cc;
+        text-decoration: none;
+        font-weight: 600;
+    }
+    
+    @media (max-width: 992px) {
+        .subscribe-content {
+            flex-direction: column;
+        }
+        .subscribe-benefits,
+        .subscribe-form-container {
+            max-width: 100%;
+        }
+    }
+</style>

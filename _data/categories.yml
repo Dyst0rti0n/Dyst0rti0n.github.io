@@ -1,0 +1,60 @@
+# Blog categories with descriptions
+- name: cybersecurity
+  title: "Cybersecurity"
+  description: "Explore the latest trends, tools, and techniques in cybersecurity, from penetration testing to threat intelligence."
+  featured: true
+  image: "/assets/images/categories/cybersecurity.jpg"
+
+- name: programming
+  title: "Programming"
+  description: "Tutorials, guides, and insights on programming languages, frameworks, and best practices."
+  featured: true
+  image: "/assets/images/categories/programming.jpg"
+
+- name: golang
+  title: "Go Programming"
+  description: "Deep dives into Go programming language, including tutorials, best practices, and project walkthroughs."
+  featured: true
+  image: "/assets/images/categories/golang.jpg"
+  parent: programming
+
+- name: python
+  title: "Python"
+  description: "Python programming tutorials, scripts, and applications for various domains including security and data analysis."
+  featured: false
+  image: "/assets/images/categories/python.jpg"
+  parent: programming
+
+- name: technology
+  title: "Technology"
+  description: "General technology topics, trends, and insights on the latest innovations and developments."
+  featured: true
+  image: "/assets/images/categories/technology.jpg"
+
+- name: web-development
+  title: "Web Development"
+  description: "Tutorials and guides on building web applications, APIs, and services using various technologies."
+  featured: false
+  image: "/assets/images/categories/web-development.jpg"
+  parent: programming
+
+- name: docker
+  title: "Docker & Containers"
+  description: "Guides on containerization, Docker, and related technologies for modern application deployment."
+  featured: false
+  image: "/assets/images/categories/docker.jpg"
+  parent: technology
+
+- name: dark-web
+  title: "Dark Web"
+  description: "Exploration of the dark web, its technologies, uses, and security implications."
+  featured: false
+  image: "/assets/images/categories/dark-web.jpg"
+  parent: cybersecurity
+
+- name: malware
+  title: "Malware Analysis"
+  description: "Analysis of malware, threats, and attack techniques for educational purposes."
+  featured: false
+  image: "/assets/images/categories/malware.jpg"
+  parent: cybersecurity

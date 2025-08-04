@@ -1,0 +1,84 @@
+--- layout: default title: Newsletter | Dyst0rti0n ---
+
+<div class="newsletter-archive-container">
+    <div class="newsletter-archive-header">
+        <h1>Newsletter Archive</h1>
+        <p>Access past issues of my newsletter covering cybersecurity, programming, and crypto insights.</p>
+
+        <div class="newsletter-signup-featured">
+            {% include cta/newsletter.html title="Subscribe to My Newsletter" description="Get the latest insights, tutorials, and exclusive content delivered directly to your inbox." medium="newsletter-archive" campaign="newsletter-archive" content="header-cta"
+            %}
+        </div>
+    </div>
+
+    <div class="newsletter-categories">
+        <button class="category-button active" data-category="all">All</button>
+        <button class="category-button" data-category="cybersecurity">Cybersecurity</button>
+        <button class="category-button" data-category="programming">Programming</button>
+        <button class="category-button" data-category="crypto">Crypto</button>
+    </div>
+
+    <div class="newsletter-grid">
+        {% for newsletter in site.newsletters %}
+        <div class="newsletter-card" data-categories="{{ newsletter.categories | join: ' ' }}">
+            <div class="newsletter-image">
+                <img src="{{ newsletter.image }}" alt="{{ newsletter.title }}"> {% if newsletter.premium %}
+                <span class="premium-badge">Premium</span> {% endif %}
+            </div>
+            <div class="newsletter-info">
+                <span class="newsletter-date">{{ newsletter.date | date: "%B %d, %Y" }}</span>
+                <h3>{{ newsletter.title }}</h3>
+                <p class="newsletter-description">{{ newsletter.description }}</p>
+                <div class="newsletter-categories">
+                    {% for category in newsletter.categories %}
+                    <span class="category-tag">{{ category }}</span> {% endfor %}
+                </div>
+                <a href="{{ newsletter.url }}" class="button">Read More</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="newsletter-premium-cta">
+        <div class="premium-content">
+            <h2>Upgrade to Premium</h2>
+            <p>Get access to exclusive content, in-depth analysis, and premium resources.</p>
+            <ul class="premium-benefits">
+                <li>Exclusive market insights</li>
+                <li>Early access to new content</li>
+                <li>Premium resources and tools</li>
+                <li>Direct Q&A access</li>
+            </ul>
+            <a href="https://ko-fi.com/dystortion/tiers" class="button primary-button" target="_blank" rel="noopener">Upgrade Now</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const categoryButtons = document.querySelectorAll('.category-button');
+        const newsletterCards = document.querySelectorAll('.newsletter-card');
+
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                categoryButtons.forEach(btn => btn.classList.remove('active'));
+
+                // Add active class to clicked button
+                this.classList.add('active');
+
+                // Get category value
+                const category = this.getAttribute('data-category');
+
+                // Filter newsletters
+                newsletterCards.forEach(card => {
+                    if (category === 'all' || card.getAttribute('data-categories').includes(category)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    });
+</script>

@@ -1,0 +1,61 @@
+{% comment %} Course CTA Component Parameters: - course_path: Path to the course (e.g., /academy/golang-learning) - course_title: Title of the course - course_image: Image URL for the course - medium: Medium for UTM tracking (e.g., blog-post, newsletter)
+- campaign: Campaign name for UTM tracking (default: "course-promotion") - content: Content identifier for UTM tracking - description: Description of the CTA (optional) - button_text: Text to display on the button (default: "Start Learning") {% endcomment
+%} {% assign campaign = include.campaign | default: "course-promotion" %} {% assign button_text = include.button_text | default: "Start Learning" %} {% capture course_url %}{{ include.course_path }}?utm_source=blog-site&utm_medium={{ include.medium }}&utm_campaign={{
+campaign }}&utm_content={{ include.content }}{% endcapture %}
+
+<div class="cta-container course-cta">
+    <div class="course-cta-content">
+        <div class="course-cta-info">
+            <h3>{{ include.course_title }}</h3>
+            {% if include.description %}
+            <p>{{ include.description }}</p>
+            {% endif %}
+        </div>
+
+        {% if include.course_image %}
+        <div class="course-cta-image">
+            <img src="{{ include.course_image }}" alt="{{ include.course_title }}">
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="cta-actions">
+        <a href="{{ course_url }}" class="button">{{ button_text }}</a>
+    </div>
+</div>
+
+<style>
+    .course-cta-content {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+
+    .course-cta-info {
+        flex: 1;
+    }
+
+    .course-cta-image {
+        width: 120px;
+        height: 120px;
+        overflow: hidden;
+        border-radius: 8px;
+        flex-shrink: 0;
+    }
+
+    .course-cta-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    @media (max-width: 768px) {
+        .course-cta-content {
+            flex-direction: column-reverse;
+        }
+        .course-cta-image {
+            width: 100%;
+            height: 200px;
+        }
+    }
+</style>

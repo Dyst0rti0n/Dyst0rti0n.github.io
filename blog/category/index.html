@@ -1,0 +1,28 @@
+--- layout: default title: "Blog Categories" ---
+
+<div class="blog-container">
+    <div class="blog-header">
+        <h1>Blog Categories</h1>
+        <p>Browse articles by topic</p>
+    </div>
+
+    <div class="categories-grid">
+        {% for category in site.data.categories %}
+        <a href="/blog/category/{{ category.name }}/" class="category-card">
+            <div class="category-card-image">
+                <img src="{{ category.image }}" alt="{{ category.title }}">
+            </div>
+            <div class="category-card-content">
+                <h3>{{ category.title }}</h3>
+                <p>{{ category.description }}</p>
+                {% assign category_posts = site.posts | where_exp: "post", "post.categories contains category.name" %}
+                <span class="category-post-count">{{ category_posts.size }} posts</span>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+
+    <div class="blog-newsletter">
+        {% include cta/newsletter.html title="Subscribe to My Newsletter" description="Get the latest articles, tutorials, and insights delivered directly to your inbox." medium="blog" campaign="categories-page" content="newsletter-cta" %}
+    </div>
+</div>

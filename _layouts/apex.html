@@ -1,0 +1,58 @@
+--- layout: default ---
+
+<div class="apex-container">
+    <div class="apex-header">
+        <h1>{{ page.title }}</h1>
+        {% if page.subtitle %}
+        <p class="apex-subtitle">{{ page.subtitle }}</p>
+        {% endif %}
+    </div>
+
+    <div class="apex-content">
+        {% if page.preview_only %}
+        <div class="apex-preview">
+            {{ content }}
+
+            <div class="apex-locked-content">
+                <div class="lock-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                </div>
+                <h3>Premium Content</h3>
+                <p>This content is available to premium subscribers only.</p>
+
+                <div class="apex-cta-buttons">
+                    {% if page.gumroad_link %} {% include monetization/gumroad-button.html link=page.gumroad_link text="Get Access" campaign=page.utm_campaign medium="apex" content="locked-content" class="primary-button" %} {% elsif page.kofi_link %} {% include monetization/kofi-button.html
+                    link=page.kofi_link text="Get Access" campaign=page.utm_campaign medium="apex" content="locked-content" %} {% endif %}
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <div class="apex-full-content">
+            {{ content }}
+        </div>
+        {% endif %}
+    </div>
+
+    {% if page.related_insights %}
+    <div class="related-insights">
+        <h2>Related Insights</h2>
+        <div class="insights-grid">
+            {% for insight_id in page.related_insights %} {% assign insight = site.data.crypto_teasers | where: "id", insight_id | first %} {% if insight %}
+            <div class="insight-card">
+                <img src="{{ insight.image }}" alt="{{ insight.title }}">
+                <h3>{{ insight.title }}</h3>
+                <p>{{ insight.teaser_content | truncate: 120 }}</p>
+                <a href="/apex/{{ insight.id }}" class="button">Read More</a>
+            </div>
+            {% endif %} {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="apex-footer">
+        {% include cta/newsletter.html title="Get Crypto Insights First" description="Subscribe to receive the latest crypto analysis before anyone else." medium="apex" campaign="apex-newsletter" content="footer-cta" %}
+    </div>
+</div>

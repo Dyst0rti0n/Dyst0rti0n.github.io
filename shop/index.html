@@ -1,0 +1,101 @@
+--- layout: default title: Digital Shop | Dyst0rti0n ---
+
+<div class="shop-container">
+    <div class="shop-header">
+        <h1>Digital Shop</h1>
+        <p>Premium digital products, guides, and resources for your journey in technology, cybersecurity, and crypto.</p>
+    </div>
+
+    <div class="shop-filters">
+        <button class="filter-button active" data-filter="all">All Products</button>
+        <button class="filter-button" data-filter="cybersecurity">Cybersecurity</button>
+        <button class="filter-button" data-filter="programming">Programming</button>
+        <button class="filter-button" data-filter="crypto">Crypto</button>
+    </div>
+
+    <div class="products-grid">
+        <!-- Cybersecurity Starter Pack -->
+        <div class="product-card" data-categories="cybersecurity">
+            <div class="product-image">
+                <img src="/assets/images/products/cyber-starter-pack.jpg" alt="Cybersecurity Starter Pack">
+                <span class="featured-badge">Featured</span>
+            </div>
+            <div class="product-info">
+                <h3>Cybersecurity Starter Pack</h3>
+                <p class="product-description">Essential tools and guides for beginners in cybersecurity.</p>
+                <div class="product-price">$29.99</div>
+                <div class="product-actions">
+                    <a href="/shop/starter-pack-1" class="button">View Details</a> {% include monetization/gumroad-button.html product_link="https://gumroad.com/l/cyber-starter" utm_campaign="cyber-starter-2024" utm_medium="shop-page" utm_content="quick-buy"
+                    button_text="Buy Now" button_size="small" %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Go Developer's Toolkit -->
+        <div class="product-card" data-categories="programming">
+            <div class="product-image">
+                <img src="/assets/images/products/go-toolkit.jpg" alt="Go Developer's Toolkit">
+            </div>
+            <div class="product-info">
+                <h3>Go Developer's Toolkit</h3>
+                <p class="product-description">Complete resource pack for Go developers.</p>
+                <div class="product-price">$39.99</div>
+                <div class="product-actions">
+                    <a href="/shop/go-toolkit" class="button">View Details</a> {% include monetization/gumroad-button.html product_link="https://gumroad.com/l/go-toolkit" utm_campaign="go-toolkit-2024" utm_medium="shop-page" utm_content="quick-buy" button_text="Buy
+                    Now" button_size="small" %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Crypto Market Research Bundle -->
+        <div class="product-card" data-categories="crypto">
+            <div class="product-image">
+                <img src="/assets/images/products/crypto-research.jpg" alt="Crypto Market Research Bundle">
+            </div>
+            <div class="product-info">
+                <h3>Crypto Market Research Bundle</h3>
+                <p class="product-description">In-depth analysis and research tools for crypto investors.</p>
+                <div class="product-price">$49.99</div>
+                <div class="product-actions">
+                    <a href="/shop/crypto-research" class="button">View Details</a> {% include monetization/gumroad-button.html product_link="https://gumroad.com/l/crypto-research" utm_campaign="crypto-research-2024" utm_medium="shop-page" utm_content="quick-buy"
+                    button_text="Buy Now" button_size="small" %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="shop-cta">
+        <h2>Custom Solutions</h2>
+        <p>Need a custom solution for your specific needs? Get in touch to discuss how I can help.</p>
+        <a href="/contact" class="button">Contact Me</a>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const filterButtons = document.querySelectorAll('.filter-button');
+        const productCards = document.querySelectorAll('.product-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+
+                // Add active class to clicked button
+                this.classList.add('active');
+
+                // Get filter value
+                const filter = this.getAttribute('data-filter');
+
+                // Filter products
+                productCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-categories').includes(filter)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    });
+</script>

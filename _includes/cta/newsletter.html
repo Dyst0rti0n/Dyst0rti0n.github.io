@@ -1,0 +1,51 @@
+{% comment %} Newsletter CTA Component Parameters: - title: Title of the CTA (default: "Subscribe to My Newsletter") - description: Description of the CTA (default: "Get the latest insights delivered to your inbox.") - medium: Medium for UTM tracking
+(e.g., blog-post, product-page) - campaign: Campaign name for UTM tracking (default: "newsletter-cta") - content: Content identifier for UTM tracking - button_text: Text to display on the button (default: "Subscribe Now") - form_action: Form action URL
+(default: "/newsletter/subscribe") {% endcomment %} {% assign title = include.title | default: "Subscribe to My Newsletter" %} {% assign description = include.description | default: "Get the latest insights delivered to your inbox." %} {% assign campaign
+= include.campaign | default: "newsletter-cta" %} {% assign button_text = include.button_text | default: "Subscribe Now" %} {% assign form_action = include.form_action | default: "/newsletter/subscribe" %} {% capture utm_params %}utm_source=blog-site&utm_medium={{
+include.medium }}&utm_campaign={{ campaign }}&utm_content={{ include.content }}{% endcapture %} {% if form_action contains '?' %} {% assign action_url = form_action | append: '&' | append: utm_params %} {% else %} {% assign action_url = form_action |
+append: '?' | append: utm_params %} {% endif %}
+
+<div class="cta-container newsletter-cta">
+    <h3>{{ title }}</h3>
+    <p>{{ description }}</p>
+
+    <form class="newsletter-form" action="{{ action_url }}" method="get">
+        <div class="newsletter-form-group">
+            <input type="email" name="email" placeholder="Your email address" required>
+            <button type="submit" class="button">{{ button_text }}</button>
+        </div>
+        <div class="newsletter-form-privacy">
+            <small>I respect your privacy. No spam, ever. Unsubscribe anytime.</small>
+        </div>
+    </form>
+</div>
+
+<style>
+    .newsletter-form {
+        margin-top: 20px;
+    }
+
+    .newsletter-form-group {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .newsletter-form-group input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+
+    .newsletter-form-privacy {
+        color: #666;
+    }
+
+    @media (max-width: 768px) {
+        .newsletter-form-group {
+            flex-direction: column;
+        }
+    }
+</style>

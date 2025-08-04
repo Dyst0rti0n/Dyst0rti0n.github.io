@@ -1,0 +1,768 @@
+/* Section Styles for New Pages */
+
+
+/* Common Section Styles */
+
+.section-header {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.section-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+/* Shop Styles */
+
+.shop-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.shop-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.shop-filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.filter-button {
+    background: none;
+    border: 1px solid #ddd;
+    padding: 8px 16px;
+    margin: 0 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-button.active {
+    background-color: #0066cc;
+    color: white;
+    border-color: #0066cc;
+}
+
+.filter-button:hover:not(.active) {
+    background-color: #f0f0f0;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.product-card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.featured-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff6b6b;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+}
+
+.product-description {
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.product-price {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.product-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.shop-cta {
+    background-color: #f8f9fa;
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+/* Newsletter Styles */
+
+.newsletter-archive-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.newsletter-archive-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.newsletter-signup-featured {
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+.newsletter-categories {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.category-button {
+    background: none;
+    border: 1px solid #ddd;
+    padding: 8px 16px;
+    margin: 0 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.category-button.active {
+    background-color: #0066cc;
+    color: white;
+    border-color: #0066cc;
+}
+
+.category-button:hover:not(.active) {
+    background-color: #f0f0f0;
+}
+
+.newsletter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.newsletter-card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.newsletter-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.newsletter-image {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.newsletter-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.premium-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ffd700;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.newsletter-info {
+    padding: 20px;
+}
+
+.newsletter-date {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.newsletter-info h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+}
+
+.newsletter-description {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.newsletter-categories {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.category-tag {
+    background-color: #f0f0f0;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: #555;
+}
+
+.newsletter-premium-cta {
+    background-color: #fff8e1;
+    border-radius: 8px;
+    padding: 40px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.premium-benefits {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.premium-benefits li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.premium-benefits li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #4caf50;
+}
+
+
+/* Apex (Crypto) Styles */
+
+.apex-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.apex-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.apex-featured {
+    margin-bottom: 60px;
+}
+
+.featured-insight {
+    display: flex;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.featured-content {
+    flex: 1;
+    padding: 30px;
+}
+
+.featured-label {
+    background-color: #0066cc;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.featured-content h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.featured-cta {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.featured-image {
+    flex: 0 0 40%;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.featured-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.apex-insights-grid h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.insights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.insight-card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.insight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.insight-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.insight-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.insight-info {
+    padding: 20px;
+}
+
+.insight-date {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.insight-info h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+}
+
+.insight-description {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.insight-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.apex-membership {
+    background-color: #f0f7ff;
+    border-radius: 8px;
+    padding: 40px;
+    margin: 50px 0;
+}
+
+.membership-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.membership-benefits {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.membership-benefits li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.membership-benefits li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #4caf50;
+}
+
+.membership-options {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.membership-option {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    width: 250px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.membership-option.featured {
+    border: 2px solid #0066cc;
+    transform: scale(1.05);
+}
+
+.best-value {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0066cc;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.membership-option h3 {
+    margin-top: 0;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.price span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #777;
+}
+
+.savings {
+    color: #4caf50;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.apex-testimonials {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.testimonial {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.testimonial-content {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.testimonial-author {
+    font-weight: 600;
+}
+
+.apex-footer {
+    margin-top: 50px;
+}
+
+
+/* Projects Styles */
+
+.projects-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.projects-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.projects-filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.project-card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.project-header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.project-badges {
+    display: flex;
+    gap: 10px;
+}
+
+.language-badge {
+    background-color: #e1f5fe;
+    color: #0277bd;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.stars-badge {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    color: #ff9800;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.project-description {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.project-tech {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.tech-tag {
+    background-color: #f0f0f0;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: #555;
+}
+
+.project-links {
+    display: flex;
+    gap: 15px;
+}
+
+.github-link,
+.details-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: #0066cc;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.github-link:hover,
+.details-link:hover {
+    color: #004c99;
+}
+
+.github-cta {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 40px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.github-cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.github-cta .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.projects-footer {
+    margin-top: 50px;
+}
+
+.custom-development {
+    background-color: #f0f7ff;
+    border-radius: 8px;
+    padding: 40px;
+    text-align: center;
+}
+
+
+/* Common Button Styles */
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0066cc;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #004c99;
+}
+
+.primary-button {
+    background-color: #0066cc;
+    color: white;
+}
+
+.primary-button:hover {
+    background-color: #004c99;
+}
+
+.secondary-button {
+    background-color: white;
+    color: #0066cc;
+    border: 1px solid #0066cc;
+}
+
+.secondary-button:hover {
+    background-color: #f0f7ff;
+}
+
+.small-button {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+}
+
+
+/* Responsive Styles */
+
+@media (max-width: 992px) {
+    .featured-insight {
+        flex-direction: column;
+    }
+    .featured-image {
+        height: 250px;
+    }
+    .membership-option.featured {
+        transform: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .products-grid,
+    .newsletter-grid,
+    .insights-grid,
+    .projects-grid,
+    .testimonials-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    }
+    .membership-options {
+        flex-direction: column;
+        align-items: center;
+    }
+    .membership-option {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+}

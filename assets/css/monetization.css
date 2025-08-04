@@ -1,0 +1,314 @@
+/* Monetization Components Styles */
+
+
+/* Gumroad Button */
+
+.gumroad-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #ff90e8;
+    color: #000;
+    padding: 10px 16px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.gumroad-button:hover {
+    background-color: #ff7ce3;
+    transform: translateY(-2px);
+}
+
+.gumroad-button svg {
+    width: 18px;
+    height: 18px;
+}
+
+.gumroad-button-small {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+}
+
+.gumroad-button-large {
+    padding: 12px 24px;
+    font-size: 1.1rem;
+}
+
+
+/* Ko-fi Button */
+
+.kofi-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #29abe0;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.kofi-button:hover {
+    background-color: #1a8dbb;
+    transform: translateY(-2px);
+}
+
+.kofi-button svg {
+    width: 18px;
+    height: 18px;
+}
+
+.kofi-button-small {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+}
+
+.kofi-button-large {
+    padding: 12px 24px;
+    font-size: 1.1rem;
+}
+
+
+/* Affiliate Button */
+
+.affiliate-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #0066cc;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.affiliate-button:hover {
+    background-color: #004c99;
+    transform: translateY(-2px);
+}
+
+.affiliate-button svg {
+    width: 18px;
+    height: 18px;
+}
+
+.affiliate-button-small {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+}
+
+.affiliate-button-large {
+    padding: 12px 24px;
+    font-size: 1.1rem;
+}
+
+.affiliate-button-secondary {
+    background-color: #6c757d;
+}
+
+.affiliate-button-secondary:hover {
+    background-color: #5a6268;
+}
+
+.affiliate-button-outline {
+    background-color: transparent;
+    border: 1px solid #0066cc;
+    color: #0066cc;
+}
+
+.affiliate-button-outline:hover {
+    background-color: rgba(0, 102, 204, 0.1);
+}
+
+
+/* Platform-specific styles */
+
+.affiliate-amazon {
+    background-color: #ff9900;
+}
+
+.affiliate-amazon:hover {
+    background-color: #e68a00;
+}
+
+.affiliate-digitalocean {
+    background-color: #0080ff;
+}
+
+.affiliate-digitalocean:hover {
+    background-color: #0066cc;
+}
+
+.affiliate-linode {
+    background-color: #00b159;
+}
+
+.affiliate-linode:hover {
+    background-color: #008c46;
+}
+
+
+/* Content Teaser */
+
+.content-teaser {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 30px;
+    margin: 30px 0;
+    text-align: center;
+    border: 1px solid #e9ecef;
+}
+
+.content-teaser h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.content-teaser p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.content-teaser-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+/* Gated Content */
+
+.gated-content .full-content {
+    display: none;
+}
+
+
+/* Email Capture Form */
+
+.email-capture-form {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 30px;
+    margin: 30px 0;
+    border: 1px solid #e9ecef;
+}
+
+.email-capture-form h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.email-capture-form p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.form-group input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.success-message {
+    display: none;
+    color: #28a745;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+
+/* CTA Components */
+
+.cta-container {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 30px;
+    margin: 30px 0;
+    border: 1px solid #e9ecef;
+}
+
+.cta-container h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.cta-container p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.cta-actions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+/* Newsletter CTA */
+
+.newsletter-cta {
+    background-color: #e6f2ff;
+    border-color: #b8daff;
+}
+
+
+/* Product CTA */
+
+.product-cta {
+    background-color: #e6fff2;
+    border-color: #b8ffda;
+}
+
+
+/* Course CTA */
+
+.course-cta {
+    background-color: #fff2e6;
+    border-color: #ffdab8;
+}
+
+
+/* Responsive styles */
+
+@media (max-width: 768px) {
+    .cta-actions {
+        flex-direction: column;
+    }
+    .content-teaser-actions {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,27 @@
+# Newsletter archive metadata
+- id: newsletter-1
+  title: "Cybersecurity Trends: Q3 2024"
+  description: "Latest trends and insights in the cybersecurity landscape"
+  image: "/assets/images/newsletter/cyber-trends-q3.jpg"
+  teaser_content: "This quarter has seen a 35% increase in supply chain attacks, with a particular focus on development dependencies. Our analysis reveals three critical patterns that every security team should be monitoring..."
+  published_date: "2024-07-01"
+  categories: ["cybersecurity", "trends"]
+  premium: false
+
+- id: newsletter-2
+  title: "Go 2.0: What's Coming"
+  description: "Preview of upcoming features in Go 2.0"
+  image: "/assets/images/newsletter/go-2-preview.jpg"
+  teaser_content: "The Go team has announced several groundbreaking features for the upcoming 2.0 release. Our technical deep dive explores how these changes will impact performance, developer experience, and existing codebases..."
+  published_date: "2024-07-15"
+  categories: ["programming", "golang"]
+  premium: false
+
+- id: newsletter-3
+  title: "Crypto Market Analysis: August 2024"
+  description: "In-depth analysis of crypto market movements"
+  image: "/assets/images/newsletter/crypto-august.jpg"
+  teaser_content: "August has seen significant volatility in the crypto markets, with key indicators suggesting a potential shift in the macro trend. Our technical analysis identifies three critical support levels that could determine the next major move..."
+  published_date: "2024-08-01"
+  categories: ["crypto", "investing"]
+  premium: true

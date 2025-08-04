@@ -1,0 +1,74 @@
+--- layout: default title: "Cybersecurity Articles" category: cybersecurity --- {% assign category = site.data.categories | where: "name", page.category | first %}
+
+<div class="blog-container">
+    <div class="blog-header">
+        <h1>{{ category.title }}</h1>
+        <p>{{ category.description }}</p>
+    </div>
+
+    <div class="blog-categories">
+        <div class="category-filters">
+            <a href="/blog/" class="category-filter">All</a> {% assign featured_categories = site.data.categories | where: "featured", true %} {% for cat in featured_categories %}
+            <a href="/blog/category/{{ cat.name }}/" class="category-filter {% if cat.name == page.category %}active{% endif %}">{{ cat.title }}</a> {% endfor %}
+            <div class="category-dropdown">
+                <button class="dropdown-button">More Categories</button>
+                <div class="dropdown-content">
+                    {% assign other_categories = site.data.categories | where: "featured", false %} {% for cat in other_categories %}
+                    <a href="/blog/category/{{ cat.name }}/" {% if cat.name==p age.category %}class="active" {% endif %}>{{ cat.title }}</a> {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="blog-grid">
+        {% assign category_posts = site.posts | where_exp: "post", "post.categories contains page.category" %} {% for post in category_posts %}
+        <div class="blog-card">
+            <div class="blog-card-image">
+                <img src="{{ post.image }}" alt="{{ post.title }}">
+            </div>
+            <div class="blog-card-content">
+                <div class="blog-card-meta">
+                    <span class="blog-card-date">{{ post.date | date: "%B %d, %Y" }}</span> {% if post.categories %}
+                    <div class="blog-card-categories">
+                        {% for cat in post.categories limit:1 %}
+                        <a href="/blog/category/{{ cat | slugify }}/" class="post-category">{{ cat }}</a> {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+                <h3>{{ post.title }}</h3>
+                <p>{{ post.excerpt | strip_html | truncate: 100 }}</p>
+                <a href="{{ post.url }}" class="blog-card-link">Read More</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    {% assign related_product = site.data.category_products | where: "category", page.category | first %} {% if related_product %} {% assign product = site.data.products | where: "id", related_product.product_id | first %} {% if product %} {% include cta/product.html
+    product_id=product.id medium="blog-category" content="category-page" %} {% endif %} {% endif %}
+
+    <div class="blog-newsletter">
+        {% include cta/newsletter.html title="Subscribe to My Newsletter" description="Get the latest articles, tutorials, and insights delivered directly to your inbox." medium="blog" campaign="category-page" content="newsletter-cta" %}
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const dropdownButton = document.querySelector('.dropdown-button');
+        const dropdownContent = document.querySelector('.dropdown-content');
+
+        if (dropdownButton && dropdownContent) {
+            dropdownButton.addEventListener('click', function() {
+                dropdownContent.classList.toggle('show');
+            });
+
+            // Close the dropdown if clicked outside
+            window.addEventListener('click', function(event) {
+                if (!event.target.matches('.dropdown-button')) {
+                    if (dropdownContent.classList.contains('show')) {
+                        dropdownContent.classList.remove('show');
+                    }
+                }
+            });
+        }
+    });
+</script>

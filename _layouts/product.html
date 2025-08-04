@@ -1,0 +1,80 @@
+--- layout: default ---
+
+<div class="product-container">
+    <div class="product-header">
+        <h1>{{ page.title }}</h1>
+        <p class="product-subtitle">{{ page.subtitle }}</p>
+    </div>
+
+    <div class="product-content">
+        <div class="product-image">
+            <img src="{{ page.image }}" alt="{{ page.title }}">
+        </div>
+        <div class="product-details">
+            <div class="product-price">${{ page.price }}</div>
+
+            <div class="product-includes">
+                <h3>What's Included:</h3>
+                <ul>
+                    {% for item in page.includes %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="product-cta">
+                {% include monetization/gumroad-button.html product_link=page.gumroad_link utm_campaign=page.utm_campaign utm_medium="product-page" utm_content="main-cta" button_text="Buy Now" %} {% include monetization/kofi-button.html button_text="Support on Ko-fi"
+                utm_campaign=page.utm_campaign utm_medium="product-page" utm_content="support-cta" %}
+            </div>
+        </div>
+    </div>
+
+    <div class="product-description">
+        {{ content }}
+    </div>
+
+    {% if page.testimonials %}
+    <div class="product-testimonials">
+        <h2>What People Are Saying</h2>
+        <div class="testimonials-container">
+            {% for testimonial in page.testimonials %}
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    "{{ testimonial.content }}"
+                </div>
+                <div class="testimonial-author">
+                    — {{ testimonial.author }}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %} {% if page.related_products %}
+    <div class="related-products">
+        <h2>You May Also Like</h2>
+        <div class="products-grid">
+            {% for product_id in page.related_products %} {% assign product_file = product_id | append: ".html" %} {% for product_page in site.pages %} {% if product_page.path contains product_file %}
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{{ product_page.image }}" alt="{{ product_page.title }}">
+                </div>
+                <div class="product-info">
+                    <h3>{{ product_page.title }}</h3>
+                    <p class="product-description">{{ product_page.subtitle }}</p>
+                    <div class="product-price">${{ product_page.price }}</div>
+                    <div class="product-actions">
+                        <a href="{{ product_page.url }}" class="button">View Details</a> {% include monetization/gumroad-button.html product_link=product_page.gumroad_link utm_campaign=product_page.utm_campaign utm_medium="related-product" utm_content="quick-buy"
+                        button_text="Buy Now" button_size="small" %}
+                    </div>
+                </div>
+            </div>
+            {% endif %} {% endfor %} {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="product-guarantee">
+        <h2>100% Satisfaction Guarantee</h2>
+        <p>If you're not completely satisfied with your purchase, contact me within 30 days for a full refund.</p>
+    </div>
+</div>

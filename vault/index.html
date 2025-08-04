@@ -1,0 +1,299 @@
+--- layout: default title: Subscriber Vault | Dyst0rti0n ---
+
+<div class="vault-container">
+    <div class="vault-header">
+        <h1>Subscriber Vault</h1>
+        <p>Exclusive content for newsletter subscribers and premium members.</p>
+    </div>
+
+    <div class="vault-access">
+        <div class="vault-login">
+            <h2>Access the Vault</h2>
+            <p>Enter your access code to unlock exclusive content.</p>
+
+            <form id="vault-access-form" class="access-form" data-content-id="vault-content">
+                <div class="form-group">
+                    <label for="access-code">Access Code:</label>
+                    <input type="password" id="access-code" class="access-code" placeholder="Enter your access code">
+                </div>
+                <div class="error-message" style="display: none; color: #dc3545; margin-top: 10px;">
+                    Invalid access code. Please try again or contact support.
+                </div>
+                <button type="submit" class="button">Unlock Content</button>
+            </form>
+
+            <div class="vault-help">
+                <p>Don't have an access code? Subscribe to our newsletter to receive your code.</p>
+                {% include cta/newsletter.html title="Subscribe for Access" description="Get exclusive content and your vault access code." medium="vault" campaign="vault-access" content="access-form" %}
+            </div>
+        </div>
+    </div>
+
+    <div class="gated-content hidden" data-content-id="vault-content">
+        <div class="vault-content">
+            <h2>Welcome to the Vault</h2>
+            <p class="vault-welcome">Thank you for being a subscriber! Here's your exclusive content.</p>
+
+            <div class="vault-sections">
+                <section class="vault-section">
+                    <h3>Premium Guides</h3>
+                    <div class="vault-items">
+                        <div class="vault-item">
+                            <div class="vault-item-header">
+                                <h4>Advanced Go Concurrency Patterns</h4>
+                                <span class="vault-item-type">PDF Guide</span>
+                            </div>
+                            <p>Deep dive into advanced concurrency patterns in Go, including worker pools, pipelines, and cancellation.</p>
+                            <a href="https://ko-fi.com/s/abcdef123456" class="button" target="_blank" rel="noopener">Download</a>
+                        </div>
+
+                        <div class="vault-item">
+                            <div class="vault-item-header">
+                                <h4>Cybersecurity Incident Response Playbook</h4>
+                                <span class="vault-item-type">PDF Guide</span>
+                            </div>
+                            <p>Step-by-step playbook for responding to common security incidents, with templates and checklists.</p>
+                            <a href="https://ko-fi.com/s/123456abcdef" class="button" target="_blank" rel="noopener">Download</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="vault-section">
+                    <h3>Code Templates & Snippets</h3>
+                    <div class="vault-items">
+                        <div class="vault-item">
+                            <div class="vault-item-header">
+                                <h4>Go API Starter Template</h4>
+                                <span class="vault-item-type">GitHub Repo</span>
+                            </div>
+                            <p>Production-ready Go API template with authentication, middleware, and documentation.</p>
+                            <a href="https://github.com/Dyst0rti0n/go-api-starter" class="button" target="_blank" rel="noopener">Access Repo</a>
+                        </div>
+
+                        <div class="vault-item">
+                            <div class="vault-item-header">
+                                <h4>Security Testing Scripts</h4>
+                                <span class="vault-item-type">Script Collection</span>
+                            </div>
+                            <p>Collection of Python and Bash scripts for automated security testing and auditing.</p>
+                            <a href="https://ko-fi.com/s/7890abcdef12" class="button" target="_blank" rel="noopener">Download</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="vault-section">
+                    <h3>Exclusive Videos</h3>
+                    <div class="vault-items">
+                        <div class="vault-item">
+                            <div class="vault-item-header">
+                                <h4>Building a Secure API with Go</h4>
+                                <span class="vault-item-type">Video Tutorial</span>
+                            </div>
+                            <p>Step-by-step video tutorial on building a secure, production-ready API with Go.</p>
+                            <a href="https://ko-fi.com/s/abcdef789012" class="button" target="_blank" rel="noopener">Watch Now</a>
+                        </div>
+
+                        <div class="vault-item">
+                            <div class="vault-item-header">
+                                <h4>Advanced Crypto Trading Strategies</h4>
+                                <span class="vault-item-type">Video Workshop</span>
+                            </div>
+                            <p>In-depth workshop on advanced crypto trading strategies, risk management, and market analysis.</p>
+                            <a href="https://ko-fi.com/s/123456789abc" class="button" target="_blank" rel="noopener">Watch Now</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="vault-upgrade">
+                <h3>Upgrade to Premium</h3>
+                <p>Want even more exclusive content? Upgrade to a premium membership for access to our full library.</p>
+                <a href="https://ko-fi.com/dystortion/tiers" class="button primary-button" target="_blank" rel="noopener">Upgrade Now</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .vault-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+    
+    .vault-header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    .vault-access {
+        max-width: 500px;
+        margin: 0 auto 50px;
+    }
+    
+    .vault-login {
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        padding: 30px;
+        text-align: center;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+        text-align: left;
+    }
+    
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+    
+    .form-group input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+    
+    .vault-help {
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid #eee;
+    }
+    
+    .hidden {
+        display: none;
+    }
+    
+    .vault-content {
+        animation: fadeIn 0.5s ease;
+    }
+    
+    .vault-welcome {
+        text-align: center;
+        font-size: 1.1rem;
+        margin-bottom: 40px;
+    }
+    
+    .vault-sections {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .vault-items {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+    }
+    
+    .vault-item {
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        padding: 20px;
+    }
+    
+    .vault-item-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    
+    .vault-item-header h4 {
+        margin: 0;
+    }
+    
+    .vault-item-type {
+        background-color: #e1f5fe;
+        color: #0277bd;
+        padding: 3px 8px;
+        border-radius: 4px;
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+    
+    .vault-upgrade {
+        background-color: #f0f7ff;
+        border-radius: 8px;
+        padding: 30px;
+        text-align: center;
+        margin-top: 50px;
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .vault-items {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const accessForm = document.getElementById('vault-access-form');
+
+        if (accessForm) {
+            accessForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const accessCode = document.getElementById('access-code').value;
+                const contentId = this.getAttribute('data-content-id');
+
+                // Demo implementation - in production, validate against your database
+                if (accessCode === 'DEMO1234') {
+                    // Store access in localStorage
+                    const accessData = JSON.parse(localStorage.getItem('gatedContentAccess') || '{}');
+                    accessData[contentId] = {
+                        granted: true,
+                        timestamp: new Date().getTime()
+                    };
+                    localStorage.setItem('gatedContentAccess', JSON.stringify(accessData));
+
+                    // Show the content
+                    const gatedContent = document.querySelector(`.gated-content[data-content-id="${contentId}"]`);
+                    if (gatedContent) {
+                        gatedContent.classList.remove('hidden');
+                    }
+
+                    // Hide the form
+                    this.closest('.vault-access').style.display = 'none';
+                } else {
+                    // Show error message
+                    const errorMsg = this.querySelector('.error-message');
+                    if (errorMsg) {
+                        errorMsg.style.display = 'block';
+                    }
+                }
+            });
+        }
+
+        // Check for existing access
+        const accessData = JSON.parse(localStorage.getItem('gatedContentAccess') || '{}');
+        Object.keys(accessData).forEach(contentId => {
+            if (accessData[contentId].granted) {
+                const gatedContent = document.querySelector(`.gated-content[data-content-id="${contentId}"]`);
+                if (gatedContent) {
+                    gatedContent.classList.remove('hidden');
+
+                    // Hide the form
+                    const accessSection = document.querySelector('.vault-access');
+                    if (accessSection) {
+                        accessSection.style.display = 'none';
+                    }
+                }
+            }
+        });
+    });
+</script>

@@ -7,6 +7,12 @@ url: "https://blog-site-self.vercel.app/"
 github_username: Dyst0rti0n
 author: Dyst0rti0n
 
+# Collections
+collections:
+  newsletters:
+    output: true
+    permalink: /newsletter/:path/
+
 # Build settings
 theme: minima
 plugins:
@@ -54,7 +60,15 @@ navigation:
     url: "/"
   - text: "Blog"
     url: "/blog"
+  - text: "Newsletter"
+    url: "/newsletter"
   - text: "Learning Academy"
     url: "/academy"
+  - text: "Shop"
+    url: "/shop"
+  - text: "Projects"
+    url: "/projects"
+  - text: "Apex"
+    url: "/apex"
   - text: "Contact"
     url: "/contact"

@@ -1,0 +1,455 @@
+--- layout: default title: Roadmap | Dyst0rti0n ---
+
+<div class="roadmap-container">
+    <div class="roadmap-header">
+        <h1>Future Plans & Roadmap</h1>
+        <p>Explore what's coming next for this platform and my content.</p>
+    </div>
+
+    <div class="roadmap-timeline">
+        <div class="roadmap-item active">
+            <div class="roadmap-date">Q3 2024</div>
+            <div class="roadmap-content">
+                <h3>Platform Expansion</h3>
+                <ul class="roadmap-list">
+                    <li class="completed">Launch newsletter subscription</li>
+                    <li class="completed">Create digital product shop</li>
+                    <li class="completed">Develop Apex crypto insights section</li>
+                    <li class="in-progress">Expand programming projects showcase</li>
+                    <li>Launch first premium course</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="roadmap-item">
+            <div class="roadmap-date">Q4 2024</div>
+            <div class="roadmap-content">
+                <h3>Content & Community</h3>
+                <ul class="roadmap-list">
+                    <li>Launch Discord community for premium members</li>
+                    <li>Start weekly live Q&A sessions</li>
+                    <li>Release comprehensive Go programming course</li>
+                    <li>Publish cybersecurity certification guide</li>
+                    <li>Launch podcast featuring industry experts</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="roadmap-item">
+            <div class="roadmap-date">Q1 2025</div>
+            <div class="roadmap-content">
+                <h3>Tools & Resources</h3>
+                <ul class="roadmap-list">
+                    <li>Release custom security testing toolkit</li>
+                    <li>Launch interactive coding challenges platform</li>
+                    <li>Develop crypto market analysis dashboard</li>
+                    <li>Create comprehensive API documentation generator</li>
+                    <li>Publish technical e-book series</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="roadmap-item">
+            <div class="roadmap-date">Q2 2025</div>
+            <div class="roadmap-content">
+                <h3>Advanced Offerings</h3>
+                <ul class="roadmap-list">
+                    <li>Launch mentorship program for aspiring developers</li>
+                    <li>Start quarterly virtual conferences</li>
+                    <li>Develop advanced certification programs</li>
+                    <li>Create interactive learning platform</li>
+                    <li>Establish research partnership program</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="roadmap-voting">
+        <h2>Vote on Future Content</h2>
+        <p>Help shape the future of this platform by voting on what you'd like to see next.</p>
+
+        <div class="voting-options">
+            <div class="voting-option">
+                <h3>Advanced Go Microservices Course</h3>
+                <p>Comprehensive course on building, deploying, and scaling microservices with Go.</p>
+                <div class="voting-progress">
+                    <div class="voting-bar">
+                        <div class="voting-fill" style="width: 75%"></div>
+                    </div>
+                    <div class="voting-count">75 votes</div>
+                </div>
+                <button class="vote-button" data-option="go-microservices">Vote</button>
+            </div>
+
+            <div class="voting-option">
+                <h3>Cybersecurity Career Guide</h3>
+                <p>Complete guide to starting and advancing your career in cybersecurity.</p>
+                <div class="voting-progress">
+                    <div class="voting-bar">
+                        <div class="voting-fill" style="width: 62%"></div>
+                    </div>
+                    <div class="voting-count">62 votes</div>
+                </div>
+                <button class="vote-button" data-option="cybersecurity-career">Vote</button>
+            </div>
+
+            <div class="voting-option">
+                <h3>Crypto Trading Bot Workshop</h3>
+                <p>Hands-on workshop for building and deploying your own crypto trading bot.</p>
+                <div class="voting-progress">
+                    <div class="voting-bar">
+                        <div class="voting-fill" style="width: 48%"></div>
+                    </div>
+                    <div class="voting-count">48 votes</div>
+                </div>
+                <button class="vote-button" data-option="crypto-bot">Vote</button>
+            </div>
+
+            <div class="voting-option">
+                <h3>Web3 Development Bootcamp</h3>
+                <p>Comprehensive bootcamp for building decentralized applications and smart contracts.</p>
+                <div class="voting-progress">
+                    <div class="voting-bar">
+                        <div class="voting-fill" style="width: 39%"></div>
+                    </div>
+                    <div class="voting-count">39 votes</div>
+                </div>
+                <button class="vote-button" data-option="web3-bootcamp">Vote</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="roadmap-suggest">
+        <h2>Suggest a Feature or Content</h2>
+        <p>Have an idea for something you'd like to see? Let me know!</p>
+
+        <form id="suggestion-form" action="/submit-suggestion" method="post">
+            <div class="form-group">
+                <label for="suggestion-name">Name:</label>
+                <input type="text" id="suggestion-name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="suggestion-email">Email:</label>
+                <input type="email" id="suggestion-email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="suggestion-type">Suggestion Type:</label>
+                <select id="suggestion-type" name="type" required>
+                    <option value="">Select an option</option>
+                    <option value="course">Course/Tutorial</option>
+                    <option value="tool">Tool/Resource</option>
+                    <option value="content">Blog/Newsletter Content</option>
+                    <option value="feature">Platform Feature</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="suggestion-content">Your Suggestion:</label>
+                <textarea id="suggestion-content" name="content" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="button">Submit Suggestion</button>
+        </form>
+    </div>
+
+    <div class="roadmap-newsletter">
+        <h2>Stay Updated</h2>
+        <p>Subscribe to the newsletter to get updates on new features and content.</p>
+
+        {% include cta/newsletter.html title="Get Roadmap Updates" description="Be the first to know when new features and content are released." medium="roadmap" campaign="roadmap-updates" content="footer-cta" %}
+    </div>
+</div>
+
+<style>
+    .roadmap-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+    
+    .roadmap-header {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    
+    .roadmap-timeline {
+        position: relative;
+        margin: 40px 0 80px;
+    }
+    
+    .roadmap-timeline::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 120px;
+        width: 2px;
+        background-color: #ddd;
+    }
+    
+    .roadmap-item {
+        position: relative;
+        padding-left: 160px;
+        margin-bottom: 50px;
+    }
+    
+    .roadmap-item::before {
+        content: '';
+        position: absolute;
+        left: 116px;
+        top: 15px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #ddd;
+        border: 2px solid #fff;
+    }
+    
+    .roadmap-item.active::before {
+        background-color: #0066cc;
+    }
+    
+    .roadmap-date {
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 100px;
+        text-align: right;
+        font-weight: 600;
+        color: #0066cc;
+    }
+    
+    .roadmap-content {
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        padding: 20px;
+    }
+    
+    .roadmap-content h3 {
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+    
+    .roadmap-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .roadmap-list li {
+        margin-bottom: 10px;
+        position: relative;
+        padding-left: 25px;
+    }
+    
+    .roadmap-list li::before {
+        content: "○";
+        position: absolute;
+        left: 0;
+        color: #777;
+    }
+    
+    .roadmap-list li.completed::before {
+        content: "✓";
+        color: #4caf50;
+    }
+    
+    .roadmap-list li.in-progress::before {
+        content: "⟳";
+        color: #ff9800;
+    }
+    
+    .roadmap-voting {
+        margin: 60px 0;
+        text-align: center;
+    }
+    
+    .voting-options {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+    }
+    
+    .voting-option {
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        padding: 20px;
+        text-align: left;
+    }
+    
+    .voting-option h3 {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+    
+    .voting-progress {
+        display: flex;
+        align-items: center;
+        margin: 15px 0;
+    }
+    
+    .voting-bar {
+        flex: 1;
+        height: 10px;
+        background-color: #e9ecef;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    
+    .voting-fill {
+        height: 100%;
+        background-color: #0066cc;
+    }
+    
+    .voting-count {
+        margin-left: 10px;
+        font-size: 0.9rem;
+        color: #777;
+        min-width: 60px;
+    }
+    
+    .vote-button {
+        background-color: #0066cc;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: background-color 0.2s ease;
+    }
+    
+    .vote-button:hover {
+        background-color: #004c99;
+    }
+    
+    .roadmap-suggest {
+        margin: 60px 0;
+        text-align: center;
+    }
+    
+    #suggestion-form {
+        max-width: 600px;
+        margin: 30px auto 0;
+        text-align: left;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+    
+    .roadmap-newsletter {
+        margin-top: 60px;
+        text-align: center;
+    }
+    
+    @media (max-width: 768px) {
+        .roadmap-timeline::before {
+            left: 20px;
+        }
+        .roadmap-item {
+            padding-left: 50px;
+        }
+        .roadmap-item::before {
+            left: 16px;
+        }
+        .roadmap-date {
+            position: static;
+            text-align: left;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .voting-options {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Voting functionality
+        const voteButtons = document.querySelectorAll('.vote-button');
+
+        voteButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const option = this.getAttribute('data-option');
+                const countElement = this.parentElement.querySelector('.voting-count');
+                const fillElement = this.parentElement.querySelector('.voting-fill');
+
+                // Get current vote count
+                let count = parseInt(countElement.textContent);
+
+                // Check if user has already voted
+                const votes = JSON.parse(localStorage.getItem('roadmapVotes') || '{}');
+
+                if (votes[option]) {
+                    alert('You have already voted for this option.');
+                    return;
+                }
+
+                // Update count and progress bar
+                count++;
+                countElement.textContent = count + ' votes';
+
+                // Calculate new percentage (simplified for demo)
+                const newWidth = Math.min(100, Math.max(1, count / 1.5)) + '%';
+                fillElement.style.width = newWidth;
+
+                // Save vote in localStorage
+                votes[option] = true;
+                localStorage.setItem('roadmapVotes', JSON.stringify(votes));
+
+                // Disable button
+                this.disabled = true;
+                this.textContent = 'Voted';
+
+                // In a real implementation, you would send this to your server
+                console.log('Vote recorded for: ' + option);
+            });
+        });
+
+        // Check for existing votes
+        const votes = JSON.parse(localStorage.getItem('roadmapVotes') || '{}');
+
+        voteButtons.forEach(button => {
+            const option = button.getAttribute('data-option');
+
+            if (votes[option]) {
+                button.disabled = true;
+                button.textContent = 'Voted';
+            }
+        });
+
+        // Form submission (demo)
+        const suggestionForm = document.getElementById('suggestion-form');
+
+        if (suggestionForm) {
+            suggestionForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                alert('Thank you for your suggestion! In a real implementation, this would be sent to the server.');
+                this.reset();
+            });
+        }
+    });
+</script>

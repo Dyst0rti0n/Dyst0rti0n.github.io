@@ -28,34 +28,26 @@ document.addEventListener('DOMContentLoaded', function() {
                         return response.json();
                     })
                     .catch(error => {
-                        console.error(`Error fetching repository ${repo}:`, error);
-                        // Return a fallback repository object with minimal info
-                        return {
-                            name: repo,
-                            description: "Repository information currently unavailable",
-                            html_url: `https://github.com/${username}/${repo}`,
-                            language: null,
-                            stargazers_count: 0,
-                            topics: [],
-                            homepage: null
-                        };
+                        console.error(error);
+                        return null;
                     })
                 );
 
                 Promise.all(promises)
                     .then(repositories => {
-                        // All repositories should be valid now since we return fallback objects
-                        if (repositories.length === 0) {
+                        // Filter out null responses (failed requests)
+                        const validRepos = repositories.filter(repo => repo !== null);
+
+                        if (validRepos.length === 0) {
                             projectsContainer.innerHTML = '<div class="error">Failed to load projects. Please try again later.</div>';
                             return;
                         }
 
-                        displayRepositories(repositories);
+                        displayRepositories(validRepos);
                     })
                     .catch(error => {
-                        console.error('Error in Promise.all for repositories:', error);
-                        // Show a more user-friendly error message
-                        projectsContainer.innerHTML = '<div class="error">We\'re having trouble connecting to GitHub right now. Please check back later.</div>';
+                        console.error('Error fetching repositories:', error);
+                        projectsContainer.innerHTML = '<div class="error">Failed to load projects. Please try again later.</div>';
                     });
             }
 
@@ -73,12 +65,6 @@ document.addEventListener('DOMContentLoaded', function() {
                             const projectCard = document.createElement('div');
                             projectCard.className = 'project-card';
                             projectCard.setAttribute('data-categories', repo.language ? repo.language.toLowerCase() : '');
-
-                            // Add any security-related topics to categories
-                            if (repo.topics && (repo.topics.includes('security') || repo.topics.includes('cybersecurity'))) {
-                                const currentCategories = projectCard.getAttribute('data-categories');
-                                projectCard.setAttribute('data-categories', currentCategories + ' security');
-                            }
 
                             projectCard.innerHTML = `
                 <div class="project-header">
@@ -117,9 +103,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
             projectsContainer.appendChild(projectCard);
         });
-
-        // Add repository statistics
-        addRepositoryStatistics(repositories);
     }
 
     /**
@@ -142,50 +125,6 @@ document.addEventListener('DOMContentLoaded', function() {
         };
 
         return languageMap[language] || 'lang-other';
-    }
-
-    /**
-     * Add repository statistics
-     */
-    function addRepositoryStatistics(repositories) {
-        // Only add stats if we have repositories
-        if (repositories.length === 0) return;
-
-        // Create stats container
-        const statsContainer = document.createElement('div');
-        statsContainer.className = 'repository-stats';
-
-        // Calculate statistics
-        const totalStars = repositories.reduce((sum, repo) => sum + repo.stargazers_count, 0);
-        const totalForks = repositories.reduce((sum, repo) => sum + repo.forks_count, 0);
-        const languages = repositories.map(repo => repo.language).filter(Boolean);
-        const uniqueLanguages = [...new Set(languages)];
-
-        // Create stats HTML
-        statsContainer.innerHTML = `
-            <div class="stats-item">
-                <span class="stats-value">${repositories.length}</span>
-                <span class="stats-label">Projects</span>
-            </div>
-            <div class="stats-item">
-                <span class="stats-value">${totalStars}</span>
-                <span class="stats-label">Stars</span>
-            </div>
-            <div class="stats-item">
-                <span class="stats-value">${totalForks}</span>
-                <span class="stats-label">Forks</span>
-            </div>
-            <div class="stats-item">
-                <span class="stats-value">${uniqueLanguages.length}</span>
-                <span class="stats-label">Languages</span>
-            </div>
-        `;
-
-        // Insert stats before the projects grid
-        const projectsHeader = document.querySelector('.projects-header');
-        if (projectsHeader && projectsHeader.nextElementSibling) {
-            projectsHeader.parentNode.insertBefore(statsContainer, projectsHeader.nextElementSibling);
-        }
     }
 
     // Filter functionality

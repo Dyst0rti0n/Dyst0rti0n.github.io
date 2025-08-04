@@ -1,0 +1,45 @@
+# Product listings for the shop
+- id: starter-pack-1
+  title: "Cybersecurity Starter Pack"
+  description: "Essential tools and guides for beginners in cybersecurity"
+  price: 29.99
+  image: "/assets/images/products/cyber-starter-pack.jpg"
+  category: "bundles"
+  featured: true
+  gumroad_link: "https://gumroad.com/l/cyber-starter"
+  utm_campaign: "cyber-starter-2024"
+  includes:
+    - "Beginner's Guide to Network Security (PDF)"
+    - "Top 10 Security Tools Cheatsheet"
+    - "Security Audit Templates"
+    - "Video Tutorial: Setting Up Your First Security Lab"
+
+- id: go-toolkit
+  title: "Go Developer's Toolkit"
+  description: "Complete resource pack for Go developers"
+  price: 39.99
+  image: "/assets/images/products/go-toolkit.jpg"
+  category: "tools"
+  featured: true
+  gumroad_link: "https://gumroad.com/l/go-toolkit"
+  utm_campaign: "go-toolkit-2024"
+  includes:
+    - "Advanced Go Programming Patterns (PDF)"
+    - "50+ Code Snippets Library"
+    - "Performance Optimization Guide"
+    - "Project Structure Templates"
+
+- id: crypto-research
+  title: "Crypto Market Research Bundle"
+  description: "In-depth analysis and research tools for crypto investors"
+  price: 49.99
+  image: "/assets/images/products/crypto-research.jpg"
+  category: "bundles"
+  featured: false
+  gumroad_link: "https://gumroad.com/l/crypto-research"
+  utm_campaign: "crypto-research-2024"
+  includes:
+    - "Market Analysis Framework (PDF)"
+    - "Technical Analysis Cheatsheet"
+    - "Investment Strategy Guide"
+    - "Risk Management Templates"

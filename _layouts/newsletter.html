@@ -1,49 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Newsletter Signup</title>
-</head>
-<body>
-  <form id="newsletter-form">
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-    <input type="hidden" id="csrf_token" name="csrf_token" value="EXPECTED_CSRF_TOKEN">
-    <button type="submit">Subscribe</button>
-  </form>
+--- layout: default ---
 
-  <script>
-    document.getElementById('newsletter-form').addEventListener('submit', function(e) {
-      e.preventDefault();
+<div class="newsletter-container">
+    <div class="newsletter-header">
+        <h1>{{ page.title }}</h1>
+        <div class="newsletter-meta">
+            <span class="date">{{ page.date | date: "%B %d, %Y" }}</span> {% if page.categories %}
+            <span class="categories">
+                {% for category in page.categories %}
+                <a href="/newsletter/category/{{ category | slugify }}/" class="category">{{ category }}</a>
+                {% endfor %}
+            </span> {% endif %}
+        </div>
+    </div>
 
-      var email = document.getElementById('email').value;
-      var csrf_token = document.getElementById('csrf_token').value;
+    <div class="newsletter-content">
+        {{ content }}
+    </div>
 
-      var data = {
-        email: email,
-        csrf_token: csrf_token
-      };
+    {% if page.premium %}
+    <div class="premium-content-teaser">
+        <h3>Premium Content</h3>
+        <p>This newsletter contains premium content available to subscribers only.</p>
+        <a href="/newsletter/subscribe" class="button">Subscribe Now</a>
+    </div>
+    {% endif %}
 
-      fetch('YOUR_WEB_APP_URL', { // Replace with the URL of your deployed web app
-        method: 'POST',
-        body: JSON.stringify(data),
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      })
-      .then(response => response.json())
-      .then(data => {
-        if (data.success) {
-          alert('Subscribed successfully!');
-        } else {
-          alert('Subscription failed: ' + data.error);
-        }
-      })
-      .catch(error => console.error('Error:', error));
-    });
-  </script>
+    <div class="newsletter-footer">
+        <div class="share-buttons">
+            <h4>Share this newsletter:</h4>
+            <a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ page.title }}" target="_blank" rel="noopener" class="share-button twitter">Twitter</a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}" target="_blank" rel="noopener" class="share-button linkedin">LinkedIn</a>
+        </div>
 
-  {% include analytics.html %}
-</body>
-</html>
+        {% include cta/newsletter.html title="Subscribe for More" description="Get the latest insights delivered directly to your inbox." medium="newsletter" campaign="newsletter-post" content="footer-cta" %} {% if page.related_product %} {% include cta/product.html
+        product_id=page.related_product medium="newsletter" content="related-product" %} {% endif %}
+    </div>
+</div>

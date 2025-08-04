@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     // Initialize achievements count from localStorage
     let achievementsCollected = parseInt(localStorage.getItem('achievementsCollected')) || 0;
     const totalAchievements = 460;
@@ -93,31 +93,31 @@ func main() {
         outputElement.textContent = 'Running...';
 
         fetch('https://emkc.org/api/v2/piston/execute', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                language: 'go',
-                version: 'latest',
-                files: [{ name: 'main.go', content: code }]
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    language: 'go',
+                    version: 'latest',
+                    files: [{ name: 'main.go', content: code }]
+                })
             })
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.run && data.run.output) {
-                outputElement.textContent = data.run.output;
-                showPopup('Code executed successfully.');
-                incrementAchievement(); // Call incrementAchievement when code is successfully run
-            } else {
-                outputElement.textContent = 'Error running code.';
-                showPopup('Error running code.');
-            }
-        })
-        .catch(error => {
-            outputElement.textContent = 'Error: ' + error;
-            showPopup('Error: ' + error);
-        });
+            .then(response => response.json())
+            .then(data => {
+                if (data.run && data.run.output) {
+                    outputElement.textContent = data.run.output;
+                    showPopup('Code executed successfully.');
+                    incrementAchievement(); // Call incrementAchievement when code is successfully run
+                } else {
+                    outputElement.textContent = 'Error running code.';
+                    showPopup('Error running code.');
+                }
+            })
+            .catch(error => {
+                outputElement.textContent = 'Error: ' + error;
+                showPopup('Error: ' + error);
+            });
     }
 
     function showPopup(message) {

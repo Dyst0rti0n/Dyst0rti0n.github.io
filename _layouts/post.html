@@ -1,43 +1,69 @@
-<!DOCTYPE html>
-<html lang="en">
+--- layout: default ---
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }}</title>
-    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css/navbar.css">
-    <link rel="stylesheet" href="/assets/css/post.css">
-</head>
-
-<body>
-    {% include navbar.html %}
-    <header>
+<div class="post-container">
+    <div class="post-header">
         <h1>{{ page.title }}</h1>
-        <p>{{ page.date | date: "%B %d, %Y" }}</p>
-    </header>
-    <main>
-        {{ content }}
-    </main>
-    {% include footer.html %}
-    {% include analytics.html %}
-    <script src="/assets/js/navbar.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const posts = document.querySelectorAll('.blog-card');
-            posts.forEach(post => {
-                const content = post.querySelector('.blog-card-content').innerText;
-                const wordCount = content.split(/\s+/).length;
-                const readingTime = Math.ceil(wordCount / 200); // Average reading speed: 200 wpm
-                const readingTimeElement = document.createElement('div');
-                readingTimeElement.className = 'reading-time';
-                readingTimeElement.innerHTML = `<img src="path/to/eye-icon.png" alt="Reading time icon" /> ${readingTime} min read`;
-                post.querySelector('.blog-card-title').appendChild(readingTimeElement);
-            });
-        });
-    </script>
-</body>
+        <div class="post-meta">
+            <span class="post-date">{{ page.date | date: "%B %d, %Y" }}</span> {% if page.categories %}
+            <div class="post-categories">
+                {% for category in page.categories %}
+                <a href="/blog/category/{{ category | slugify }}/" class="post-category">{{ category }}</a> {% endfor %}
+            </div>
+            {% endif %}
+            <div class="post-reading-time">
+                {% assign words = content | number_of_words %} {% assign reading_time = words | divided_by: 200 | plus: 1 %}
+                <span>{{ reading_time }} min read</span>
+            </div>
+        </div>
+    </div>
 
-</html>
+    {% if page.image %}
+    <div class="post-featured-image">
+        <img src="{{ page.image }}" alt="{{ page.title }}">
+    </div>
+    {% endif %}
+
+    <div class="post-content">
+        {{ content }}
+    </div>
+
+    <div class="post-footer">
+        <div class="post-share">
+            <h3>Share this post</h3>
+            <div class="share-buttons">
+                <a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ page.title }}" target="_blank" rel="noopener" class="share-button twitter">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>                    Twitter
+                </a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}" target="_blank" rel="noopener" class="share-button linkedin">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>                    LinkedIn
+                </a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" target="_blank" rel="noopener" class="share-button facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>                    Facebook
+                </a>
+            </div>
+        </div>
+
+        {% include cta/newsletter.html title="Subscribe to My Newsletter" description="Get the latest insights, tutorials, and exclusive content delivered directly to your inbox." medium="blog-post" campaign="post-footer" content="newsletter-cta" %} {% if page.categories
+        %} {% assign first_category = page.categories | first %} {% assign related_posts = site.posts | where_exp: "post", "post.categories contains first_category" | where_exp: "post", "post.url != page.url" | sort: "date" | reverse | limit: 3 %} {%
+        if related_posts.size > 0 %}
+        <div class="related-posts">
+            <h3>Related Posts</h3>
+            <div class="related-posts-grid">
+                {% for post in related_posts %}
+                <a href="{{ post.url }}" class="related-post-card">
+                        {% if post.image %}
+                        <div class="related-post-image">
+                            <img src="{{ post.image }}" alt="{{ post.title }}">
+                        </div>
+                        {% endif %}
+                        <div class="related-post-content">
+                            <h4>{{ post.title }}</h4>
+                            <span class="related-post-date">{{ post.date | date: "%B %d, %Y" }}</span>
+                        </div>
+                    </a> {% endfor %}
+            </div>
+        </div>
+        {% endif %} {% endif %} {% assign category_products = site.data.category_products | where: "category", first_category | first %} {% if category_products %} {% assign product = site.data.products | where: "id", category_products.product_id | first %} {%
+        if product %} {% include cta/product.html product_id=product.id medium="blog-post" content="related-product" %} {% endif %} {% endif %}
+    </div>
+</div>

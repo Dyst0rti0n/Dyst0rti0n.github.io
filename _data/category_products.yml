@@ -1,0 +1,18 @@
+# Mapping categories to related products for monetization
+- category: cybersecurity
+  product_id: starter-pack-1
+
+- category: golang
+  product_id: go-toolkit
+
+- category: programming
+  product_id: go-toolkit
+
+- category: technology
+  product_id: starter-pack-1
+
+- category: dark-web
+  product_id: crypto-research
+
+- category: python
+  product_id: starter-pack-1

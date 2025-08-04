@@ -1,0 +1,187 @@
+--- layout: default title: Now | Dyst0rti0n ---
+
+<div class="now-container">
+    <div class="now-header">
+        <h1>What I'm Focused On Now</h1>
+        <p class="now-updated">Last updated: July 15, 2024</p>
+    </div>
+
+    <div class="now-content">
+        <section class="now-section">
+            <h2>Current Projects</h2>
+            <div class="now-items">
+                <div class="now-item">
+                    <h3>Go API Framework Development</h3>
+                    <p>I'm actively developing a lightweight, modular API framework for Go with middleware support, authentication, and automatic documentation. This project aims to simplify backend development while maintaining high performance.</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%;">75%</div>
+                    </div>
+                </div>
+
+                <div class="now-item">
+                    <h3>Cybersecurity Course Creation</h3>
+                    <p>I'm creating a comprehensive cybersecurity course that covers network security, penetration testing, and security auditing. The course will include hands-on labs and real-world scenarios.</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 40%;">40%</div>
+                    </div>
+                </div>
+
+                <div class="now-item">
+                    <h3>DeFi Research</h3>
+                    <p>I'm conducting in-depth research on DeFi protocols, yield strategies, and risk management techniques. This research will be published in my Apex Crypto Insights section.</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 60%;">60%</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="now-section">
+            <h2>Learning Focus</h2>
+            <div class="now-items">
+                <div class="now-item">
+                    <h3>Rust Programming</h3>
+                    <p>I'm deepening my knowledge of Rust for systems programming and blockchain development. Currently working through advanced topics like concurrency, unsafe code, and FFI.</p>
+                </div>
+
+                <div class="now-item">
+                    <h3>Zero-Knowledge Proofs</h3>
+                    <p>Studying the mathematics and implementation of zero-knowledge proof systems, with a focus on practical applications in privacy-preserving technologies.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="now-section">
+            <h2>Reading List</h2>
+            <div class="now-items">
+                <div class="now-item">
+                    <h3>Technical Reading</h3>
+                    <ul class="reading-list">
+                        <li>"Designing Data-Intensive Applications" by Martin Kleppmann</li>
+                        <li>"Zero Knowledge Proofs" by Oded Goldreich</li>
+                        <li>"The Rust Programming Language" (2nd Edition)</li>
+                    </ul>
+                </div>
+
+                <div class="now-item">
+                    <h3>Non-Technical Reading</h3>
+                    <ul class="reading-list">
+                        <li>"The Psychology of Money" by Morgan Housel</li>
+                        <li>"Deep Work" by Cal Newport</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="now-section">
+            <h2>Upcoming Content</h2>
+            <div class="now-items">
+                <div class="now-item">
+                    <h3>Blog Posts</h3>
+                    <ul class="upcoming-content">
+                        <li>Advanced Go Concurrency Patterns</li>
+                        <li>Building a Zero-Knowledge Authentication System</li>
+                        <li>Security Analysis of Popular DeFi Protocols</li>
+                    </ul>
+                </div>
+
+                <div class="now-item">
+                    <h3>Tutorials & Guides</h3>
+                    <ul class="upcoming-content">
+                        <li>Setting Up a Secure Home Lab Environment</li>
+                        <li>Building a Real-time Crypto Dashboard with React</li>
+                        <li>Network Penetration Testing: A Practical Guide</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="now-footer">
+        <p>This is a <a href="https://nownownow.com/about" target="_blank" rel="noopener">/now page</a>, inspired by Derek Sivers. It's a snapshot of my current focus and priorities.</p>
+        <p>Want to discuss any of these topics? <a href="/contact">Get in touch</a>.</p>
+    </div>
+</div>
+
+<style>
+    .now-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+    
+    .now-header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    .now-updated {
+        color: #777;
+        font-style: italic;
+    }
+    
+    .now-section {
+        margin-bottom: 40px;
+    }
+    
+    .now-items {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 20px;
+    }
+    
+    .now-item {
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        padding: 20px;
+    }
+    
+    .now-item h3 {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+    
+    .progress-bar {
+        background-color: #e9ecef;
+        border-radius: 4px;
+        height: 24px;
+        margin-top: 15px;
+        overflow: hidden;
+    }
+    
+    .progress {
+        background-color: #0066cc;
+        color: white;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+    
+    .reading-list,
+    .upcoming-content {
+        padding-left: 20px;
+        margin: 10px 0;
+    }
+    
+    .reading-list li,
+    .upcoming-content li {
+        margin-bottom: 8px;
+    }
+    
+    .now-footer {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 1px solid #eee;
+        text-align: center;
+        color: #555;
+    }
+    
+    @media (max-width: 768px) {
+        .now-items {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

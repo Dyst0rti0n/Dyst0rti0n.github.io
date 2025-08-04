@@ -1,93 +1,94 @@
----
-layout: default
-title: "Latest Blogs"
----
+--- layout: default title: "Blog" ---
 
-<head>
-    <link rel="stylesheet" href="/assets/css/blog.css">
-</head>
-<body>
-    <div class="page-container">
-        <h1 class="page-title">Latest Blogs</h1>
-        <p class="page-description">Stay updated with our latest blog posts covering various topics in technology, programming, and more.</p>
-        
-        <!-- Toggle Button -->
-        <div class="toggle-button-container">
-            <button id="latest-blogs-btn" class="toggle-button active" onclick="toggleBlogs('latest')">Latest Blogs</button>
-            <button id="community-blogs-btn" class="toggle-button" onclick="toggleBlogs('community')">Community Blogs</button>
-        </div>
-        
-        <!-- Latest Blogs Section -->
-        <div id="latest-blogs" class="blog-container">
-            {% for post in site.posts %}
-                {% unless post.path contains '/com-blogs/' %}
-                    <a href="{{ post.url }}" class="blog-card-link">
-                        <div class="blog-card">
-                            <img src="{{ post.image }}" alt="{{ post.title }}">
-                            <div class="blog-card-content">
-                                <h2 class="blog-card-title">{{ post.title }}</h2>
-                                <p class="blog-card-date">{{ post.date | date: "%B %d, %Y" }}</p>
-                                <p class="blog-card-excerpt">{{ post.excerpt | truncate: 100 }}</p>
-                            </div>
-                        </div>
-                    </a>
-                {% endunless %}
-            {% endfor %}
-        </div>
+<div class="blog-container">
+    <div class="blog-header">
+        <h1>Blog</h1>
+        <p>Explore articles on cybersecurity, programming, and technology</p>
+    </div>
 
-        <!-- Community Blogs Section -->
-        <div id="community-blogs" class="blog-container">
-            {% for post in site.posts %}
-                {% if post.path contains '/com-blogs/' %}
-                    <a href="{{ post.url }}" class="blog-card-link">
-                        <div class="blog-card">
-                            <img src="{{ post.image }}" alt="{{ post.title }}">
-                            <div class="blog-card-content">
-                                <h2 class="blog-card-title">{{ post.title }}</h2>
-                                <p class="blog-card-date">{{ post.date | date: "%B %d, %Y" }}</p>
-                                <p class="blog-card-excerpt">{{ post.excerpt | truncate: 100 }}</p>
-                            </div>
-                        </div>
-                    </a>
-                {% endif %}
-            {% endfor %}
-            <div class="coming-soon">
-                <h2>New writers coming soon. <a href="/contact">Contact me to apply</a>.</h2>
+    <div class="blog-categories">
+        <h2>Categories</h2>
+        <div class="category-filters">
+            <a href="/blog/" class="category-filter {% if page.url == '/blog/' %}active{% endif %}">All</a> {% assign featured_categories = site.data.categories | where: "featured", true %} {% for category in featured_categories %}
+            <a href="/blog/category/{{ category.name }}/" class="category-filter">{{ category.title }}</a> {% endfor %}
+            <div class="category-dropdown">
+                <button class="dropdown-button">More Categories</button>
+                <div class="dropdown-content">
+                    {% assign other_categories = site.data.categories | where: "featured", false %} {% for category in other_categories %}
+                    <a href="/blog/category/{{ category.name }}/">{{ category.title }}</a> {% endfor %}
+                </div>
             </div>
         </div>
     </div>
 
-    <script>
-        function toggleBlogs(view) {
-            const latestBtn = document.getElementById('latest-blogs-btn');
-            const communityBtn = document.getElementById('community-blogs-btn');
-            const latestBlogs = document.getElementById('latest-blogs');
-            const communityBlogs = document.getElementById('community-blogs');
+    <div class="blog-featured">
+        {% assign latest_post = site.posts | first %}
+        <div class="featured-post">
+            <div class="featured-post-image">
+                <img src="{{ latest_post.image }}" alt="{{ latest_post.title }}">
+            </div>
+            <div class="featured-post-content">
+                <div class="featured-post-meta">
+                    <span class="featured-post-date">{{ latest_post.date | date: "%B %d, %Y" }}</span> {% if latest_post.categories %}
+                    <div class="featured-post-categories">
+                        {% for category in latest_post.categories %}
+                        <a href="/blog/category/{{ category | slugify }}/" class="post-category">{{ category }}</a> {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+                <h2>{{ latest_post.title }}</h2>
+                <p>{{ latest_post.excerpt | strip_html | truncate: 200 }}</p>
+                <a href="{{ latest_post.url }}" class="featured-post-link">Read More</a>
+            </div>
+        </div>
+    </div>
 
-            if (view === 'latest') {
-                latestBlogs.style.display = 'flex';
-                communityBlogs.style.display = 'none';
-                latestBtn.classList.add('active');
-                communityBtn.classList.remove('active');
-            } else {
-                latestBlogs.style.display = 'none';
-                communityBlogs.style.display = 'flex';
-                latestBtn.classList.remove('active');
-                communityBtn.classList.add('active');
-            }
-        
-            const pageContainer = document.querySelector('.page-container');
-            const latestHeight = latestBlogs.offsetHeight;
-            const communityHeight = communityBlogs.offsetHeight;
-            const maxHeight = Math.max(latestHeight, communityHeight);
+    <div class="blog-grid">
+        {% for post in site.posts offset:1 %}
+        <div class="blog-card">
+            <div class="blog-card-image">
+                <img src="{{ post.image }}" alt="{{ post.title }}">
+            </div>
+            <div class="blog-card-content">
+                <div class="blog-card-meta">
+                    <span class="blog-card-date">{{ post.date | date: "%B %d, %Y" }}</span> {% if post.categories %}
+                    <div class="blog-card-categories">
+                        {% for category in post.categories limit:1 %}
+                        <a href="/blog/category/{{ category | slugify }}/" class="post-category">{{ category }}</a> {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+                <h3>{{ post.title }}</h3>
+                <p>{{ post.excerpt | strip_html | truncate: 100 }}</p>
+                <a href="{{ post.url }}" class="blog-card-link">Read More</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 
-            pageContainer.style.minHeight = `${maxHeight}px`;
+    <div class="blog-newsletter">
+        {% include cta/newsletter.html title="Subscribe to My Newsletter" description="Get the latest articles, tutorials, and insights delivered directly to your inbox." medium="blog" campaign="blog-footer" content="newsletter-cta" %}
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const dropdownButton = document.querySelector('.dropdown-button');
+        const dropdownContent = document.querySelector('.dropdown-content');
+
+        if (dropdownButton && dropdownContent) {
+            dropdownButton.addEventListener('click', function() {
+                dropdownContent.classList.toggle('show');
+            });
+
+            // Close the dropdown if clicked outside
+            window.addEventListener('click', function(event) {
+                if (!event.target.matches('.dropdown-button')) {
+                    if (dropdownContent.classList.contains('show')) {
+                        dropdownContent.classList.remove('show');
+                    }
+                }
+            });
         }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            toggleBlogs('latest');
-        });
-    </script>
-
-    {% include analytics.html %}
-</body>
+    });
+</script>
